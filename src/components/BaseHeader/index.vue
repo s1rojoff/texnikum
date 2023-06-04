@@ -1,27 +1,32 @@
 <script setup lang="ts">
-import { type NavLink } from '@/interfaces/index'
-import type { PropType } from 'vue'
-const props = defineProps({
-  navlink: {
-    type: Array as PropType<NavLink[]>,
-    required: true
-  }
-})
+import BaseIcon from '@/components/BaseIcon/index.vue'
+import { useBaseHeader } from '@/components/BaseHeader/composable'
+const { topIconName, navLinks } = useBaseHeader()
 </script>
-
 <template>
-  <div class="w-full fixed top-0  z-10 bg-white">
-    <div class="flex mx-auto  container px-5 justify-between items-center">
-      <img src="/images/logo.png" class="lg:w-24 lg:h-24" alt="" />
-      <div class="flex items-center">
-        <router-link
-        to="/"
-          class="lg:text-base uppercase lg:ml-6 cursor-pointer"
-          v-for="(item, index) in props.navlink"
-          :key="index"
-          >{{ item.name }}</router-link>
-  
+  <div class="bg-white">
+    <div class="lg:px-24 mx-auto container lg:flex lg:items-center lg:justify-between">
+      <p class="lg:uppercase lg:text-xs lg:font-semibold text-main lg:py-4">
+        TOSHKENT TEMIR YO'L TEXNIKUMI
+      </p>
+      <div class="lg:flex lg:items-center lg:justify-end gap-6">
+        <BaseIcon v-for="(icon, index) in topIconName" :key="index" :name="icon" />
       </div>
+    </div>
+  </div>
+  <div class="bg-[#E2F0F9]">
+    <div class="container mx-auto lg:flex lg:px-24 lg:items-center lg:justify-between lg:py-6">
+      <BaseIcon class="lg:w-7 lg:h-7 cursor-pointer" name="dashboard" />
+      <p
+        class="lg:text-[21px] lg:font-normal text-main"
+        v-for="(link, index) in navLinks"
+        :key="index"
+      >
+        <router-link :to="link.route">
+          {{ link.name }}
+        </router-link>
+      </p>
+      <BaseIcon class="lg:w-7 lg:h-7" name="search" />
     </div>
   </div>
 </template>

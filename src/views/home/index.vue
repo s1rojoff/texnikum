@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BaseHeader from '@/components/BaseHeader/index.vue'
 import BaseIcon from '@/components/BaseIcon/index.vue'
+import AboutHome from '@/views/home/about-home.vue'
 </script>
 <template>
   <div class="w-full">
@@ -24,22 +25,6 @@ import BaseIcon from '@/components/BaseIcon/index.vue'
       <BaseIcon class="right-[15%]" name="lightway" />
     </div>
   </div>
-  <div class="container mx-auto lg:px-24 lg:pt-28">
-    <div class="flex items-center gap-24 justify-between">
-      <img src="/images/saida.png" alt="" />
-      <div>
-        <p class="lg:text-2xl text-center font-extrabold text-main border-b-8 pb-4 border-main">
-          Toshkent Temir Yo'l Texnikumi
-        </p>
-        <p class="lg:pt-12 lg:text-[23px]">
-          2023-yil 18-yanvardan ta’limning kunduzgi shaklida tahsil oluvchi 1-, 2-, 3-kurs
-          o‘quvchilari uchun nazariy va amaliy mashg‘ulotlar 1-semestr dars jadvali asosida
-          boshlanadi. Sirtqi ta’lim shaklida tahsil oluvchi 1-, 2-kurs va dual ta’lim shaklida
-          tahsil oluvchi 1-kurs o‘quvchilari uchun o‘qishning boshlanish vaqti to‘g‘risida alohida
-          habar beriladi.
-        </p>
-      </div>
-    </div>
-  </div>
+  <about-home></about-home>
 </template>
 <style></style>

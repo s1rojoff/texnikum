@@ -19,4 +19,18 @@ body {
 
 
 
+.swiper {
+  width: 440px;
+  height: 440px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
 

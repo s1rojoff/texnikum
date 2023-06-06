@@ -4,13 +4,9 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 import '@/assets/main.css'
-import {EffectCards } from 'swiper'
+import { EffectCards } from 'swiper'
 const modules = [EffectCards]
-const slides = ref([
-  '/images/saida.png',
-  '/images/saida.png',
-  '/images/saida.png'
-])
+const slides = ref(['/images/saida.png', '/images/header1.png', '/images/header.jpg'])
 </script>
 <template>
   <div class="container mx-auto lg:px-24 lg:pt-28">
@@ -18,7 +14,7 @@ const slides = ref([
       <div class="w-1/2">
         <swiper :effect="'cards'" :grabCursor="true" :modules="modules" class="mySwiper">
           <swiper-slide v-for="slide in slides" :key="slide">
-          <img :src="slide" alt="">
+            <img :src="slide" class="lg:w-[440px] lg:min-h-[440px]" alt="" />
           </swiper-slide>
         </swiper>
       </div>

@@ -2,10 +2,11 @@
 import BaseHeader from '@/components/BaseHeader/index.vue'
 import BaseIcon from '@/components/BaseIcon/index.vue'
 import AboutHome from '@/views/home/about-home.vue'
+import MediaHome from '@/views/home/media-home.vue'
 </script>
 <template>
   <div class="w-full">
-    <div class="absolute w-full z-10 top-0 left-0">
+    <div class="fixed w-full z-10 top-0 left-0">
       <BaseHeader />
     </div>
     <div class="bg-[url('/images/header1.png')] relative bg-cover bg-center lg:w-full lg:h-screen">
@@ -25,6 +26,9 @@ import AboutHome from '@/views/home/about-home.vue'
       <BaseIcon class="right-[15%]" name="lightway" />
     </div>
   </div>
-  <about-home></about-home>
+  <div>
+  <about-home />
+    <media-home />
+  </div>
 </template>
 <style></style>

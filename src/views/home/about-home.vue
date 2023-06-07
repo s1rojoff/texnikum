@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 import '@/assets/main.css'
-import { EffectCards } from 'swiper'
+import { EffectCards } from 'swiper';
 const modules = [EffectCards]
 const slides = ref(['/images/saida.png', '/images/header1.png', '/images/header.jpg'])
 </script>

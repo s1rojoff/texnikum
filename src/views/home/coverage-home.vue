@@ -6,7 +6,7 @@ import BaseIcon from '@/components/BaseIcon/index.vue'
     <div class="relative">
     <div class="w-full -z-10 -top-96 overflow-x-hidden absolute">
       <BaseIcon class="left-3/4 w-1/2" name="lightway" />
-      <BaseIcon class="w-1/2 -top-32" name="lightway" />
+      <BaseIcon class="w-1/2 lg:-top-32 2xl:-top-28" name="lightway" />
     </div>
   </div>
   <div class="mx-auto container lg:px-24 lg:mt-32">

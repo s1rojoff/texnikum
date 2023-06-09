@@ -3,6 +3,7 @@ import BaseHeader from '@/components/BaseHeader/index.vue'
 import BaseIcon from '@/components/BaseIcon/index.vue'
 import AboutHome from '@/views/home/about-home.vue'
 import MediaHome from '@/views/home/media-home.vue'
+import CoverageHome from '@/views/home/coverage-home.vue'
 </script>
 <template>
   <div class="w-full">
@@ -27,8 +28,9 @@ import MediaHome from '@/views/home/media-home.vue'
     </div>
   </div>
   <div>
-  <about-home />
+    <about-home />
     <media-home />
+    <coverage-home/>
   </div>
 </template>
 <style></style>

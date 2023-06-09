@@ -4,6 +4,7 @@ import BaseIcon from '@/components/BaseIcon/index.vue'
 import AboutHome from '@/views/home/about-home.vue'
 import MediaHome from '@/views/home/media-home.vue'
 import CoverageHome from '@/views/home/coverage-home.vue'
+import ConnectHome from '@/views/home/connect-home.vue'
 </script>
 <template>
   <div class="w-full">
@@ -27,10 +28,11 @@ import CoverageHome from '@/views/home/coverage-home.vue'
       <BaseIcon class="right-[15%]" name="lightway" />
     </div>
   </div>
-  <div>
+  <div class="pb-10">
     <about-home />
     <media-home />
     <coverage-home/>
+    <connect-home/>
   </div>
 </template>
 <style></style>

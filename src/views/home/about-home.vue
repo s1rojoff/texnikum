@@ -21,7 +21,7 @@ const slides = ref(['/images/saida.png', '/images/header1.png', '/images/header.
       <div class="w-1/2">
         <div class="text-center">
           <span
-            class="lg:text-2xl text-center font-extrabold text-main border-b-8 pb-4 border-main"
+            class="lg:text-2xl text-center font-extrabold text-second border-b-2 pb-4 border-main"
           >
             Toshkent Temir Yo'l Texnikumi
           </span>

@@ -20,7 +20,7 @@ import BaseIcon from '@/components/BaseIcon/index.vue'
     <div class="grid grid-cols-2 lg:gap-16">
       <div class="">
         <BaseIcon class="text-white" name="uzbekistan" />
-        <div class="lg:w-56 h-auto lg:py-2 lg:px-4 border-main border rounded-lg">
+        <div class="lg:w-56 bg-white h-auto lg:py-2 lg:px-4 border-main border rounded-lg">
         <p class="text-center lg:font-medium lg:text-lg">Qoraqalpog'iston</p>
         <p class="">O'g'il bolalar: 2387</p>
         <p class="">Qiz bolalar: 1892</p>

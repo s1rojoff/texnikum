@@ -1,9 +1,23 @@
 <script setup lang="ts">
 import BaseInput from '@/components/BaseInput/index.vue'
 import BaseButton from '@/components/BaseButton/index.vue'
+import BaseIcon  from '@/components/BaseIcon/index.vue'
 </script>
 <template>
-  <div class="mx-auto container lg:px-24">
+  <div class="relative">
+    <div class="w-full -z-10 lg:mt-24 flex items-center  overflow-x-hidden absolute">
+      <BaseIcon class="w-[55%] right-[5%]" name="lightway" />
+      <BaseIcon class="w-1/2 left-[20%]" name="lightway" />
+    </div>
+  </div>
+  <div class="flex justify-center lg:pb-14 lg:mt-32">
+      <span
+        class="lg:text-3xl text-second lg:font-extrabold border-main text-center border-b-8 pb-1"
+      >
+        Bog'lanish
+      </span>
+    </div>
+  <div class="mx-auto container lg:px-24 ">
     <div class="grid lg:grid-cols-2 lg:gap-48">
       <div class="rounded-2xl overflow-hidden">
         <iframe

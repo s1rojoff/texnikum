@@ -6,7 +6,7 @@ const { navLinks } = useBaseHeader()
 
 <template>
   <div class="bg-main w-full">
-    <div class="container mx-auto lg:px-24 pt-10 pb-3">
+    <div class="container mx-auto lg:px-24 pt-10 mt-28 pb-3">
       <div class="grid grid-cols-3">
         <div>
           <!-- <img src="/images/logo-text-sariq.png" class="w-52 p-0" alt="" /> -->

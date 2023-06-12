@@ -1,10 +1,14 @@
-// stores/counter.js
 import { defineStore } from 'pinia'
 
 export const useHeaderStore = defineStore('header', {
   state: () => {
     return { 
-      isVisibleLang: false
+      ipadNavs: false
+    }
+  },
+  actions:{
+    toggleNavbar(){
+      this.$state.ipadNavs = !this.$state.ipadNavs
     }
   }
 })

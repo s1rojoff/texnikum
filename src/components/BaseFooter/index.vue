@@ -9,7 +9,7 @@ const { navLinks } = useBaseHeader()
     <div class="container mx-auto lg:px-24 pt-10 mt-28 pb-3">
       <div class="grid grid-cols-3">
         <div>
-          <!-- <img src="/images/logo-text-sariq.png" class="w-52 p-0" alt="" /> -->
+          <img src="/images/logo-text-sariq.png" class="w-52 p-0" alt="" />
           <div class="flex items-center justify-start">
             <BaseIcon class="w-7 h-7" name="location" />
             <span class="text-sm text-white ml-2"

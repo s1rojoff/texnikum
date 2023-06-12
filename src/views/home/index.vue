@@ -13,7 +13,7 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
     <div class="fixed w-full z-10 top-0 left-0">
       <BaseHeader />
     </div>
-    <div class="bg-[url('/images/header1.png')] relative bg-cover bg-center lg:w-full lg:h-screen">
+    <div class="bg-[url('/images/header1.png')] relative bg-cover bg-center md:w-full md:h-screen">
       <div class="absolute bottom-10">
         <div class="relative py-7">
           <BaseIcon name="afrosiyob" class="absolute top-0 left-0" />

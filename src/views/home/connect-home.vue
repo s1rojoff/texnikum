@@ -4,7 +4,7 @@ import BaseButton from '@/components/BaseButton/index.vue'
 import BaseIcon  from '@/components/BaseIcon/index.vue'
 </script>
 <template>
-  <div class="relative">
+  <div class="relative hidden lg:block">
     <div class="w-full -z-10 lg:mt-24 flex items-center  overflow-x-hidden absolute">
       <BaseIcon class="w-[55%] right-[5%]" name="lightway" />
       <BaseIcon class="w-1/2 left-[20%]" name="lightway" />
@@ -17,8 +17,8 @@ import BaseIcon  from '@/components/BaseIcon/index.vue'
         Bog'lanish
       </span>
     </div>
-  <div class="mx-auto container lg:px-24 ">
-    <div class="grid lg:grid-cols-2 lg:gap-48">
+  <div class="mx-auto container lg:px-24 md:px-7 md:mt-10">
+    <div class="grid md:grid-cols-2 lg:gap-48 md:gap-32">
       <div class="rounded-2xl overflow-hidden">
         <iframe
           width="100%"
@@ -34,7 +34,7 @@ import BaseIcon  from '@/components/BaseIcon/index.vue'
           <base-input placeholder="Ism va familya"/>
           <base-input  placeholder="E-maill"/>
         </div>
-          <textarea placeholder="Tavsif" class="border-main w-full lg:mt-4 border lg:rounded-2xl py-2 outline-none px-2" rows="5"></textarea>
+          <textarea placeholder="Tavsif" class="border-main resize-none w-full md:mt-4 border md:rounded-2xl py-2 outline-none px-2" rows="5"></textarea>
           <base-button class="lg:mt-4"/>
       </div>
     </div>

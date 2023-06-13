@@ -9,7 +9,7 @@ import BaseIcon from '@/components/BaseIcon/index.vue'
       <BaseIcon class="w-1/2 lg:-top-32 2xl:-top-28" name="lightway" />
     </div>
   </div>
-  <div class="mx-auto container lg:px-24 lg:mt-3 md:mt-20">
+  <div class="mx-auto container lg:px-24 md:px-7 lg:mt-3 md:mt-20">
     <div class="flex justify-center lg:pb-14">
       <span
         class="lg:text-3xl text-second lg:font-extrabold border-main text-center border-b-8 pb-1"
@@ -20,8 +20,8 @@ import BaseIcon from '@/components/BaseIcon/index.vue'
     <div class="lg:grid lg:grid-cols-2 md:px-7 md:grid-cols-1 lg:gap-16">
       <div class="">
         <BaseIcon class="text-white" name="uzbekistan" />
-        <div class="lg:w-56 md:w-40 bg-white h-auto lg:py-2 lg:px-4 border-main border rounded-lg">
-        <p class="text-center lg:font-medium lg:text-lg">Qoraqalpog'iston</p>
+        <div class="md:w-56 bg-white h-auto py-2 px-4 border-main border rounded-lg">
+        <p class="text-center font-extrabold lg:text-lg">Qoraqalpog'iston</p>
         <p class="">O'g'il bolalar: 2387</p>
         <p class="">Qiz bolalar: 1892</p>
         </div>

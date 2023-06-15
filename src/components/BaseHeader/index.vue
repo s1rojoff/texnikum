@@ -25,7 +25,7 @@ storeToRefs(store)
     >
       <BaseIcon class="lg:w-7 lg:h-7 cursor-pointe md:w-5 md:-5" @click="toggleNavbar" name="dashboard" />
       <p
-        class="lg:text-[21px] lg:block hidden lg:font-normal text-main"
+        class="lg:text-lg uppercase lg:block hidden lg:font-normal text-main"
         v-for="(link, index) in navLinks"
         :key="index"
       >

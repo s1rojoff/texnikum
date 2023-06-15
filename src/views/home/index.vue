@@ -13,17 +13,13 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
     <div class="fixed w-full z-10 top-0 left-0">
       <BaseHeader />
     </div>
-    <div class="bg-[url('/images/header1.png')] relative bg-cover bg-center md:w-full md:h-screen">
-      <div class="absolute bottom-10">
-        <div class="relative py-7">
-          <BaseIcon name="afrosiyob" class="absolute top-0 left-0" />
-          <p class="text-white containe text-center text-xl lg:pl-32">
-            Toshkent Temir Yo'l Texnikumi
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
+  <div class="relative overflow-hidden">
+      <video class="absolute w-full" muted autoplay loop>
+        <source class="min-h-screen min-w-screen" src="/videos/header1.mp4" type="video/mp4" />
+      </video>
+      <div class="bg-main opacity-50 w-screen h-screen"></div>
+    </div>
   <div class="relative">
     <div class="w-full -z-10 -top-96 overflow-x-hidden absolute">
       <BaseIcon class="left-[60%]" name="lightway" />
@@ -33,10 +29,10 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
   <div>
     <about-home />
     <media-home />
-    <coverage-home/>
-    <connect-home/>
-    <partners-home/>
-    <base-footer/>
+    <coverage-home />
+    <connect-home />
+    <partners-home />
+    <base-footer />
   </div>
 </template>
 <style></style>

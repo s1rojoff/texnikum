@@ -10,15 +10,15 @@ import BaseIcon  from '@/components/BaseIcon/index.vue'
       <BaseIcon class="w-1/2 left-[20%]" name="lightway" />
     </div>
   </div>
-  <div class="flex justify-center lg:pb-14 lg:mt-32">
+  <div class="flex justify-center pt-10 lg:pb-10">
       <span
-        class="lg:text-3xl text-second lg:font-extrabold border-main text-center border-b-8 pb-1"
+        class="lg:text-3xl text-second text-2xl lg:font-extrabold border-main text-center md:border-b-8 border-b-4"
       >
         Bog'lanish
       </span>
     </div>
-  <div class="mx-auto container lg:px-24 md:px-7 md:mt-10">
-    <div class="grid md:grid-cols-2 lg:gap-48 md:gap-32">
+  <div class="mx-auto container lg:px-24 md:px-7 px-5 md:mt-10">
+    <div class="grid md:grid-cols-2 pt-10 md:pt-0 lg:gap-48 md:gap-32">
       <div class="rounded-2xl overflow-hidden">
         <iframe
           width="100%"
@@ -29,13 +29,13 @@ import BaseIcon  from '@/components/BaseIcon/index.vue'
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <div>
-        <div class="flex items-center justify-between gap-3">
+      <div class="pt-5 md:pt-0">
+        <div class="flex items-center justify-between gap-1 md:gap-3">
           <base-input placeholder="Ism va familya"/>
           <base-input  placeholder="E-maill"/>
         </div>
-          <textarea placeholder="Tavsif" class="border-main resize-none w-full md:mt-4 border md:rounded-2xl py-2 outline-none px-2" rows="5"></textarea>
-          <base-button class="lg:mt-4"/>
+          <textarea placeholder="Tavsif" class="border-main resize-none w-full md:mt-4 mt-2 border rounded-2xl py-2 outline-none px-2" rows="5"></textarea>
+          <base-button class="lg:mt-4 mt-3"/>
       </div>
     </div>
   </div>

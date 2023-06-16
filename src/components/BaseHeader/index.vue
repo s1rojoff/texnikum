@@ -9,7 +9,7 @@ const { toggleNavbar } = store
 storeToRefs(store)
 </script>
 <template>
-  <div class="sticky top-0">
+  <div>
     <div class="bg-white hidden md:block">
       <div
         class="lg:px-24 md:px-7 lg:py-2 mx-auto container md:flex md:items-center md:justify-between"

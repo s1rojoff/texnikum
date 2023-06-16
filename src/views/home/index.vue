@@ -9,7 +9,7 @@ import PartnersHome from '@/views/home/partners-home.vue'
 import BaseFooter from '@/components/BaseFooter/index.vue'
 </script>
 <template>
-  <div class="w-full">
+  <div class="">
     <div class="fixed w-full z-10 top-0 left-0">
       <BaseHeader />
     </div>

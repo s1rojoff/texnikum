@@ -27,7 +27,7 @@ const partners = ref<string[]>([
       </span>
     </div>
 
-    <div class="overflow-scroll scrollbar-hide mt-5 ">
+    <div class="overflow-scroll scrollbar-hide mt-10 ">
       <div class="flex items-center justify-between md:gap-4 gap-2 partners">
         <div v-for="(item, index) in partners" :key="index">
           <img class="md:w-32 md:h-32 h-20 w-20" :src="item" alt="" />

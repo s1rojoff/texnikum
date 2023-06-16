@@ -68,20 +68,20 @@ const { navLinks } = useBaseHeader()
         </div>
         <div class="mt-10">
           <BaseIcon class="mx-auto w-12 h-12" name="location" />
-              <p class="text-sm text-center text-white mt-2"
+              <p class="text-base text-center text-white mt-2"
                 >Toshkent shahar, Mirobod tumani, <br>
                 Temiryo'lchilar ko'chasi 89, 100176</p
               >
         </div>
         <div  class="mt-5">
           <BaseIcon class="mx-auto w-12 h-12" name="phone" />
-              <p class="text-sm text-center text-white mt-2"
+              <p class="text-base text-center text-white mt-2"
                 >Tel: (71) 299 04 00</p
               >
         </div>
         <div  class="mt-5">
           <BaseIcon class="mx-auto w-12 h-12" name="email" />
-              <p class="text-sm text-center text-white mt-2"
+              <p class="text-base text-center text-white mt-2"
                 >info@tpkjt.uz</p
               >
         </div>

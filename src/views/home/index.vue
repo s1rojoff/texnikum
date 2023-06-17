@@ -16,7 +16,7 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
   </div>
   <div class="pt-10 mt-5 h-auto  overflow-hidden">
     <video class=" w-full" muted autoplay loop>
-      <source class="min-w-screen" src="/videos/header2.mp4" type="video/mp4" />
+      <source class="min-w-screen" src="/videos/header1.mp4" type="video/mp4" />
     </video>
     <!-- <div class="bg-main absolute opacity-50 w-screen h-screen z-50"></div> -->
     <div class=" md:bottom-5  bottom-0 absolute left-0">

@@ -9,7 +9,7 @@ const modules = [EffectCards]
 const slides = ref(['/images/saida.png', '/images/header1.png', '/images/header.jpg'])
 </script>
 <template>
-  <div class="container overflow-hidden mx-auto lg:px-24 px-5 md:px-7 lg:pt-28 pt-0">
+  <div class="container overflow-hidden mx-auto lg:px-24 px-5 md:px-7 lg:pt-28 pt-10">
     <div class="grid md:grid-cols-2 grid-cols-1 lg:gap-24 md:gap-16 ">
       <div class="">
         <swiper :effect="'cards'" :grabCursor="true" :modules="modules" class="mySwiper">

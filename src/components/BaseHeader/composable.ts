@@ -4,7 +4,7 @@ export function useBaseHeader() {
   const navLinks: NavLink[] = [
     {
       name: 'Biz haqimizda',
-      route: '/'
+      route: '/about'
     },
     {
       name: 'Xalqaro aloqalar',

@@ -2,6 +2,7 @@
 import { storeToRefs } from 'pinia'
 import BaseIcon from '@/components/BaseIcon/index.vue'
 import { useBaseHeader } from '@/components/BaseHeader/composable'
+import { routers } from '@/router/router'
 import { useHeaderStore } from '@/stores'
 const { topIconName, navLinks } = useBaseHeader()
 const store = useHeaderStore()
@@ -9,7 +10,7 @@ const { toggleNavbar } = store
 storeToRefs(store)
 </script>
 <template>
-  <div>
+  <div class="sticky">
     <div class="bg-white hidden md:block">
       <div
         class="lg:px-24 md:px-7 lg:py-2 mx-auto container md:flex md:items-center md:justify-between"
@@ -64,5 +65,4 @@ storeToRefs(store)
     </div>
   </div>
 </template>
-<style>
-</style>
+<style></style>

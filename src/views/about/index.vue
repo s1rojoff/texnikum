@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BaseHeader from '@/components/BaseHeader/index.vue'
 import BaseFooter from '@/components/BaseFooter/index.vue'
+import Management from '@/views/about/management.vue'
 </script>
 
 <template>
@@ -35,6 +36,11 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
           o’rnatish maqsadida kolejj direktori va o’quv ishlari buyicha direktor o’rinbosariga
         </p>
       </div>
+    </div>
+
+    <!-- Management section -->
+    <div>
+    <management/>
     </div>
   </div>
   <div>

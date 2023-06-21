@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type{PropType} from 'vue'
 // import { type Rahbariyat } from "@/interfaces"
 const props = defineProps({
     cardData:{

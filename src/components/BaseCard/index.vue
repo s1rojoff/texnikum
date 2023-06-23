@@ -1,5 +1,8 @@
 <script setup lang="ts">
 // import { type Rahbariyat } from "@/interfaces"
+const emits = defineEmits([
+  'openPopup'
+])
 const props = defineProps({
     cardData:{
         type: Object,
@@ -19,7 +22,7 @@ const props = defineProps({
         alt=""
       />
       <div class="flex flex-col justify-between px-3 leading-normal">
-        <h5 class="mb-2 text-center border-b text-base font-semibold text-gray-900 dark:text-white">
+        <h5 class="mb-1 text-center border-b text-base font-semibold text-gray-900 dark:text-white">
           {{ props.cardData.name }}
         </h5>
         <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
@@ -34,6 +37,11 @@ const props = defineProps({
         <p class="font-normal text-gray-700 dark:text-gray-400">
           <span class="font-bold">E-mail:</span> {{ props.cardData.email }}
         </p>
+        <p @click="$emit('openPopup')" class="font-medium cursor-pointer text-main dark:text-white">
+           Batafsil &RightArrow;
+        </p>
+        <div>
+        </div>
       </div>
     </div>
   </div>

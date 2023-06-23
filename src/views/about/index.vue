@@ -1,8 +1,13 @@
 <script setup lang="ts">
+import { storeToRefs } from 'pinia'
 import BaseHeader from '@/components/BaseHeader/index.vue'
 import BaseFooter from '@/components/BaseFooter/index.vue'
 import Management from '@/views/about/management.vue'
 import Department from '@/views/about/departments.vue'
+import BasePopup from '@/components/BasePopup/index.vue'
+import { useAboutStore } from '@/stores'
+const store:any = useAboutStore()
+storeToRefs(store)
 </script>
 
 <template>
@@ -11,6 +16,10 @@ import Department from '@/views/about/departments.vue'
       <BaseHeader />
     </div>
   </div>
+
+  <!-- Popup  -->
+  <BasePopup :modal="store.$state.openModal" @closePopup="store.togglePopup"/>
+
   <div class="bg-[url('/images/header.jpg')] h-screen bg-center bg-contain">
     <div class="text-center top-1/2">
       <p class="text-4xl font-extrabold text-white">"O'zbekiston Temir Yo'llari" AJ</p>
@@ -45,7 +54,7 @@ import Department from '@/views/about/departments.vue'
     </div>
     <!-- Departments section -->
     <div>
-      <department/>
+      <department />
     </div>
   </div>
   <div>

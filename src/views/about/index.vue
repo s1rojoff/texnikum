@@ -2,6 +2,7 @@
 import BaseHeader from '@/components/BaseHeader/index.vue'
 import BaseFooter from '@/components/BaseFooter/index.vue'
 import Management from '@/views/about/management.vue'
+import Department from '@/views/about/departments.vue'
 </script>
 
 <template>
@@ -40,7 +41,11 @@ import Management from '@/views/about/management.vue'
 
     <!-- Management section -->
     <div>
-    <management/>
+      <management />
+    </div>
+    <!-- Departments section -->
+    <div>
+      <department/>
     </div>
   </div>
   <div>

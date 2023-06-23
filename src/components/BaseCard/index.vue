@@ -2,7 +2,7 @@
 // import { type Rahbariyat } from "@/interfaces"
 const props = defineProps({
     cardData:{
-        type: Any,
+        type: Object,
         required: true
     }
 }) 

@@ -6,6 +6,8 @@ import Management from '@/views/about/management.vue'
 import Department from '@/views/about/departments.vue'
 import BasePopup from '@/components/BasePopup/index.vue'
 import { useAboutStore } from '@/stores'
+import {useAboutPage} from '@/views/about/composable'
+const {managements}  = useAboutPage()
 const store:any = useAboutStore()
 storeToRefs(store)
 </script>
@@ -18,7 +20,7 @@ storeToRefs(store)
   </div>
 
   <!-- Popup  -->
-  <BasePopup :modal="store.$state.openModal" @closePopup="store.togglePopup"/>
+  <BasePopup :modal="store.$state.openModal" :popupData="{name: managements[store.cardId].name,url:managements[store.cardId].url, experience: managements[store.cardId].experience}" @closePopup="store.togglePopup"/>
 
   <div class="bg-[url('/images/header.jpg')] h-screen bg-center bg-contain">
     <div class="text-center top-1/2">

@@ -19,14 +19,14 @@ storeToRefs(store)
     </div>
   </div>
   <div>
-    <div class="flex  justify-center"><BaseCard :cardData="managements[0]" @openPopup="store.togglePopup"/></div>
+    <div class="flex  justify-center"><BaseCard :id="`${managements[0].id}`" :cardData="managements[0]" @openPopup="store.togglePopup(managements[0].id)"/></div>
     <div class="grid lg:grid-cols-2 grid-cols-1 mt-5 gap-5">
-        <BaseCard :cardData="managements[1]"/>
-        <BaseCard :cardData="managements[2]"/>
+        <BaseCard  :cardData="managements[1]" :id="`${managements[1].id}`" @openPopup="store.togglePopup(managements[1].id)"/>
+        <BaseCard :cardData="managements[2]" :id="`${managements[2].id}`"  @openPopup="store.togglePopup(managements[2].id)"/>
     </div>
     <div class="grid lg:grid-cols-2 grid-cols-1 mt-5 gap-5">
-        <BaseCard :cardData="managements[3]"/>
-        <BaseCard :cardData="managements[3]"/>
+        <BaseCard :cardData="managements[3]" :id="`${managements[3].id}`" @openPopup="store.togglePopup(managements[3].id)"/>
+        <BaseCard :cardData="managements[4]" :id="`${managements[4].id}`" @openPopup="store.togglePopup(managements[4].id)"/>
     </div>
   </div>
 </template>

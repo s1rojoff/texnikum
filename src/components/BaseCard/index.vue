@@ -7,6 +7,10 @@ const props = defineProps({
     cardData:{
         type: Object,
         required: true
+    },
+    id:{
+      type: String,
+      required: true
     }
 }) 
 </script>
@@ -17,7 +21,7 @@ const props = defineProps({
       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
     >
       <img
-        class="object-cover w-full rounded-t-lg  md:h-48 md:w-48 md:rounded-none md:rounded-l-lg"
+        class="object-cover w-full rounded-t-lg  md:h-52 md:w-48 md:rounded-none md:rounded-l-lg"
         :src="props.cardData.url"
         alt=""
       />
@@ -37,7 +41,7 @@ const props = defineProps({
         <p class="font-normal text-gray-700 dark:text-gray-400">
           <span class="font-bold">E-mail:</span> {{ props.cardData.email }}
         </p>
-        <p @click="$emit('openPopup')" class="font-medium cursor-pointer text-main dark:text-white">
+        <p :id="props.id" @click="$emit('openPopup')" class="font-medium cursor-pointer text-main dark:text-white">
            Batafsil &RightArrow;
         </p>
         <div>

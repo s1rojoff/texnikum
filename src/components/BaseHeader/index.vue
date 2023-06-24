@@ -50,7 +50,7 @@ storeToRefs(store)
       </div>
     </div>
     <div
-      class="bg-main py-9 px-14 rounded-br-3xl absolute hidden md:block lg:hidden"
+      class="bg-main py-9 px-14 rounded-br-3xl absolute block lg:hidden"
       v-if="store.$state.ipadNavs"
     >
       <p

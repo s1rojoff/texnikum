@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import BaseIcon from '@/components/BaseIcon/index.vue'
-import { useBaseHeader } from '@/components/BaseHeader/composable'
-const { navLinks } = useBaseHeader()
+import { useHeaderStore } from '@/stores';
+const { navLinks } = useHeaderStore()
 </script>
 
 <template>

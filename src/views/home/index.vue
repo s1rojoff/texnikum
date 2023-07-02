@@ -17,7 +17,7 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
   <div class="h-auto overflow-hidden">
     <div class="h-auto lg:h-[75vh]">
       <video src="/videos/header1.mp4" type="video/mp4" class="w-screen" muted autoplay loop>
-        <!-- <source class="w-full"  /> -->
+
       </video>
     </div>
     <!-- <div class="bg-main absolute opacity-50 w-screen h-screen z-50"></div> -->

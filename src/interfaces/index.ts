@@ -1,6 +1,7 @@
 export interface NavLink {
   name: string
-  route: string
+  route: string,
+  visible: boolean
 }
 export interface Rahbariyat {
   id:number

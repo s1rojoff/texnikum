@@ -4,13 +4,15 @@ import BaseIcon from '@/components/BaseIcon/index.vue'
 import { useBaseHeader } from '@/components/BaseHeader/composable'
 import { routers } from '@/router/router'
 import { useHeaderStore } from '@/stores'
-const { topIconName, navLinks } = useBaseHeader()
-const store = useHeaderStore()
-const { toggleNavbar } = store
+const { topIconName } = useBaseHeader()
+const store:any = useHeaderStore()
+const { toggleNavbar, navLinks, toggleSubNav } = store
 storeToRefs(store)
 </script>
 <template>
   <div class="sticky">
+
+  <!-- Logo and  icons for social media -->
     <div class="bg-white hidden md:block">
       <div
         class="lg:px-24 md:px-7 lg:py-2 mx-auto container md:flex md:items-center md:justify-between"
@@ -28,6 +30,8 @@ storeToRefs(store)
         </div>
       </div>
     </div>
+
+    <!-- Laptop view navbars -->
     <div class="bg-[#E2F0F9]">
       <div
         class="container mx-auto py-3 flex md:px-7 lg:px-24 px-5 items-center justify-between md:py-2 lg:py-6"
@@ -37,18 +41,28 @@ storeToRefs(store)
           @click="toggleNavbar"
           name="dashboard"
         />
-        <p
-          class="lg:text-lg uppercase lg:block hidden lg:font-normal text-main"
+        <div
+          class="lg:text-lg relative uppercase lg:block hidden lg:font-normal text-main"
           v-for="(link, index) in navLinks"
           :key="index"
+          @mouseenter="toggleSubNav(index)"
+          @mouseleave="toggleSubNav(index)"
         >
           <router-link :to="link.route">
             {{ link.name }}
           </router-link>
-        </p>
+
+          <div v-if="navLinks[index].visible" class="h-auto py-2 w-32 absolute px-2 text-center rounded-lg bg-main">
+            <a  href="#management-about" class="text-white text-[11px] leading-3 cursor-pointer pt-2">Rahbariyat</a>
+            <p class="text-white text-[10px] cursor-pointer pt-2">Tashkiliy tuzilma</p>
+            <p class="text-white text-[10px] cursor-pointer pt-2">Kasaba uyushmasi</p>
+          </div>
+        </div>
         <BaseIcon class="lg:w-7 lg:h-7 md:w-5 md:-5" name="search" />
       </div>
     </div>
+
+    <!-- iPad view navbars -->
     <div
       class="bg-main py-9 px-14 rounded-br-3xl absolute block lg:hidden"
       v-if="store.$state.ipadNavs"

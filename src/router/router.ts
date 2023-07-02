@@ -1,12 +1,12 @@
 export const routers = [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: ()=>import('@/views/home/index.vue')
     },
     {
       path: '/about',
-      name: 'About',
+      name: 'Biz haqimizda',
       component: ()=>import('@/views/about/index.vue')
     }
   ]

@@ -6,23 +6,29 @@ import Management from '@/views/about/management.vue'
 import Department from '@/views/about/departments.vue'
 import BasePopup from '@/components/BasePopup/index.vue'
 import { useAboutStore } from '@/stores'
-import {useAboutPage} from '@/views/about/composable'
-const {managements}  = useAboutPage()
-const store:any = useAboutStore()
+import { useAboutPage } from '@/views/about/composable'
+const { managements } = useAboutPage()
+const store: any = useAboutStore()
 storeToRefs(store)
 </script>
 
 <template>
   <div class="sticky top-0 z-10">
-    <div class="">
-      <BaseHeader />
-    </div>
+    <BaseHeader />
   </div>
 
   <!-- Popup  -->
-  <BasePopup :modal="store.$state.openModal" :popupData="{name: managements[store.cardId].name,url:managements[store.cardId].url, experience: managements[store.cardId].experience}" @closePopup="store.togglePopup"/>
+  <BasePopup
+    :modal="store.$state.openModal"
+    :popupData="{
+      name: managements[store.cardId].name,
+      url: managements[store.cardId].url,
+      experience: managements[store.cardId].experience
+    }"
+    @closePopup="store.togglePopup"
+  />
 
-  <div class="bg-[url('/images/header.jpg')] h-screen bg-center bg-contain">
+  <div class="bg-[url('/images/header.jpg')] bg-no-repeat w-full bg-center bg-cover h-[75vh]">
     <div class="text-center top-1/2">
       <p class="text-4xl font-extrabold text-white">"O'zbekiston Temir Yo'llari" AJ</p>
       <p class="text-4xl font-extrabold text-white">Toshkent Temir Yo'l Texnikumi</p>

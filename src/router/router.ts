@@ -10,7 +10,7 @@ export const routers = [
     component: () => import('@/views/about/index.vue'),
     children: [
       {
-        path: '/',
+        path: '',
         name: 'About us',
         meta: { parentName: 'Biz haqimizda' },
         component: () => import('@/views/about/story.vue')

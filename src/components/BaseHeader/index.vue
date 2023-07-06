@@ -53,6 +53,9 @@ storeToRefs(store)
             v-if="navLinks[index].visible"
             class="h-auto py-2 w-40 absolute px-2 text-center rounded-lg bg-main"
           >
+          <router-link to="/about">
+              <p class="text-white text-xs leading-3 cursor-pointer pt-2">Texnikum</p>
+            </router-link>
             <router-link to="about/management">
               <p class="text-white text-xs leading-3 cursor-pointer pt-2">Rahbariyat</p>
             </router-link>

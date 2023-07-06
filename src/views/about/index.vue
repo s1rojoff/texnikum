@@ -37,8 +37,9 @@ storeToRefs(store)
       <p class="text-4xl font-extrabold text-white">Rahbariyati</p>
     </div>
   </div>
-  <router-view>
-  </router-view>
+  <div class="container lg:px-24 mx-auto">
+    <router-view></router-view>
+  </div>
   <div>
     <BaseFooter />
   </div>

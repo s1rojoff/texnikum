@@ -1,5 +1,13 @@
 <script setup lang="ts"></script>
 <template>
+  <div
+    class="bg-[url('/about/header-about.avif')] lg:px-24 bg-no-repeat w-full bg-center bg-cover h-[75vh]"
+  >
+    <div class="text-start top-2/3 border-b-2 border-main">
+      <p class="text-4xl font-extrabold text-white">Toshkent temir yo'l texnikumi</p>
+      <p class="text-4xl font-extrabold text-white">Haqida</p>
+    </div>
+  </div>
   <div class="mx-auto container lg:px-24">
     <div class="flex justify-between items-start gap-24 pt-20">
       <div class="w-1/2">

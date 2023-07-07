@@ -1,7 +1,12 @@
+interface SubMenu{
+  name: string,
+  route: string
+}
 export interface NavLink {
   name: string
   route: string,
-  visible: boolean
+  visible: boolean,
+  subMenu: SubMenu[]
 }
 export interface Rahbariyat {
   id:number

@@ -9,24 +9,15 @@ storeToRefs(store)
 </script>
 
 <template>
-  <!-- <div
+  <div
     class="bg-[url('/about/header-about.avif')] lg:px-24 bg-no-repeat w-full bg-center bg-cover h-[75vh]"
   >
     <div class="text-start top-2/3 border-b-2 border-main">
-      <p class="text-4xl font-extrabold text-white">"O'zbekiston Temir Yo'llari" AJ</p>
-      <p class="text-4xl font-extrabold text-white">Toshkent Temir Yo'l Texnikumi</p>
+      <p class="text-4xl font-extrabold text-white">Toshkent temir yo'l texnikumi</p>
+      <p class="text-4xl font-extrabold text-white">Rahbariyati</p>
     </div>
-  </div> -->
-  <!-- <div>
-    <div class="flex justify-center pt-16 lg:pb-10">
-      <span
-        class="lg:text-3xl text-second text-2xl lg:font-extrabold border-main text-center md:border-b-4 border-b-4"
-      >
-        Rahbariyat
-      </span>
-    </div>
-  </div> -->
-  <div class="mt-10">
+  </div>
+  <div class="mt-10 container mx-auto lg:px-24">
     <div class="flex justify-center">
       <BaseCard
         :id="`${managements[0].id}`"

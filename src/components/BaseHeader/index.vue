@@ -47,20 +47,16 @@ storeToRefs(store)
           @mouseenter="toggleSubNav(index)"
           @mouseleave="toggleSubNav(index)"
         >
-            {{ link.name }}
+          <p class="cursor-pointer">{{ link.name }}</p>
 
           <div
             v-if="navLinks[index].visible"
-            class="h-auto py-2 w-40 absolute px-2 text-center rounded-lg bg-main"
+            class="h-auto py-2 w-64 absolute px-4 text-start rounded-lg bg-main"
           >
-          <router-link to="/about">
-              <p class="text-white text-xs leading-3 cursor-pointer pt-2">Texnikum</p>
-            </router-link>
-            <router-link to="about/management">
-              <p class="text-white text-xs leading-3 cursor-pointer pt-2">Rahbariyat</p>
-            </router-link>
-            <p class="text-white text-xs cursor-pointer pt-2">Tashkiliy tuzilma</p>
-            <p class="text-white text-xs cursor-pointer pt-2">Kasaba uyushmasi</p>
+            <p v-for="(item, index) in link.subMenu" :key="index" class="text-white cursor-pointer text-sm py-1">
+              <router-link :to="item.route">{{ item.name }}</router-link>
+              
+            </p>
           </div>
         </div>
         <BaseIcon class="lg:w-7 lg:h-7 md:w-5 md:-5" name="search" />

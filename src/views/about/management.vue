@@ -18,14 +18,12 @@ storeToRefs(store)
     </div>
   </div>
   <div class="mt-10 container mx-auto lg:px-24">
-    <div class="flex justify-center">
+    <div>
       <BaseCard
         :id="`${managements[0].id}`"
         :cardData="managements[0]"
         @openPopup="store.togglePopup(managements[0].id)"
       />
-    </div>
-    <div class="grid lg:grid-cols-2 grid-cols-1 mt-5 gap-5">
       <BaseCard
         :cardData="managements[1]"
         :id="`${managements[1].id}`"
@@ -36,8 +34,6 @@ storeToRefs(store)
         :id="`${managements[2].id}`"
         @openPopup="store.togglePopup(managements[2].id)"
       />
-    </div>
-    <div class="grid lg:grid-cols-2 grid-cols-1 mt-5 gap-5">
       <BaseCard
         :cardData="managements[3]"
         :id="`${managements[3].id}`"

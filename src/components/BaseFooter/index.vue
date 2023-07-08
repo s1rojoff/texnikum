@@ -10,7 +10,7 @@ const { navLinks } = store
     <div class="container mx-auto px-5 lg:px-24 md:px-7 pt-7 md:mt-28 mt-10 pb-3">
       <div class="hidden md:block">
         <div class="grid md:grid-cols-3 grid-cols-1">
-          <div class="mx-auto">
+          <div class="">
             <!-- <img src="/images/logo-text-sariq.png" class="w-52 p-0" alt="" /> -->
             <div class="flex items-center justify-start">
               <BaseIcon class="lg:w-7 md:w-5 lg:h-7 md:h-5" name="location" />

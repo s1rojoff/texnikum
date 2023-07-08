@@ -31,7 +31,7 @@ export const useHeaderStore = defineStore('header', {
               route: '/about'
             },
             {
-              name: "Kafedralar",
+              name: 'Kafedralar',
               route: '/about'
             },
             {
@@ -112,7 +112,7 @@ export const useHeaderStore = defineStore('header', {
               route: '/about'
             },
             {
-              name: "Kafedralar",
+              name: 'Kafedralar',
               route: '/about'
             },
             {

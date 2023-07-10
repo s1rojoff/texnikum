@@ -16,5 +16,6 @@ export interface Rahbariyat {
   phone: string
   qabul: string
   email: string,
-  experience: string
+  experience: string,
+  mandate: string
 }

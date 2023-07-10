@@ -188,7 +188,8 @@ export const useAboutStore = defineStore('about', {
   state: () => {
     return {
       openModal: false,
-      cardId: 0
+      cardId: 0,
+      visibleInfo : false,
     }
   },
   actions: {
@@ -197,6 +198,9 @@ export const useAboutStore = defineStore('about', {
         this.$state.cardId = id - 1
       }
       this.$state.openModal = !this.$state.openModal
-    }
+    },
+    toggleInfo(){
+      this.$state.visibleInfo = !this.$state.visibleInfo
+    },
   }
 })

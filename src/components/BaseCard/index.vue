@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const emits = defineEmits(['openPopup'])
+import { ref } from 'vue'
+const emits = defineEmits(['expInfo', 'manInfo'])
 const props = defineProps({
   cardData: {
     type: Object,
@@ -8,12 +9,30 @@ const props = defineProps({
   id: {
     type: String,
     required: true
+  },
+  showInfo: {
+    type: Boolean,
+    default: false
   }
 })
+//currentExp: boolean, currentMan: boolean
+const currentExp = ref<boolean>(false)
+const currentMan = ref<boolean>(false)
+function replaceInfoExp() {
+  currentExp.value = true
+  if (currentMan.value) {
+    currentMan.value = false
+  }
+}
+function replaceInfoMan() {
+  currentMan.value = true
+  if (currentExp.value) {
+    currentExp.value = false
+  }
+}
 </script>
 
 <template>
- 
   <br />
   <div class="w-full rounded py-3 px-4 bg-gray-100">
     <div class="flex items-start gap-10">
@@ -42,22 +61,34 @@ const props = defineProps({
           </div>
         </div>
 
+        <!-- Informations -->
         <div class="flex items-center gap-20 mt-16">
-          <button class="toggle-btn">Ish tajribasi</button>
-          <button class="toggle-btn">Majburiyatlari</button>
+          <button :class="currentExp ? 'bg-main text-white': 'bg-white text-main'" class="toggle-btn" @click="replaceInfoExp">Ish tajribasi</button>
+          <button
+            :class="currentMan ? 'bg-main text-white': 'bg-white text-main'"
+            class="toggle-btn"
+            @click="replaceInfoMan"
+          >
+            Majburiyatlari
+          </button>
         </div>
       </div>
     </div>
+
     <div class="px-5 mt-5">
-      <p class="text-center text-xl text-main font-semibold">Ish tajribasi</p>
-      <p class="mt-1">
-        
-      </p>
+      <div v-if="currentExp">
+        <p class="text-center text-xl text-main font-semibold">Ish tajribasi</p>
+        <p class="mt-1">{{ props.cardData.experience }}</p>
+      </div>
+      <div v-if="currentMan">
+        <p class="text-center text-xl text-main font-semibold">Majburiyatlari</p>
+        <p class="mt-1">{{ props.cardData.mandate }}</p>
+      </div>
     </div>
   </div>
 </template>
 <style>
 .toggle-btn {
-  @apply rounded-2xl border-main border bg-white text-main py-1 px-10 hover:bg-main hover:text-white transition;
+  @apply rounded-2xl border-main border py-1 px-10 hover:bg-main hover:text-white transition;
 }
 </style>

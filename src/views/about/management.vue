@@ -6,6 +6,7 @@ import { useAboutStore } from '@/stores'
 import { storeToRefs } from 'pinia'
 const store: any = useAboutStore()
 storeToRefs(store)
+
 </script>
 
 <template>
@@ -24,7 +25,8 @@ storeToRefs(store)
         :key="index"
         :id="`${management.id}`"
         :cardData="management"
-        @openPopup="store.togglePopup(management.id)"
+        :showInfo="store.visibleInfo"
+        @expInfo="store.toggleInfo"
       />
     </div>
   </div>

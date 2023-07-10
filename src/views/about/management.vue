@@ -20,29 +20,11 @@ storeToRefs(store)
   <div class="mt-10 container mx-auto lg:px-24">
     <div>
       <BaseCard
-        :id="`${managements[0].id}`"
-        :cardData="managements[0]"
-        @openPopup="store.togglePopup(managements[0].id)"
-      />
-      <BaseCard
-        :cardData="managements[1]"
-        :id="`${managements[1].id}`"
-        @openPopup="store.togglePopup(managements[1].id)"
-      />
-      <BaseCard
-        :cardData="managements[2]"
-        :id="`${managements[2].id}`"
-        @openPopup="store.togglePopup(managements[2].id)"
-      />
-      <BaseCard
-        :cardData="managements[3]"
-        :id="`${managements[3].id}`"
-        @openPopup="store.togglePopup(managements[3].id)"
-      />
-      <BaseCard
-        :cardData="managements[4]"
-        :id="`${managements[4].id}`"
-        @openPopup="store.togglePopup(managements[4].id)"
+        v-for="(management, index) in managements"
+        :key="index"
+        :id="`${management.id}`"
+        :cardData="management"
+        @openPopup="store.togglePopup(management.id)"
       />
     </div>
   </div>

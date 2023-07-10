@@ -19,15 +19,23 @@ const props = defineProps({
 const currentExp = ref<boolean>(false)
 const currentMan = ref<boolean>(false)
 function replaceInfoExp() {
-  currentExp.value = true
-  if (currentMan.value) {
-    currentMan.value = false
+  if (currentExp.value) {
+    currentExp.value = false
+  } else {
+    currentExp.value = true
+    if (currentMan.value) {
+      currentMan.value = false
+    }
   }
 }
 function replaceInfoMan() {
-  currentMan.value = true
-  if (currentExp.value) {
-    currentExp.value = false
+  if (currentMan.value) {
+    currentMan.value = false
+  } else {
+    currentMan.value = true
+    if (currentExp.value) {
+      currentExp.value = false
+    }
   }
 }
 </script>
@@ -63,9 +71,15 @@ function replaceInfoMan() {
 
         <!-- Informations -->
         <div class="flex items-center gap-20 mt-16">
-          <button :class="currentExp ? 'bg-main text-white': 'bg-white text-main'" class="toggle-btn" @click="replaceInfoExp">Ish tajribasi</button>
           <button
-            :class="currentMan ? 'bg-main text-white': 'bg-white text-main'"
+            :class="currentExp ? 'bg-main text-white' : 'bg-white text-main'"
+            class="toggle-btn"
+            @click="replaceInfoExp"
+          >
+            Ish tajribasi
+          </button>
+          <button
+            :class="currentMan ? 'bg-main text-white' : 'bg-white text-main'"
             class="toggle-btn"
             @click="replaceInfoMan"
           >

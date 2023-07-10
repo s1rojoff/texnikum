@@ -20,7 +20,7 @@ export const useHeaderStore = defineStore('header', {
             },
             {
               name: 'Tashkiliy tuzilma',
-              route: '/about'
+              route: '/about/structure'
             },
             {
               name: 'Rahbariyat',

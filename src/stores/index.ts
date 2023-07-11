@@ -24,7 +24,7 @@ export const useHeaderStore = defineStore('header', {
             },
             {
               name: 'Rahbariyat',
-              route: 'about/management'
+              route: '/about/management'
             },
             {
               name: "Bo'linmalar",

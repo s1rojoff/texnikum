@@ -19,3 +19,27 @@ export interface Rahbariyat {
   experience: string,
   mandate: string
 }
+
+// international/department
+
+export interface  Department {
+  lavozim: string,
+  email: string,
+  name:string,
+  url: string,
+  phone: string,
+  experience: string,
+  mandate: string
+}
+
+// international/currentpro
+
+// export interface Currentpro {
+//   id: number,
+//   name: string,
+//   url: string,
+//   text:string,
+//   phone: string,
+//   email: string,
+//   position: string,
+// }

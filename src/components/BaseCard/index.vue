@@ -43,7 +43,7 @@ function replaceInfoMan() {
 <template>
   <br />
   <div class="w-full rounded py-3 px-4 bg-gray-100">
-    <div class="flex items-start gap-10">
+    <div class="flex  items-start gap-10 ">
       <div class="1/3">
         <img
           :src="props.cardData.url"

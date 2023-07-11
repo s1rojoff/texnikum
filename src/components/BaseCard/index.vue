@@ -6,10 +6,6 @@ const props = defineProps({
     type: Object,
     required: true
   },
-  id: {
-    type: String,
-    required: true
-  },
   showInfo: {
     type: Boolean,
     default: false
@@ -63,7 +59,7 @@ function replaceInfoMan() {
             <p>Email</p>
             <p>{{ props.cardData.email }}</p>
           </div>
-          <div class="grid grid-cols-1 grid-rows-2">
+          <div  v-if="props.cardData.qabul" class="grid grid-cols-1 grid-rows-2">
             <p>Qabul kunlari</p>
             <p>{{ props.cardData.qabul }}</p>
           </div>

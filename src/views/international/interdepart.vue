@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import BaseCard from '@/components/BaseCard/index.vue'
 import { useAboutPage } from './composable'
-const { Department } = useAboutPage()
 import { useAboutStore } from '@/stores'
 import { storeToRefs } from 'pinia'
+const { department } = useAboutPage()
 const store: any = useAboutStore()
 storeToRefs(store)
 </script>
@@ -25,7 +25,7 @@ storeToRefs(store)
   <div class="mx-auto container">
     <div class="mt-10 container mx-auto lg:px-24">
       <div>
-        <BaseCard :cardData="Department[0]" />
+        <BaseCard :cardData="department" />
       </div>
     </div>
     <!-- information about international department  -->

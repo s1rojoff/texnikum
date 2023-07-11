@@ -19,9 +19,25 @@ export const routers = [
         path: 'management',
         name: 'Rahbariyat',
         meta: {
-          name: 'Rahbariyat'
+          parentName: 'Biz haqimizda'
         },
         component: () => import('@/views/about/management.vue')
+      },
+      {
+        path: 'structure',
+        name: 'Tarkibiy tuzilma',
+        meta: {
+          parentName: 'Biz haqimizda'
+        },
+        component: () => import('@/views/about/sturucture.vue')
+      },
+      {
+        path: 'division',
+        name: "Bo'linma",
+        meta: {
+          parentName: 'Biz haqimizda'
+        },
+        component: () => import('@/views/about/division.vue')
       }
     ]
   }

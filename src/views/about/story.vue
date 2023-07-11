@@ -3,9 +3,9 @@
   <div
     class="bg-[url('/about/header-about.avif')] lg:px-24 bg-no-repeat w-full bg-center bg-cover h-[75vh]"
   >
-    <div class="text-start top-2/3 border-b-2 border-main">
-      <p class="text-4xl font-extrabold text-white">Toshkent temir yo'l texnikumi</p>
-      <p class="text-4xl font-extrabold text-white">Haqida</p>
+    <div class="text-start top-2/3 ">
+      <p class="text-4xl font-extrabold border-b-2 border-white text-white">Toshkent temir yo'l texnikumi</p>
+      <p class="text-3xl font-bold text-white"> Biz haqimizda</p>
     </div>
   </div>
   <div class="mx-auto container lg:px-24">

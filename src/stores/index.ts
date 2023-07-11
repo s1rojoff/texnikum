@@ -50,19 +50,23 @@ export const useHeaderStore = defineStore('header', {
           visible: false,
           subMenu: [
             {
-              name: 'Texnikum haqida',
+              name: "Bo'lim haqida",
+              route: '/international'
+            },
+            {
+              name: 'Amaladgi loyihalar',
+              route: 'international/currentpro'
+            },
+            {
+              name: 'Xorijiy talabalarga',
               route: '/about'
             },
             {
-              name: 'Rahbariyat',
+              name: 'Jalb etilgan sarmoyalar va grantlar',
               route: '/about'
             },
             {
-              name: 'Tashkiliy tuzilma',
-              route: '/about'
-            },
-            {
-              name: 'Kasaba uyushmasi',
+              name: 'Xorijda malaka oshirish va ta’lim',
               route: '/about'
             }
           ]

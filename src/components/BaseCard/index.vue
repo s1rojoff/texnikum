@@ -6,10 +6,6 @@ const props = defineProps({
     type: Object,
     required: true
   },
-  id: {
-    type: String,
-    required: true
-  },
   showInfo: {
     type: Boolean,
     default: false
@@ -43,7 +39,7 @@ function replaceInfoMan() {
 <template>
   <br />
   <div class="w-full rounded py-3 px-4 bg-gray-100">
-    <div class="flex items-start gap-10">
+    <div class="flex  items-start gap-10 ">
       <div class="1/3">
         <img
           :src="props.cardData.url"
@@ -63,7 +59,7 @@ function replaceInfoMan() {
             <p>Email</p>
             <p>{{ props.cardData.email }}</p>
           </div>
-          <div class="grid grid-cols-1 grid-rows-2">
+          <div  v-if="props.cardData.qabul" class="grid grid-cols-1 grid-rows-2">
             <p>Qabul kunlari</p>
             <p>{{ props.cardData.qabul }}</p>
           </div>

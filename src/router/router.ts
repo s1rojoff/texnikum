@@ -40,5 +40,38 @@ export const routers = [
         component: () => import('@/views/about/division.vue')
       }
     ]
+  },
+  {
+    path: '/international',
+    name: 'Xalqaro aloqalar',
+    component: () => import('@/views/international/index.vue'),
+    children: [
+      {
+        path: '',
+        name: "Bolim haqida",
+        component: () => import('@/views/international/interdepart.vue')
+      },
+      {
+        path: 'currentpro',
+        name: "Amaldagi loyihalar",
+        component: () => import('@/views/international/currentpro.vue')
+      },
+      // {
+      //   path: '',
+      //   name: "Bo'lim hqida",
+      //   component: () => import('@/views/international/interdepart.vue')
+      // },
+      // {
+      //   path: '',
+      //   name: "Bo'lim hqida",
+      //   component: () => import('@/views/international/interdepart.vue')
+      // },
+      // {
+      //   path: '',
+      //   name: "Bo'lim hqida",
+      //   component: () => import('@/views/international/interdepart.vue')
+      // },
+    ]
   }
+
 ]

@@ -53,9 +53,12 @@ storeToRefs(store)
             v-if="navLinks[index].visible"
             class="h-auto py-2 w-64 absolute px-4 text-start rounded-lg bg-main"
           >
-            <p v-for="(item, index) in link.subMenu" :key="index" class="text-white cursor-pointer text-sm py-1">
+            <p
+              v-for="(item, index) in link.subMenu"
+              :key="index"
+              class="text-white cursor-pointer text-xs py-1.5"
+            >
               <router-link :to="item.route">{{ item.name }}</router-link>
-              
             </p>
           </div>
         </div>

@@ -28,7 +28,7 @@ export const useHeaderStore = defineStore('header', {
             },
             {
               name: "Bo'linmalar",
-              route: '/about'
+              route: '/about/division'
             },
             {
               name: 'Kafedralar',

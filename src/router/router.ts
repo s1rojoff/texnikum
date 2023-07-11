@@ -30,6 +30,14 @@ export const routers = [
           parentName: 'Biz haqimizda'
         },
         component: () => import('@/views/about/sturucture.vue')
+      },
+      {
+        path: 'division',
+        name: "Bo'linma",
+        meta: {
+          parentName: 'Biz haqimizda'
+        },
+        component: () => import('@/views/about/division.vue')
       }
     ]
   }

@@ -56,7 +56,7 @@ export function useAboutPage() {
     },
     {
       id: 5,
-      name: 'Test  Testov Testovich',
+      name: 'Farhod aka',
       url: '/rahbariyat/myself.jpg',
       lavozim: "Direktorning moliya-iqtisod va ma'muriy xo'jalik ishlari bo‘yicha o‘rinbosari",
       phone: '(71) 299-05-76',

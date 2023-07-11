@@ -37,7 +37,7 @@ export const routers = [
         meta: {
           parentName: 'Biz haqimizda'
         },
-        component: () => import('@/views/about/division.vue')
+        component: () => import('@/views/about/division/index.vue')
       }
     ]
   },

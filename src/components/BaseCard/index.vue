@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-const emits = defineEmits(['expInfo', 'manInfo'])
 const props = defineProps({
   cardData: {
     type: Object,
@@ -11,7 +10,6 @@ const props = defineProps({
     default: false
   }
 })
-//currentExp: boolean, currentMan: boolean
 const currentExp = ref<boolean>(false)
 const currentMan = ref<boolean>(false)
 function replaceInfoExp() {
@@ -87,11 +85,11 @@ function replaceInfoMan() {
 
     <div class="px-5 mt-5">
       <div v-if="currentExp">
-        <p class="text-center text-xl text-main font-semibold">Ish tajribasi</p>
+        <p class="title">Ish tajribasi</p>
         <p class="mt-1">{{ props.cardData.experience }}</p>
       </div>
       <div v-if="currentMan">
-        <p class="text-center text-xl text-main font-semibold">Majburiyatlari</p>
+        <p class="title">Majburiyatlari</p>
         <p class="mt-1">{{ props.cardData.mandate }}</p>
       </div>
     </div>
@@ -100,5 +98,8 @@ function replaceInfoMan() {
 <style>
 .toggle-btn {
   @apply rounded-2xl border-main border py-1 px-10 hover:bg-main hover:text-white transition;
+}
+.title{
+  @apply text-center text-xl text-main font-semibold
 }
 </style>

@@ -37,7 +37,39 @@ export const routers = [
         meta: {
           parentName: 'Biz haqimizda'
         },
-        component: () => import('@/views/about/division/index.vue')
+        component: () => import('@/views/about/division/main.vue'),
+        children:[
+          {
+            path: '',
+            name: 'InfraStruktura index',
+            component: () => import('@/views/about/division/index.vue')
+          },
+          {
+            path: 'infrastructure',
+            name: 'InfraStruktura',
+            component: () => import('@/views/about/division/infrastructure.vue')
+          },
+          {
+            path: 'energy',
+            name: 'Elektr energiyasi',
+            component: () => import('@/views/about/division/energy.vue')
+          },
+          {
+            path: 'auto-info',
+            name: 'Automation information',
+            component: () => import('@/views/about/division/auto-info.vue')
+          },
+          {
+            path: 'movement',
+            name: 'Movement',
+            component: () => import('@/views/about/division/movement.vue')
+          },
+          {
+            path: 'organization',
+            name: 'Organization',
+            component: () => import('@/views/about/division/organization.vue')
+          }
+        ]
       }
     ]
   },

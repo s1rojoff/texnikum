@@ -46,8 +46,8 @@ export const routers = [
           },
           {
             path: 'infrastructure',
-            name: 'InfraStruktura',
-            component: () => import('@/views/about/division/infrastructure.vue')
+            name: 'InfraStructure',
+            component: () => import('@/views/about/division/infrastruktura.vue')
           },
           {
             path: 'energy',

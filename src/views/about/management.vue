@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import BaseCard from '@/components/BaseCard/index.vue'
 import { useAboutPage } from '@/views/about/composable'
-const { managements } = useAboutPage()
 import { useAboutStore } from '@/stores'
 import { storeToRefs } from 'pinia'
+const { managements } = useAboutPage()
 const store: any = useAboutStore()
 storeToRefs(store)
 </script>

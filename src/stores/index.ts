@@ -54,8 +54,8 @@ export const useHeaderStore = defineStore('header', {
               route: '/international'
             },
             {
-              name: 'Amaladgi loyihalar',
-              route: 'international/currentpro'
+              name: 'Amaldagi loyihalar',
+              route: '/international/currentpro'
             },
             {
               name: 'Xorijiy talabalarga',

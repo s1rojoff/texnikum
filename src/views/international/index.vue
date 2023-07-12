@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Baseheader from '@/components/BaseHeader/index.vue'
 import Basefooter from '@/components/BaseFooter/index.vue'
+
 </script>
 <template>
   <!-- Header -->

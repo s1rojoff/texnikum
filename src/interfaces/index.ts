@@ -34,12 +34,10 @@ export interface  Department {
 
 // international/currentpro
 
-// export interface Currentpro {
-//   id: number,
-//   name: string,
-//   url: string,
-//   text:string,
-//   phone: string,
-//   email: string,
-//   position: string,
-// }
+export interface CurrentPro {
+  id: number,
+  title: string,
+  subtitle: string,
+  url: string,
+  description:string,
+}

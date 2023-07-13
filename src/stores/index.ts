@@ -32,7 +32,7 @@ export const useHeaderStore = defineStore('header', {
             },
             {
               name: 'Kafedralar',
-              route: '/about'
+              route: '/about/department'
             },
             {
               name: "Bo'limlar",

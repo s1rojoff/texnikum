@@ -70,6 +70,44 @@ export const routers = [
             component: () => import('@/views/about/division/organization.vue')
           }
         ]
+      },
+      {
+        path: 'department',
+        name: 'Kafedralar',
+        component:()=> import ('@/views/about/departments/main.vue'),
+        children:[
+          {
+            path: '',
+            name: 'Kafedra main page',
+            component: ()=> import('@/views/about/departments/index.vue')
+          },
+          {
+            path: 'general-education',
+            name: 'Umumtalim',
+            component: ()=> import('@/views/about/departments/general-education.vue')
+          },
+          {
+            path: 'bugaltery',
+            name: 'Bugalteriya hisobi',
+            component: ()=> import('@/views/about/departments/bugaltery.vue')
+          },
+          {
+            path: 'logistic',
+            name: 'Harakatni tashkil etish',
+            component: ()=> import('@/views/about/departments/movement.vue')
+          },
+          {
+            path: 'automation',
+            name: 'Automatik aloqa',
+            component: ()=> import('@/views/about/departments/automatic.vue')
+          },
+          {
+            path: 'infrastructure',
+            name: 'Harakat tarkibi',
+            component: ()=> import('@/views/about/departments/infratuzilma.vue')
+          },
+          
+        ]
       }
     ]
   },

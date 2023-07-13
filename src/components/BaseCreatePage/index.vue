@@ -3,6 +3,10 @@ const props = defineProps({
   divisionPageInfo:{
     type: Object,
     required: true
+  },
+  infoName:{
+    type: String,
+    default: "Bo'lim"
   }
 }) 
 </script>
@@ -15,7 +19,7 @@ const props = defineProps({
   </div>
   <div class="lg:px-24">
     <div class="text-center mt-10">
-      <span class="text-main text-4xl border-b-2 border-main font-semibold">Bo'lim haqida</span>
+      <span class="text-main text-4xl border-b-2 border-main font-semibold">{{ props.infoName }} haqida</span>
     </div>
     <p class="mt-4">
       {{ props.divisionPageInfo.description }}

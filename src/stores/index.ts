@@ -36,7 +36,7 @@ export const useHeaderStore = defineStore('header', {
             },
             {
               name: "Bo'limlar",
-              route: '/about'
+              route: '/about/dep-employee'
             },
             {
               name: 'Kasaba uyushmasi',

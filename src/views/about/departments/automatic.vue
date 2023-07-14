@@ -4,5 +4,5 @@ import { useDepartment } from '@/views/about/departments/composable';
 const {departments} = useDepartment()
 </script>
 <template>
-    <BaseBaseCreatePage :division-page-info="departments[3]" info-name="Kafedra"/>
+    <BaseBaseCreatePage :page-info="departments[3]" info-name="Kafedra"/>
 </template>

@@ -19,7 +19,7 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
       </p>
     </div>
   </div>
-  <div class="container mx-auto lg:mt-20 px-24">
+  <div class="container mx-auto lg:mt-20 lg:px-24 px-5">
     <div>
       <p class="title">Qabul komissiyasi faoliyati</p>
       <p class="subtitle">
@@ -110,7 +110,7 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
     <BaseFooter />
   </div>
 </template>
-<style>
+<style scoped>
 .title {
   @apply sm:text-5xl font-light text-black border-solid border-l-stone-400 sm:pb-10 sm:mb-2 border-b-2 text-3xl text-center sm:pt-10;
 }

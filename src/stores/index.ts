@@ -135,21 +135,21 @@ export const useHeaderStore = defineStore('header', {
           visible: false,
           subMenu: [
             {
-              name: 'Texnikum haqida',
-              route: '/about'
+              name: "Qabul komissiyasi haqida ma'lumot",
+              route: '/acceptance'
             },
-            {
-              name: 'Rahbariyat',
-              route: '/about'
-            },
-            {
-              name: 'Tashkiliy tuzilma',
-              route: '/about'
-            },
-            {
-              name: 'Kasaba uyushmasi',
-              route: '/about'
-            }
+            // {
+            //   name: 'Rahbariyat',
+            //   route: '/about'
+            // },
+            // {
+            //   name: 'Tashkiliy tuzilma',
+            //   route: '/about'
+            // },
+            // {
+            //   name: 'Kasaba uyushmasi',
+            //   route: '/about'
+            // }
           ]
         },
         {

@@ -32,19 +32,24 @@ function replaceInfoExp() {
           <p class="subtitle text-base/6 max-w-[400px]">{{ props.cardData.subtitle }}</p>
         </div>
 
-        <button class="float-right  button border rounded-md bg-blue-500/50 px-3 py-1 right-0 text-white hover:bg-white hover:shadow-blue-500/50 shadow-lg hover:text-second" @click="replaceInfoExp">Batasil</button>
-
-        
+        <div>
+          <button
+            class="float-right button border rounded-md bg-blue-500/50 px-3 py-1 right-0 text-white hover:bg-white hover:shadow-blue-500/50 shadow-lg hover:text-second"
+            @click="replaceInfoExp"
+          >
+            Batafsil
+          </button>
+        </div>
       </div>
     </div>
     <div v-if="currentExp">
-          <p class="description mt-2">{{ props.cardData.description }}</p>
-        </div>
+      <p class="description mt-2">{{ props.cardData.description }}</p>
+    </div>
   </div>
 </template>
 <style>
 .box {
-  @apply md:flex  flex-wrap grid justify-items-center gap-10 md:flex-nowrap ;
+  @apply md:flex  flex-wrap grid justify-items-center gap-10 md:flex-nowrap;
 }
 .img {
   @apply rounded-md min-w-[300px] h-[200px] object-cover;

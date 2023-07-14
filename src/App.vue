@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import {RouterView } from 'vue-router'
-// import International from '@/views/international/index.vue'
+// import Acceptance from '@/views/acceptance/index.vue'
 </script>
 
 <template>
-  <!-- <div><International/></div> -->
+  <!-- <div><Acceptance/></div> -->
 <RouterView></RouterView> 
 </template>

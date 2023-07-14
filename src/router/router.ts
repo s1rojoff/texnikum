@@ -1,3 +1,4 @@
+
 export const routers = [
   {
     path: '/',
@@ -38,7 +39,7 @@ export const routers = [
           parentName: 'Biz haqimizda'
         },
         component: () => import('@/views/about/division/main.vue'),
-        children:[
+        children: [
           {
             path: '',
             name: 'InfraStruktura index',
@@ -126,21 +127,19 @@ export const routers = [
         name: "Amaldagi loyihalar",
         component: () => import('@/views/international/currentpro.vue')
       },
-      // {
-      //   path: '',
-      //   name: "Bo'lim hqida",
-      //   component: () => import('@/views/international/interdepart.vue')
-      // },
-      // {
-      //   path: '',
-      //   name: "Bo'lim hqida",
-      //   component: () => import('@/views/international/interdepart.vue')
-      // },
-      // {
-      //   path: '',
-      //   name: "Bo'lim hqida",
-      //   component: () => import('@/views/international/interdepart.vue')
-      // },
+    ]
+  },
+  {
+    path: '/acceptance',
+    name: 'Qabul komissiyasi',
+    component: () => import('@/views/acceptance/index.vue'),
+    children: [
+      {
+        path: '',
+        name: "Qabul komissiyasi haqida ma'lumot",
+        component: () => import('@/views/acceptance/index.vue')
+      }
+
     ]
   }
 

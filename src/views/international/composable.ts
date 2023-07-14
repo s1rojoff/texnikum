@@ -21,23 +21,30 @@ export function useprojectsPage() {
   const currentPros = ref<CurrentPro[]>([
     {
       id: 1,
-      title: "Transport universiteti talabalari Polsha davlatining Sileziya Texnologiya Universitetida o'qish imkoniyatiga ega bo'ldi",
+      title: "Shimoliy Kavkaz kon-metallurgiya instituti (Davlat texnologiya universiteti) (SKGMI)",
       subtitle:  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magnam, voluptatem iure animi impedit, pariatur facilis',
-      url: '/international/current_pro.jpeg',
+      url: '/international/univer-1.jpg',
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magnam, voluptatem iure animi impedit, pariatur facilis sapiente soluta veniam alias ipsum cumque quibusdam praesentium harum delectus. Expedita, optio recusandae. Laudantium quam sunt in itaque? Maxime optio mollitia dolorum hic provident eius aspernatur. Similique animi facere maiores corrupti. Nulla itaque totam molestiae similique dicta dolores vel nostrum, tenetur illum illo incidunt magni cumque odio iusto nemo suscipit necessitatibus corporis, autem laborum nobis. Perferendis, quia at! Quia ratione consequuntur saepe repellat vel blanditiis explicabo rerum unde et commodi quae atque, totam consequatur doloremque eligendi, eaque exercitationem. Quae corporis temporibus doloremque veniam nisi!"
     },
     {
       id: 2,
-      title: "Temir yo'l korxonalarida hafta davomida amalga oshirilgan ishlar haqida",
+      title: "Rossiya transport universiteti (RUT MIIT)",
       subtitle:  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magnam, voluptatem iure animi impedit, pariatur facilis',
-      url: '/international/map.jpg',
+      url: '/international/univer-2.jpg',
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magnam, voluptatem iure animi impedit, pariatur facilis sapiente soluta veniam alias ipsum cumque quibusdam praesentium harum delectus. Expedita, optio recusandae. Laudantium quam sunt in itaque? Maxime optio mollitia dolorum hic provident eius aspernatur. Similique animi facere maiores corrupti. Nulla itaque totam molestiae similique dicta dolores vel nostrum, tenetur illum illo incidunt magni cumque odio iusto nemo suscipit necessitatibus corporis, autem laborum nobis. Perferendis, quia at! Quia ratione consequuntur saepe repellat vel blanditiis explicabo rerum unde et commodi quae atque, totam consequatur doloremque eligendi, eaque exercitationem. Quae corporis temporibus doloremque veniam nisi!"
     },
     {
       id: 3,
-      title: "Xitoy - Qirg'iziston - O'zbekiston ' Afg'oniston multimodal yo'nalishida Xitoydan O'zbekistonga konteyner blok-poyezdi jo'natildi",
+      title: "Moskva arxitektura instituti (Davlat akademiyasi) (MARCHI)",
       subtitle:  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magnam, voluptatem iure animi impedit, pariatur facilis',
-      url: '/international/current_pro-3.jpg',
+      url: '/international/univer-3.jpg',
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magnam, voluptatem iure animi impedit, pariatur facilis sapiente soluta veniam alias ipsum cumque quibusdam praesentium harum delectus. Expedita, optio recusandae. Laudantium quam sunt in itaque? Maxime optio mollitia dolorum hic provident eius aspernatur. Similique animi facere maiores corrupti. Nulla itaque totam molestiae similique dicta dolores vel nostrum, tenetur illum illo incidunt magni cumque odio iusto nemo suscipit necessitatibus corporis, autem laborum nobis. Perferendis, quia at! Quia ratione consequuntur saepe repellat vel blanditiis explicabo rerum unde et commodi quae atque, totam consequatur doloremque eligendi, eaque exercitationem. Quae corporis temporibus doloremque veniam nisi!"
+    },
+    {
+      id: 4,
+      title: "Belarus davlat transport universiteti (BelSUT)",
+      subtitle:  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magnam, voluptatem iure animi impedit, pariatur facilis',
+      url: '/international/univer-4.jpg',
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magnam, voluptatem iure animi impedit, pariatur facilis sapiente soluta veniam alias ipsum cumque quibusdam praesentium harum delectus. Expedita, optio recusandae. Laudantium quam sunt in itaque? Maxime optio mollitia dolorum hic provident eius aspernatur. Similique animi facere maiores corrupti. Nulla itaque totam molestiae similique dicta dolores vel nostrum, tenetur illum illo incidunt magni cumque odio iusto nemo suscipit necessitatibus corporis, autem laborum nobis. Perferendis, quia at! Quia ratione consequuntur saepe repellat vel blanditiis explicabo rerum unde et commodi quae atque, totam consequatur doloremque eligendi, eaque exercitationem. Quae corporis temporibus doloremque veniam nisi!"
     }
   ])

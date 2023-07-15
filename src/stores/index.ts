@@ -40,7 +40,7 @@ export const useHeaderStore = defineStore('header', {
             },
             {
               name: 'Kasaba uyushmasi',
-              route: '/about'
+              route: '/about/tradeunion'
             }
           ]
         },

@@ -184,6 +184,11 @@ export const routers = [
             component: () => import('@/views/about/dep_employe/technicalEconomy.vue')
           }
         ]
+      },
+      {
+        path: 'tradeunion',
+        name: 'Kasaba uyushmasi',
+        component: () => import('@/views/about/tradeunion.vue')
       }
     ]
   },

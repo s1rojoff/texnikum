@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { useDepartment } from '@/views/about/departments/composable'
-import BaseSmallPage from '@/components/BaseSmallCard/index.vue'
-const { departments } = useDepartment()
+import BaseSmallCard from '@/components/BaseSmallCard/index.vue'
+import {usedepEmploye} from '@/views/about/dep_employe/composable'
+const {depEmployes} = usedepEmploye()
+
 </script>
 <template>
   <div
@@ -13,13 +14,13 @@ const { departments } = useDepartment()
       >
         Toshkent temir yo'l texnikumi
       </p>
-      <p class="sm:text-4xl font-light text-2xl text-white">Kafedralari</p>
+      <p class="sm:text-4xl font-light text-2xl text-white">Bo'limlari</p>
     </div>
   </div>
   <div class="mx-auto container mt-16 lg:px-24">
     <div class="grid grid-cols-3 gap-5">
-      <div v-for="(item, index) in departments" :key="index">
-        <BaseSmallPage :item-info="item" />
+      <div v-for="(item, index) in depEmployes" :key="index">
+        <BaseSmallCard :item-info="item" />
       </div>
     </div>
   </div>

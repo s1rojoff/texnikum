@@ -28,8 +28,8 @@ function replaceInfoExp() {
       </div>
       <div>
         <div class="flex flex-wrap gap-5">
-          <p class="title text-xl md:text-2xl">{{ props.cardData.title }}</p>
-          <p class="subtitle text-base/6 max-w-[400px]">{{ props.cardData.subtitle }}</p>
+          <p class=" text-xl md:text-2xl">{{ props.cardData.title }}</p>
+          <p class=" text-base/6 max-w-[400px]">{{ props.cardData.subtitle }}</p>
         </div>
 
         <div>

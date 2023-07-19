@@ -3,9 +3,9 @@ const props = defineProps({
   itemInfo: {
     type: Object,
     default: {},
-    required: true
-  }
-})
+    required: true,
+  },
+});
 </script>
 <template>
   <div>

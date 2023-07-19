@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const props = defineProps({
-  pageInfo:{
+  pageInfo: {
     type: Object,
     required: true
   },
-  infoName:{
+  infoName: {
     type: String,
     default: "Bo'linma"
   }
-}) 
+})
 </script>
 <template>
   <div class="relative">
@@ -18,8 +18,11 @@ const props = defineProps({
     </div>
   </div>
   <div class="lg:px-24">
+    <div class="mt-10"><slot name="boss"></slot></div>
     <div class="text-center mt-10">
-      <span class="text-main text-4xl border-b-2 border-main font-semibold">{{ props.infoName }} haqida</span>
+      <span class="text-main text-4xl border-b-2 border-main font-semibold"
+        >{{ props.infoName }} haqida ma'lumot</span
+      >
     </div>
     <p class="mt-4">
       {{ props.pageInfo.description }}

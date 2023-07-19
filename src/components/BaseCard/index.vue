@@ -36,8 +36,8 @@ function replaceInfoMan() {
 
 <template>
   <br />
-  <div class="w-full rounded py-3 px-4 bg-gray-100">
-    <div class="flex  items-start gap-10 ">
+  <div class="w-full rounded py-5 px-4 bg-gray-100">
+    <div class="flex items-start gap-10">
       <div class="1/3">
         <img
           :src="props.cardData.url"
@@ -48,7 +48,10 @@ function replaceInfoMan() {
       <div class="w-2/3">
         <p class="text-center text-lg">{{ props.cardData.lavozim }}</p>
         <p class="text-center text-2xl">{{ props.cardData.name }}</p>
-        <div class="flex justify-between">
+        <div
+          class="flex justify-between"
+          :class="{ 'mt-10': !props.cardData.experience && !props.cardData.mandate }"
+        >
           <div class="grid grid-cols-1 grid-rows-2">
             <p>Telefon</p>
             <p>{{ props.cardData.phone }}</p>
@@ -57,14 +60,17 @@ function replaceInfoMan() {
             <p>Email</p>
             <p>{{ props.cardData.email }}</p>
           </div>
-          <div  v-if="props.cardData.qabul" class="grid grid-cols-1 grid-rows-2">
+          <div v-if="props.cardData.qabul" class="grid grid-cols-1 grid-rows-2">
             <p>Qabul kunlari</p>
             <p>{{ props.cardData.qabul }}</p>
           </div>
         </div>
 
         <!-- Informations -->
-        <div class="flex items-center gap-20 mt-16">
+        <div
+          class="flex items-center gap-20 mt-16"
+          v-if="props.cardData.experience && props.cardData.mandate"
+        >
           <button
             :class="currentExp ? 'bg-main text-white' : 'bg-white text-main'"
             class="toggle-btn"
@@ -99,7 +105,7 @@ function replaceInfoMan() {
 .toggle-btn {
   @apply rounded-2xl border-main border py-1 px-10 hover:bg-main hover:text-white transition;
 }
-.title{
-  @apply text-center text-xl text-main font-semibold
+.title {
+  @apply text-center text-xl text-main font-semibold;
 }
 </style>

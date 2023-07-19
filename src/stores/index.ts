@@ -100,33 +100,29 @@ export const useHeaderStore = defineStore('header', {
           visible: false,
           subMenu: [
             {
-              name: 'Texnikum haqida',
+              name: 'Yangiliklar',
+              route: '/announcement/news'
+            },
+            {
+              name: 'Kutilyotgan tadbirlar',
               route: '/about'
             },
             {
-              name: 'Tashkiliy tuzilma',
+              name: 'Videoroliklar',
               route: '/about'
             },
             {
-              name: 'Rahbariyat',
+              name: "Fotolavhalar",
               route: '/about'
             },
             {
-              name: "Bo'linmalar",
+              name: 'Direktorga murojaat qilish ',
               route: '/about'
             },
             {
-              name: 'Kafedralar',
+              name: "Aloqa",
               route: '/about'
             },
-            {
-              name: "Bo'limlar",
-              route: '/about'
-            },
-            {
-              name: 'Kasaba uyushmasi',
-              route: '/about'
-            }
           ]
         },
         {
@@ -138,18 +134,6 @@ export const useHeaderStore = defineStore('header', {
               name: "Qabul komissiyasi haqida ma'lumot",
               route: '/acceptance'
             },
-            // {
-            //   name: 'Rahbariyat',
-            //   route: '/about'
-            // },
-            // {
-            //   name: 'Tashkiliy tuzilma',
-            //   route: '/about'
-            // },
-            // {
-            //   name: 'Kasaba uyushmasi',
-            //   route: '/about'
-            // }
           ]
         },
         {

@@ -4,13 +4,14 @@ import BaseIcon from '@/components/BaseIcon/index.vue'
 import { useBaseHeader } from '@/components/BaseHeader/composable'
 import { routers } from '@/router/router'
 import { useHeaderStore } from '@/stores'
+import { ref } from 'vue'
 const { topIconName } = useBaseHeader()
 const store: any = useHeaderStore()
 const { toggleNavbar, navLinks, toggleSubNav } = store
 storeToRefs(store)
 </script>
 <template>
-  <div class="sticky">
+  <div>
     <!-- Logo and  icons for social media -->
     <div class="bg-white hidden md:block">
       <div
@@ -53,13 +54,11 @@ storeToRefs(store)
             v-if="navLinks[index].visible"
             class="h-auto py-2 w-64 absolute px-4 text-start rounded-lg bg-main"
           >
-            <p
-              v-for="(item, index) in link.subMenu"
-              :key="index"
-              class="text-white cursor-pointer text-xs py-1.5"
-            >
-              <router-link :to="item.route">{{ item.name }}</router-link>
-            </p>
+            <router-link v-for="(item, index) in link.subMenu" :key="index" :to="item.route">
+              <p class="text-white cursor-pointer text-xs py-1.5">
+                {{ item.name }}
+              </p>
+            </router-link>
           </div>
         </div>
         <BaseIcon class="lg:w-7 lg:h-7 md:w-5 md:-5" name="search" />

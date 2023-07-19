@@ -5,6 +5,8 @@ const { devisions } = useDivision()
 </script>
 <template>
   <div>
-    <BaseCreatePage :page-info="devisions[4]"/>
+    <BaseCreatePage :page-info="devisions[4]">
+          
+    </BaseCreatePage>
   </div>
 </template>

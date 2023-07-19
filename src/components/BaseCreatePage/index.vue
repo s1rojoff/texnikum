@@ -13,7 +13,7 @@ const props = defineProps({
 <template>
   <div class="relative">
     <img class="w-full lg:h-[75vh]" :src="props.pageInfo.url" alt="" />
-    <div class="absolute bottom-0 bg-main py-3 px-5">
+    <div class="absolute bottom-0 bg-main py-3 px-5 w-full">
       <p class="text-white lg:text-4xl font-semibold tracking-wider">{{ props.pageInfo.name }}</p>
     </div>
   </div>

@@ -2,7 +2,6 @@
 import { useInvestmentPage } from './composable'
 import { useAboutStore } from '@/stores'
 import { storeToRefs } from 'pinia'
-import type { Key } from 'readline'
 const { investment } = useInvestmentPage()
 const store: any = useAboutStore()
 storeToRefs(store)

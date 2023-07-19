@@ -41,3 +41,19 @@ export interface CurrentPro {
   url: string,
   description:string,
 }
+// international/investment
+export interface Investment {
+  id: number,
+  grantName: string,
+  direction: string,
+  period: string,
+  leader: string
+}
+
+export interface Activities {
+  id: number, 
+  url: string,
+  title: string,
+  subtitle: string,
+  date: string
+}

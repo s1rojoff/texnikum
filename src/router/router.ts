@@ -206,6 +206,34 @@ export const routers = [
         path: 'currentpro',
         name: 'Amaldagi loyihalar',
         component: () => import('@/views/international/currentpro.vue')
+
+      },
+      {
+        path: 'students',
+        name: 'Xorijdagi talabalarga',
+        component: () => import('@/views/international/students.vue')
+      },
+      {
+        path: 'investment',
+        name: 'Jalb etilgan sarmoyalar va grantlar',
+        component: () => import('@/views/international/investment.vue')
+      },
+      {
+        path: 'foreignPractice',
+        name: "Xorijda malaka oshirish va ta'lim",
+        component: () => import('@/views/international/foreignpractice.vue')
+      }
+    ]
+  },
+  {
+    path: '/youthpolicy',
+    name: 'Yoshlar siyosati',
+    component: () => import('@/views/youthPolicy/index.vue'),
+    children: [
+      {
+        path: 'activities',
+        name: "Ma'daniy va ma'rifiy tadbirlar",
+        component: () => import('@/views/youthPolicy/activities.vue')
       }
     ]
   },

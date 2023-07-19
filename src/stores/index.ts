@@ -59,15 +59,15 @@ export const useHeaderStore = defineStore('header', {
             },
             {
               name: 'Xorijiy talabalarga',
-              route: '/about'
+              route: '/international/students'
             },
             {
               name: 'Jalb etilgan sarmoyalar va grantlar',
-              route: '/about'
+              route: '/international/investment'
             },
             {
               name: 'Xorijda malaka oshirish va ta’lim',
-              route: '/about'
+              route: '/international/foreignpractice'
             }
           ]
         },
@@ -77,19 +77,27 @@ export const useHeaderStore = defineStore('header', {
           visible: false,
           subMenu: [
             {
-              name: 'Texnikum haqida',
+              name: "Ma'naviy va Ma'rifiy tadbirlar",
+              route: '/youthpolicy/activities'
+            },
+            {
+              name: "Yoshlar bilan ishlash, ma'naviyat va ma'rifat bo'limi",
               route: '/about'
             },
             {
-              name: 'Rahbariyat',
+              name: "To'garak va klublar",
               route: '/about'
             },
             {
-              name: 'Tashkiliy tuzilma',
+              name: "Tanlovlar, musobaqa va stipendiyalar",
               route: '/about'
             },
             {
-              name: 'Kasaba uyushmasi',
+              name: "Talabalar shaharchasi",
+              route: '/about'
+            },
+            {
+              name: "Talabalar hayotidan fotogalereya",
               route: '/about'
             }
           ]

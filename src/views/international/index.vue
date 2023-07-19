@@ -5,7 +5,7 @@ import Basefooter from '@/components/BaseFooter/index.vue'
 </script>
 <template>
   <!-- Header -->
-  <div class="sticky top-0 z-10">
+  <div class="sticky top-0 z-30">
     <Baseheader />
   </div>
   <router-view></router-view>

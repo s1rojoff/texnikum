@@ -130,7 +130,7 @@ export const routers = [
           },
           {
             path: 'international',
-            name: 'Xalqaro aloqalar',
+            name: 'Xalqaro Aloqalar',
             component: () => import('@/views/about/dep_employe/international.vue')
           },
           {
@@ -246,6 +246,18 @@ export const routers = [
         path: '',
         name: "Qabul komissiyasi haqida ma'lumot",
         component: () => import('@/views/acceptance/index.vue')
+      }
+    ]
+  },
+  {
+    path: '/announcement',
+    name: "E'lonlar",
+    component: ()=> import('@/views/announcement/main.vue'),
+    children:[
+      {
+        path: 'news',
+        name: 'main page of announcement page',
+        component: ()=> import('@/views/announcement/index.vue')
       }
     ]
   }

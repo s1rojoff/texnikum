@@ -9,7 +9,7 @@ import PartnersHome from '@/views/home/partners-home.vue'
 import BaseFooter from '@/components/BaseFooter/index.vue'
 </script>
 <template>
-  <div class="sticky z-20 top-0">
+  <div class="sticky top-0 z-10">
     <div class="">
       <BaseHeader />
     </div>

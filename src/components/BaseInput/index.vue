@@ -12,6 +12,10 @@ const props = defineProps({
   placeholder: {
     type: String,
     default: ''
+  },
+  size:{
+    type: String,
+    default: 'md'
   }
 })
 </script>
@@ -19,7 +23,8 @@ const props = defineProps({
 <template>
   <div>
     <input
-      class="border-main border w-full rounded-2xl py-2 outline-none px-2"
+      class="border-main border w-full rounded-2xl py-1 outline-none px-2"
+      :class="{'py-2' : (props.size == 'md'), 'py-1' :(props.size == 'sm') }"
       :type="props.type"
       :value="props.modelValue"
       :placeholder="props.placeholder"

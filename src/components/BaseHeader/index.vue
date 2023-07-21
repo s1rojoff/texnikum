@@ -52,12 +52,12 @@ storeToRefs(store)
 
           <div
             v-if="navLinks[index].visible"
-            class="h-auto py-2 w-64 absolute px-4 text-start rounded-lg bg-main"
+            class="h-auto py-2 w-64 absolute px-4 text-start bg-bgColor drop-shadow-md"
           >
             <p
               v-for="(item, index) in link.subMenu"
               :key="index"
-              class="text-white cursor-pointer text-xs py-1.5"
+              class="menu-style text-black font-medium cursor-pointer text-xs py-1.5 m-3  border-solid border-b-2"
             >
               <router-link v-if="item.name != 'Direktorga murojaat qilish'" :to="item.route">
                 {{ item.name }}
@@ -71,11 +71,11 @@ storeToRefs(store)
     </div>
     <!-- iPad view navbars -->
     <div
-      class="bg-main py-9 px-14 rounded-br-3xl absolute block lg:hidden"
+      class="ipad-style bg-bgColor py-9 px-14  h-[100vh] absolute block lg:hidden "
       v-if="store.$state.ipadNavs"
     >
       <p
-        class="lg:text-[21px] border-b border-white last:border-none pb-4 mt-4 first:mt-0 lg:font-normal lg:text-main md:text-white"
+        class=" lg:text-[21px]  border-b-2 border-opacityColor last:border-none pb-4 mt-4 first:mt-0 lg:font-normal lg:text-main md:text-black"
         v-for="(link, index) in navLinks"
         :key="index"
       >
@@ -86,4 +86,9 @@ storeToRefs(store)
     </div>
   </div>
 </template>
-<style></style>
+<style>
+  .menu-style:hover{  
+   @apply border-sky-500 transition duration-150 ease-out hover:ease-in 
+  }
+
+</style>

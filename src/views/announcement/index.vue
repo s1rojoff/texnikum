@@ -28,7 +28,7 @@ const categories = ['Barchasi', 'Jamiyat', 'Sport', 'Texnikum', 'Rahbariyat']
   </div>
   <div class="container mx-auto lg:px-24 mt-10">
     <div class="flex items-start gap-5">
-      <div class="grid grid-cols-2 w-4/5 gap-x-5 gap-y-5">
+      <div class="grid grid-cols-2 w-3/4 gap-x-5 gap-y-5">
         <BaseNewsCard />
         <BaseNewsCard />
         <BaseNewsCard />
@@ -39,10 +39,10 @@ const categories = ['Barchasi', 'Jamiyat', 'Sport', 'Texnikum', 'Rahbariyat']
         <BaseNewsCard />
         <BaseNewsCard />
       </div>
-      <div class="w-1/5">
+      <div class="w-1/4">
       <BaseInput placeholder="Search for" size="sm" type="search" />
         <p class="text-main text-start text-lg mt-5 font-medium">Kategoriyalar</p>
-        <p class="border-b first:mt-2 custom-transition text-sm border-main py-3 cursor-pointer hover:pl-2 transition hover:bg-slate-200" v-for="item in categories" :key="item">{{ item }}</p>
+        <p class="border-b first:mt-2 custom-transition text-sm border-main py-3 cursor-pointer hover:pl-4 pl-2 transition hover:bg-slate-200" v-for="item in categories" :key="item">{{ item }}</p>
       </div>
     </div>
   </div>

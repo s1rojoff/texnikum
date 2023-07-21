@@ -11,6 +11,7 @@ const { toggleNavbar, navLinks, toggleSubNav } = store
 storeToRefs(store)
 </script>
 <template>
+  <marquee style="position: absolute; top: 0; z-index: 70; font-size: 20px; color: red;" truespeed="2" direction="left" width="100%">Сайт работает на тестовом режиме</marquee>
   <div>
     <!-- Logo and  icons for social media -->
     <div class="bg-white hidden md:block">

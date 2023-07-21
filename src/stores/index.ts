@@ -82,23 +82,23 @@ export const useHeaderStore = defineStore('header', {
             },
             {
               name: "Yoshlar bilan ishlash, ma'naviyat va ma'rifat bo'limi",
-              route: '/about'
+              route: '/youthpolicy/youthwork'
             },
             {
               name: "To'garak va klublar",
-              route: '/about'
+              route: '/youthpolicy/training'
             },
             {
               name: "Tanlovlar, musobaqa va stipendiyalar",
-              route: '/about'
+              route: '/youthpolicy/scholarship'
             },
             {
               name: "Talabalar shaharchasi",
-              route: '/about'
+              route: '/youthpolicy/studentcampus'
             },
             {
               name: "Talabalar hayotidan fotogalereya",
-              route: '/about'
+              route: '/youthpolicy/galery'
             }
           ]
         },

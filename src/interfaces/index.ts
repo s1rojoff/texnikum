@@ -57,3 +57,11 @@ export interface Activities {
   subtitle: string,
   date: string
 }
+export interface Trainings {
+  id: number,
+  url: string,
+  title: string,
+  subtitle: string,
+  date: string,
+  description: string
+}

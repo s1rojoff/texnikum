@@ -234,6 +234,31 @@ export const routers = [
         path: 'activities',
         name: "Ma'daniy va ma'rifiy tadbirlar",
         component: () => import('@/views/youthPolicy/activities.vue')
+      },
+      {
+        path: 'youthwork',
+        name: "Yoshlar bilan ishlash, ma'naviyat va ma'rifat bo'limi",
+        component: () => import('@/views/youthPolicy/youthWork.vue')
+      },
+      {
+        path: 'training',
+        name: "To'garak va klublar",
+        component: () => import('@/views/youthPolicy/training.vue')
+      },
+      {
+        path: 'scholarship',
+        name: "Tanlovlar, musobaqa va stipendiyalar",
+        component: () => import('@/views/youthPolicy/scholarship.vue')
+      },
+      {
+        path:'studentcampus',
+        name: "Talabalar shaharchasi",
+        component: () => import('@/views/youthPolicy/studentCampus.vue')
+      },
+      {
+        path: 'galery',
+        name: 'Talabalar hayotidan fotogalereya',
+        component: () => import('@/views/youthPolicy/galery.vue')
       }
     ]
   },

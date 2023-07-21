@@ -283,7 +283,17 @@ export const routers = [
         path: 'news',
         name: 'main page of announcement page',
         component: ()=> import('@/views/announcement/index.vue')
+      },
+      {
+        path: 'upcoming-event',
+        name: 'Upcoming events',
+        component: ()=> import('@/views/announcement/upcomingEvent.vue')
       }
     ]
+  },
+  {
+    path :'/connection',
+    name: 'Connection with texnikum',
+    component: ()=> import('@/views/connect-texnikum.vue')
   }
 ]

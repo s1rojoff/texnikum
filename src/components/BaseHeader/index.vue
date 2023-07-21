@@ -11,7 +11,6 @@ const { toggleNavbar, navLinks, toggleSubNav } = store
 storeToRefs(store)
 </script>
 <template>
-  <marquee style="position: absolute; top: 0; z-index: 70; font-size: 20px; color: red;" truespeed="2" direction="left" width="100%">Сайт работает на тестовом режиме</marquee>
   <div>
     <!-- Logo and  icons for social media -->
     <div class="bg-white hidden md:block">
@@ -55,11 +54,16 @@ storeToRefs(store)
             v-if="navLinks[index].visible"
             class="h-auto py-2 w-64 absolute px-4 text-start rounded-lg bg-main"
           >
-            <router-link v-for="(item, index) in link.subMenu" :key="index" :to="item.route">
-              <p class="text-white cursor-pointer text-xs py-1.5">
+            <p
+              v-for="(item, index) in link.subMenu"
+              :key="index"
+              class="text-white cursor-pointer text-xs py-1.5"
+            >
+              <router-link v-if="item.name != 'Direktorga murojaat qilish'" :to="item.route">
                 {{ item.name }}
-              </p>
-            </router-link>
+              </router-link>
+              <a v-if="item.name == 'Direktorga murojaat qilish'" target="_blank" :href="item.route">{{ item.name }}</a>
+            </p>
           </div>
         </div>
         <BaseIcon class="lg:w-7 lg:h-7 md:w-5 md:-5" name="search" />

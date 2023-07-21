@@ -113,23 +113,15 @@ export const useHeaderStore = defineStore('header', {
             },
             {
               name: 'Kutilyotgan tadbirlar',
-              route: '/about'
+              route: '/announcement/upcoming-event'
             },
             {
               name: 'Videoroliklar',
               route: '/about'
             },
             {
-              name: "Fotolavhalar",
-              route: '/about'
-            },
-            {
-              name: 'Direktorga murojaat qilish ',
-              route: '/about'
-            },
-            {
-              name: "Aloqa",
-              route: '/about'
+              name: 'Direktorga murojaat qilish',
+              route: 'https://t.me/ttytdirektor_bot'
             },
           ]
         },
@@ -150,20 +142,8 @@ export const useHeaderStore = defineStore('header', {
           visible: false,
           subMenu: [
             {
-              name: 'Texnikum haqida',
-              route: '/about'
-            },
-            {
-              name: 'Rahbariyat',
-              route: '/about'
-            },
-            {
-              name: 'Tashkiliy tuzilma',
-              route: '/about'
-            },
-            {
-              name: 'Kasaba uyushmasi',
-              route: '/about'
+              name: "Biz bilan bog'lanish",
+              route: '/connection'
             }
           ]
         }

@@ -54,12 +54,17 @@ storeToRefs(store)
             v-if="navLinks[index].visible"
             class="h-auto py-2 w-64 absolute px-4 text-start bg-bgColor drop-shadow-md"
           >
+<<<<<<< Updated upstream
             <p
               v-for="(item, index) in link.subMenu"
               :key="index"
               class="menu-style text-black font-medium cursor-pointer text-xs py-1.5 m-3  border-solid border-b-2"
             >
               <router-link v-if="item.name != 'Direktorga murojaat qilish'" :to="item.route">
+=======
+            <router-link v-for="(item, index) in link.subMenu" :key="index" :to="item.route">
+              <p class="menu-style text-black font-medium cursor-pointer text-xs py-1.5 m-3  border-solid border-b-2 ">
+>>>>>>> Stashed changes
                 {{ item.name }}
               </router-link>
               <a v-if="item.name == 'Direktorga murojaat qilish'" target="_blank" :href="item.route">{{ item.name }}</a>

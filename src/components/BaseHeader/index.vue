@@ -14,57 +14,28 @@ storeToRefs(store)
   <div>
     <!-- Logo and  icons for social media -->
     <div class="bg-white hidden md:block">
-      <div
-        class="lg:px-24 md:px-7 lg:py-2 mx-auto container md:flex md:items-center md:justify-between"
-      >
-        <router-link to="/" class="cursor-pointer"
-          ><img src="/images/logo-header.png" class="w-32" alt=""
-        /></router-link>
+      <div class="lg:px-24 md:px-7 lg:py-2 mx-auto container md:flex md:items-center md:justify-between">
+        <router-link to="/" class="cursor-pointer"><img src="/images/logo-header.png" class="w-32" alt="" /></router-link>
         <div class="md:flex md:items-center md:justify-end lg:gap-6 md:gap-2">
-          <BaseIcon
-            v-for="(icon, index) in topIconName"
-            :key="index"
-            :name="icon"
-            class="lg:w-7 lg:h-7 md:w-6 md:h-6"
-          />
+          <BaseIcon v-for="(icon, index) in topIconName" :key="index" :name="icon" class="lg:w-7 lg:h-7 md:w-6 md:h-6" />
         </div>
       </div>
     </div>
 
     <!-- Laptop view navbars -->
     <div class="bg-[#E2F0F9]">
-      <div
-        class="container mx-auto py-3 flex md:px-7 lg:px-24 px-5 items-center justify-between md:py-2 lg:py-6"
-      >
-        <BaseIcon
-          class="lg:w-7 lg:h-7 cursor-pointe md:w-5 md:-5"
-          @click="toggleNavbar"
-          name="dashboard"
-        />
-        <div
-          class="lg:text-lg relative uppercase lg:block hidden lg:font-normal text-main"
-          v-for="(link, index) in navLinks"
-          :key="index"
-          @mouseenter="toggleSubNav(index)"
-          @mouseleave="toggleSubNav(index)"
-        >
+      <div class="container mx-auto py-3 flex md:px-7 lg:px-24 px-5 items-center justify-between md:py-2 lg:py-6">
+        <BaseIcon class="lg:w-7 lg:h-7 cursor-pointe md:w-5 md:-5" @click="toggleNavbar" name="dashboard" />
+        <div class="lg:text-lg relative uppercase lg:block hidden lg:font-normal text-main"
+          v-for="(link, index) in navLinks" :key="index" @mouseenter="toggleSubNav(index)"
+          @mouseleave="toggleSubNav(index)">
           <p class="cursor-pointer">{{ link.name }}</p>
 
-          <div
-            v-if="navLinks[index].visible"
-            class="h-auto py-2 w-64 absolute px-4 text-start bg-bgColor drop-shadow-md"
-          >
-<<<<<<< Updated upstream
-            <p
-              v-for="(item, index) in link.subMenu"
-              :key="index"
-              class="menu-style text-black font-medium cursor-pointer text-xs py-1.5 m-3  border-solid border-b-2"
-            >
+          <div v-if="navLinks[index].visible" class="h-auto py-2 w-64 absolute px-4 text-start bg-bgColor drop-shadow-md">
+            <p v-for="(item, index) in link.subMenu" :key="index"
+              class="menu-style text-black font-medium cursor-pointer text-xs py-1.5 m-3  border-solid border-b-2">
               <router-link v-if="item.name != 'Direktorga murojaat qilish'" :to="item.route">
-=======
-            <router-link v-for="(item, index) in link.subMenu" :key="index" :to="item.route">
-              <p class="menu-style text-black font-medium cursor-pointer text-xs py-1.5 m-3  border-solid border-b-2 ">
->>>>>>> Stashed changes
+
                 {{ item.name }}
               </router-link>
               <a v-if="item.name == 'Direktorga murojaat qilish'" target="_blank" :href="item.route">{{ item.name }}</a>
@@ -75,15 +46,9 @@ storeToRefs(store)
       </div>
     </div>
     <!-- iPad view navbars -->
-    <div
-      class="ipad-style bg-bgColor py-9 px-14  h-[100vh] absolute block lg:hidden "
-      v-if="store.$state.ipadNavs"
-    >
-      <p
-        class=" lg:text-[21px]  border-b-2 border-opacityColor last:border-none pb-4 mt-4 first:mt-0 lg:font-normal lg:text-main md:text-black"
-        v-for="(link, index) in navLinks"
-        :key="index"
-      >
+    <div class="ipad-style bg-bgColor py-9 px-14  h-[100vh] absolute block lg:hidden " v-if="store.$state.ipadNavs">
+      <p class=" lg:text-[21px]  border-b-2 border-opacityColor last:border-none pb-4 mt-4 first:mt-0 lg:font-normal lg:text-main md:text-black"
+        v-for="(link, index) in navLinks" :key="index">
         <router-link :to="link.route">
           {{ link.name }}
         </router-link>
@@ -92,8 +57,7 @@ storeToRefs(store)
   </div>
 </template>
 <style>
-  .menu-style:hover{  
-   @apply border-sky-500 transition duration-150 ease-out hover:ease-in 
-  }
-
+.menu-style:hover {
+  @apply border-sky-500 transition duration-150 ease-out hover:ease-in
+}
 </style>

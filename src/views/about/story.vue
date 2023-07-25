@@ -1,15 +1,16 @@
 <script setup lang="ts"></script>
 <template>
   <div
-    class="bg-[url('/about/header-about.avif')] lg:px-24 bg-no-repeat w-full bg-center bg-cover h-[75vh]"
+    class="bg-[url('/about/about_us.jpg')] lg:px-24 bg-no-repeat w-full bg-center bg-cover h-[75vh]"
   >
     <div class="text-start top-2/3">
       <p
-        class="sm:text-5xl font-medium text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-4 text-3xl"
+      class="sm:text-5xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none z-[3]"
       >
       Biz haqimizda
       </p>
     </div>
+    <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-2"></div>
   </div>
   <div class="mx-auto container lg:px-24">
     <div class="flex justify-between items-start gap-24 pt-20">

@@ -1,16 +1,17 @@
 <script setup lang="ts"></script>
 <template>
   <div
-    class="bg-[url('/about/header-about.avif')] lg:px-24 bg-no-repeat w-full bg-center bg-cover h-[75vh]"
-  >
-    <div class="text-start top-2/3">
-      <p
-        class="sm:text-5xl font-medium text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-4 text-3xl"
-      >
-      Tashkiliy tuzilmasi
-      </p>
+      class="bg-[url('/about/strcuture.webp')] lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh]"
+    >
+      <div class="mx-auto container top-2/3 text-start z-20">
+        <p
+          class="sm:text-5xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none"
+        >
+          Tashkiliy tuzilmasi
+        </p>
+      </div>
+      <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-[3]"></div>
     </div>
-  </div>
   <div class="lg:px-24 mt-5">
     <img class="w-full" src="/images/Tarkibiy_tuzilma.jpg" alt="" />
   </div>

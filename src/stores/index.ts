@@ -1,13 +1,15 @@
 import { defineStore } from 'pinia'
 import { type NavLink } from '@/interfaces'
 interface StateHeader {
-  navLinks: NavLink[]
   ipadNavs: boolean
+  allMenus: boolean
+  navLinks: NavLink[]
 }
 export const useHeaderStore = defineStore('header', {
   state: (): StateHeader => {
     return {
       ipadNavs: false,
+      allMenus: false,
       navLinks: [
         {
           name: 'Biz haqimizda',
@@ -89,15 +91,15 @@ export const useHeaderStore = defineStore('header', {
               route: '/youthpolicy/training'
             },
             {
-              name: "Tanlovlar, musobaqa va stipendiyalar",
+              name: 'Tanlovlar, musobaqa va stipendiyalar',
               route: '/youthpolicy/scholarship'
             },
             {
-              name: "Talabalar shaharchasi",
+              name: 'Talabalar shaharchasi',
               route: '/youthpolicy/studentcampus'
             },
             {
-              name: "Talabalar hayotidan fotogalereya",
+              name: 'Talabalar hayotidan fotogalereya',
               route: '/youthpolicy/galery'
             }
           ]
@@ -122,7 +124,7 @@ export const useHeaderStore = defineStore('header', {
             {
               name: 'Direktorga murojaat qilish',
               route: 'https://t.me/ttytdirektor_bot'
-            },
+            }
           ]
         },
         {
@@ -133,7 +135,7 @@ export const useHeaderStore = defineStore('header', {
             {
               name: "Qabul komissiyasi haqida ma'lumot",
               route: '/acceptance'
-            },
+            }
           ]
         },
         {
@@ -153,6 +155,7 @@ export const useHeaderStore = defineStore('header', {
   actions: {
     toggleNavbar() {
       this.$state.ipadNavs = !this.$state.ipadNavs
+      this.$state.allMenus = !this.$state.allMenus
     },
     toggleSubNav(index: number) {
       this.$state.navLinks[index].visible = !this.$state.navLinks[index].visible
@@ -165,7 +168,7 @@ export const useAboutStore = defineStore('about', {
     return {
       openModal: false,
       cardId: 0,
-      visibleInfo : false,
+      visibleInfo: false
     }
   },
   actions: {
@@ -175,8 +178,8 @@ export const useAboutStore = defineStore('about', {
       }
       this.$state.openModal = !this.$state.openModal
     },
-    toggleInfo(){
+    toggleInfo() {
       this.$state.visibleInfo = !this.$state.visibleInfo
-    },
+    }
   }
 })

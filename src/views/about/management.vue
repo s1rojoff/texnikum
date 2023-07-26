@@ -10,15 +10,16 @@ storeToRefs(store)
 
 <template>
   <div
-    class="bg-[url('/about/header-about.avif')] lg:px-24 bg-no-repeat w-full bg-center bg-cover h-[75vh]"
+    class="bg-[url('/about/management.webp')] lg:px-24 bg-no-repeat w-full bg-center bg-cover h-[75vh]"
   >
     <div class="text-start top-2/3">
       <p
-        class="sm:text-5xl font-medium text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-4 text-3xl"
+        class="sm:text-5xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none z-[3]"
       >
         Rahbariyat
       </p>
     </div>
+    <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-2"></div>
   </div>
   <div class="mt-10 container mx-auto lg:px-24">
     <div>

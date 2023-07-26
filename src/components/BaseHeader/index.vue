@@ -12,19 +12,10 @@ storeToRefs(store)
   <div>
     <!-- Logo and  icons for social media -->
     <div class="bg-white hidden md:block">
-      <div
-        class="lg:px-24 md:px-7 lg:py-2 mx-auto container md:flex md:items-center md:justify-between"
-      >
-        <router-link to="/" class="cursor-pointer"
-          ><img src="/images/logo-header.png" class="w-32" alt=""
-        /></router-link>
+      <div class="lg:px-24 md:px-7 lg:py-2 mx-auto container md:flex md:items-center md:justify-between">
+        <router-link to="/" class="cursor-pointer"><img src="/images/logo-header.png" class="w-32" alt="" /></router-link>
         <div class="md:flex md:items-center md:justify-end lg:gap-6 md:gap-2">
-          <BaseIcon
-            v-for="(icon, index) in topIconName"
-            :key="index"
-            :name="icon"
-            class="lg:w-7 lg:h-7 md:w-6 md:h-6"
-          />
+          <BaseIcon v-for="(icon, index) in topIconName" :key="index" :name="icon" class="lg:w-7 lg:h-7 md:w-6 md:h-6" />
         </div>
       </div>
     </div>
@@ -59,6 +50,7 @@ storeToRefs(store)
               class="menu-style text-black font-medium cursor-pointer text-xs py-1.5 m-3"
             >
               <router-link v-if="item.name != 'Direktorga murojaat qilish'" :to="item.route">
+
                 {{ item.name }}
               </router-link>
               <a

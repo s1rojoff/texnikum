@@ -10,6 +10,7 @@ storeToRefs(store)
 </script>
 <template>
   <div>
+    <marquee behavior="scroll" direction="left" scrollamount="10" class="absolute text-lg text-red-600 z-50 ">Сайт работает в тестовом режиме</marquee>
     <!-- Logo and  icons for social media -->
     <div class="bg-white hidden md:block">
       <div

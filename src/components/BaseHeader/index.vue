@@ -2,9 +2,7 @@
 import { storeToRefs } from 'pinia'
 import BaseIcon from '@/components/BaseIcon/index.vue'
 import { useBaseHeader } from '@/components/BaseHeader/composable'
-import { routers } from '@/router/router'
 import { useHeaderStore } from '@/stores'
-import { ref } from 'vue'
 const { topIconName } = useBaseHeader()
 const store: any = useHeaderStore()
 const { toggleNavbar, navLinks, toggleSubNav } = store
@@ -24,40 +22,127 @@ storeToRefs(store)
 
     <!-- Laptop view navbars -->
     <div class="bg-[#E2F0F9]">
-      <div class="container mx-auto py-3 flex md:px-7 lg:px-24 px-5 items-center justify-between md:py-2 lg:py-6">
-        <BaseIcon class="lg:w-7 lg:h-7 cursor-pointe md:w-5 md:-5" @click="toggleNavbar" name="dashboard" />
-        <div class="lg:text-lg relative uppercase lg:block hidden lg:font-normal text-main"
-          v-for="(link, index) in navLinks" :key="index" @mouseenter="toggleSubNav(index)"
-          @mouseleave="toggleSubNav(index)">
+      <div
+        class="container mx-auto py-3 flex md:px-7 lg:px-24 px-5 items-center justify-between md:py-2 lg:py-6"
+      >
+        <BaseIcon
+          class="lg:w-7 lg:h-7 cursor-pointer md:w-5 md:-5"
+          @click="toggleNavbar"
+          name="dashboard"
+        />
+
+        <div
+          class="lg:text-lg relative uppercase lg:block hidden lg:font-normal text-main"
+          v-for="(link, index) in navLinks"
+          :key="index"
+          @mouseenter="toggleSubNav(index)"
+          @mouseleave="toggleSubNav(index)"
+        >
           <p class="cursor-pointer">{{ link.name }}</p>
 
-          <div v-if="navLinks[index].visible" class="h-auto py-2 w-64 absolute px-4 text-start bg-bgColor drop-shadow-md">
-            <p v-for="(item, index) in link.subMenu" :key="index"
-              class="menu-style text-black font-medium cursor-pointer text-xs py-1.5 m-3  border-solid border-b-2">
+          <div
+            v-if="navLinks[index].visible && !store.$state.allMenus"
+            class="h-auto py-2 w-64 absolute px-4 text-start bg-bgColor drop-shadow-md"
+          >
+            <p
+              v-for="(item, index) in link.subMenu"
+              :key="index"
+              class="menu-style text-black font-medium cursor-pointer text-xs py-1.5 m-3"
+            >
               <router-link v-if="item.name != 'Direktorga murojaat qilish'" :to="item.route">
 
                 {{ item.name }}
               </router-link>
-              <a v-if="item.name == 'Direktorga murojaat qilish'" target="_blank" :href="item.route">{{ item.name }}</a>
+              <a
+                v-if="item.name == 'Direktorga murojaat qilish'"
+                target="_blank"
+                :href="item.route"
+                >{{ item.name }}</a
+              >
             </p>
           </div>
         </div>
         <BaseIcon class="lg:w-7 lg:h-7 md:w-5 md:-5" name="search" />
       </div>
     </div>
-    <!-- iPad view navbars -->
-    <div class="ipad-style bg-bgColor py-9 px-14  h-[100vh] absolute block lg:hidden " v-if="store.$state.ipadNavs">
-      <p class=" lg:text-[21px]  border-b-2 border-opacityColor last:border-none pb-4 mt-4 first:mt-0 lg:font-normal lg:text-main md:text-black"
-        v-for="(link, index) in navLinks" :key="index">
-        <router-link :to="link.route">
-          {{ link.name }}
-        </router-link>
-      </p>
+    <!-- All menues in navbar -->
+    <div class="relative hidden md:block " v-if="store.$state.allMenus">
+      <div class="bg-white absolute w-full h-80 pl-10 pt-5">
+        <div class="flex w-full items-start gap-5 justify-center">
+          <div v-for="(item, index) in navLinks" :key="index">
+            <p class="text-lg font-semibold pb-2">{{ item.name }}</p>
+            <p
+              v-for="(subItem, index) in item.subMenu"
+              :key="index"
+              @click="store.$state.allMenus = false"
+              class="text-sm py-1 cursor-pointer all-submenu"
+            >
+              <router-link :to="subItem.route" v-if="subItem.name != 'Direktorga murojaat qilish'">
+                {{ subItem.name }}
+              </router-link>
+              <a
+                v-if="subItem.name == 'Direktorga murojaat qilish'"
+                target="_blank"
+                :href="subItem.route"
+                >{{ subItem.name }}</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <style>
-.menu-style:hover {
-  @apply border-sky-500 transition duration-150 ease-out hover:ease-in
+.menu-style::after {
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: rgba(51, 80, 157, 1);
+  left: 0;
+  bottom: 0;
+  transition: all 0.4s linear;
+  position: absolute;
+}
+.menu-style:hover::after {
+  width: 100%;
+}
+.menu-style::before {
+  content: '';
+  width: 0;
+  background-color: rgba(51, 80, 157, 1);
+  right: 0;
+  top: 0;
+  transition: all 0.4s linear;
+  position: absolute;
+}
+.menu-style:hover::before {
+  width: 100%;
+}
+
+.all-submenu::after {
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: rgba(51, 80, 157, 1);
+  left: 0;
+  bottom: 0;
+  transition: all 0.4s linear;
+  position: absolute;
+}
+.all-submenu:hover::after {
+  width: 100%;
+}
+.all-submenu::before {
+  content: '';
+  width: 0;
+  background-color: rgba(51, 80, 157, 1);
+  right: 0;
+  top: 0;
+  transition: all 0.4s linear;
+  position: absolute;
+}
+.all-submenu:hover::before {
+  width: 100%;
 }
 </style>

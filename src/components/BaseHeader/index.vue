@@ -6,16 +6,39 @@ import { useHeaderStore } from '@/stores'
 const { topIconName } = useBaseHeader()
 const store: any = useHeaderStore()
 const { toggleNavbar, navLinks, toggleSubNav } = store
+const handleClicked = (id: number) => {
+  if (store.$state.phoneView != id) {
+    store.$state.phoneView = id
+  } else {
+    store.$state.phoneView = 123
+  }
+}
 storeToRefs(store)
 </script>
 <template>
   <div>
+    <marquee
+      behavior="scroll"
+      direction="left"
+      scrollamount="10"
+      class="absolute text-lg text-red-600 z-50"
+      >Сайт работает в тестовом режиме</marquee
+    >
     <!-- Logo and  icons for social media -->
     <div class="bg-white hidden md:block">
-      <div class="lg:px-24 md:px-7 lg:py-2 mx-auto container md:flex md:items-center md:justify-between">
-        <router-link to="/" class="cursor-pointer"><img src="/images/logo-header.png" class="w-32" alt="" /></router-link>
+      <div
+        class="lg:px-24 md:px-7 lg:py-2 mx-auto container md:flex md:items-center md:justify-between"
+      >
+        <router-link to="/" class="cursor-pointer" @click="store.$state.allMenus = false"
+          ><img src="/images/logo-header.png" class="w-32" alt=""
+        /></router-link>
         <div class="md:flex md:items-center md:justify-end lg:gap-6 md:gap-2">
-          <BaseIcon v-for="(icon, index) in topIconName" :key="index" :name="icon" class="lg:w-7 lg:h-7 md:w-6 md:h-6" />
+          <BaseIcon
+            v-for="(icon, index) in topIconName"
+            :key="index"
+            :name="icon"
+            class="lg:w-7 lg:h-7 md:w-6 md:h-6"
+          />
         </div>
       </div>
     </div>
@@ -50,7 +73,6 @@ storeToRefs(store)
               class="menu-style text-black font-medium cursor-pointer text-xs py-1.5 m-3"
             >
               <router-link v-if="item.name != 'Direktorga murojaat qilish'" :to="item.route">
-
                 {{ item.name }}
               </router-link>
               <a
@@ -62,11 +84,17 @@ storeToRefs(store)
             </p>
           </div>
         </div>
-        <BaseIcon class="lg:w-7 lg:h-7 md:w-5 md:-5" name="search" />
+        <router-link
+          to="/"
+          class="cursor-pointer block md:hidden"
+          @click="store.$state.allMenus = false"
+          ><img src="/images/logo-header.png" class="w-32" alt=""
+        /></router-link>
+        <BaseIcon class="lg:w-7 lg:h-7 md:w-5 md:-5 hidden md:block" name="search" />
       </div>
     </div>
     <!-- All menues in navbar -->
-    <div class="relative hidden md:block " v-if="store.$state.allMenus">
+    <div class="relative hidden md:block" v-if="store.$state.allMenus">
       <div class="bg-white absolute w-full h-80 pl-10 pt-5">
         <div class="flex w-full items-start gap-5 justify-center">
           <div v-for="(item, index) in navLinks" :key="index">
@@ -87,6 +115,37 @@ storeToRefs(store)
                 >{{ subItem.name }}</a
               >
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- phone view navbars -->
+
+    <div v-if="store.$state.allMenus" class="block md:hidden bg-white w-full h-[100dvh] px-5">
+      <div>
+        <div v-for="(item, index) in navLinks" :key="index" class="pt-3">
+          <div
+            @click.stop="handleClicked(item.id)"
+            class="flex items-center cursor-pointer justify-start gap-5"
+          >
+            <p class="text-lg text-black font-medium">{{ item.name }}</p>
+            <BaseIcon
+              :class="store.$state.phoneView === index + 1 ? 'rotate-180' : ''"
+              class="w-3 transition h-3 text-main"
+              name="down"
+            />
+          </div>
+          <div class="ml-3" v-if="store.$state.phoneView === index + 1">
+            <router-link
+              v-for="(subItem, subIndex) in item.subMenu"
+              :key="subIndex"
+              class="cursor-pointer block hover:text-main"
+              :to="subItem.route"
+              @click="store.$state.allMenus = false"
+            >
+              {{ subItem.name }}
+            </router-link>
           </div>
         </div>
       </div>

@@ -4,14 +4,17 @@ interface StateHeader {
   ipadNavs: boolean
   allMenus: boolean
   navLinks: NavLink[]
+  phoneView: number
 }
 export const useHeaderStore = defineStore('header', {
   state: (): StateHeader => {
     return {
+      phoneView: 1,
       ipadNavs: false,
       allMenus: false,
       navLinks: [
         {
+          id:1,
           name: 'Biz haqimizda',
           route: '/about',
           visible: false,
@@ -47,6 +50,7 @@ export const useHeaderStore = defineStore('header', {
           ]
         },
         {
+          id:2,
           name: 'Xalqaro aloqalar',
           route: '/',
           visible: false,
@@ -74,6 +78,7 @@ export const useHeaderStore = defineStore('header', {
           ]
         },
         {
+          id:3,
           name: 'Yoshlar siyosati',
           route: '/',
           visible: false,
@@ -105,6 +110,7 @@ export const useHeaderStore = defineStore('header', {
           ]
         },
         {
+          id:4,
           name: "E'lonlar",
           route: '/',
           visible: false,
@@ -128,6 +134,7 @@ export const useHeaderStore = defineStore('header', {
           ]
         },
         {
+          id:5,
           name: 'Qabul komissiyasi',
           route: '/',
           visible: false,
@@ -139,6 +146,7 @@ export const useHeaderStore = defineStore('header', {
           ]
         },
         {
+          id:6,
           name: "Bog'lanish",
           route: '/',
           visible: false,

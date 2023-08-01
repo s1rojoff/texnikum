@@ -36,20 +36,20 @@ function replaceInfoMan() {
 
 <template>
   <br />
-  <div class="w-full rounded py-5 px-4 bg-gray-100">
-    <div class="flex items-start gap-10">
+  <div class="w-full rounded py-5 px-4 bg-slate-100 shadow-lg shadow-indigo-500/50">
+    <div class="flex items-start gap-10 md:flex-nowrap flex-wrap justify-center">
       <div class="1/3">
         <img
           :src="props.cardData.url"
           :alt="props.cardData.id"
-          class="md:h-52 bg-cover bg-center rounded md:w-48"
+          class="md:h-52 h-[200px] sm:h-[300px] bg-cover bg-center rounded md:w-48"
         />
       </div>
-      <div class="w-2/3">
+      <div class="md:w-2/3 w-full">
         <p class="text-center text-lg">{{ props.cardData.lavozim }}</p>
         <p class="text-center text-2xl">{{ props.cardData.name }}</p>
         <div
-          class="flex justify-between"
+          class="flex sm:justify-between mt-11 flex-wrap md:flex-row gap-4 flex-col"
           :class="{ 'mt-10': !props.cardData.experience && !props.cardData.mandate }"
         >
           <div class="grid grid-cols-1 grid-rows-2">
@@ -73,7 +73,7 @@ function replaceInfoMan() {
         >
           <button
             :class="currentExp ? 'bg-main text-white' : 'bg-white text-main'"
-            class="toggle-btn"
+            class="toggle-btn "
             @click="replaceInfoExp"
           >
             Ish tajribasi
@@ -103,7 +103,7 @@ function replaceInfoMan() {
 </template>
 <style>
 .toggle-btn {
-  @apply rounded-2xl border-main border py-1 px-10 hover:bg-main hover:text-white transition;
+  @apply rounded-md border-none border py-1 px-10 hover:bg-blue-500/50 hover:text-white transition hover:hover:shadow-blue-500/50 shadow-lg; 
 }
 .title {
   @apply text-center text-xl text-main font-semibold;

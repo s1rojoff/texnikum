@@ -1,25 +1,26 @@
 <script setup lang="ts"></script>
 <template>
   <div
-    class="bg-[url('/about/about_us.jpg')] lg:px-24 bg-no-repeat w-full bg-center bg-cover h-[75vh]"
+    class="bg-[url('/about/about_us.jpg')] lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh]"
   >
-    <div class="text-start top-2/3">
+    <div class="mx-auto container top-2/3 text-start z-20">
       <p
-      class="sm:text-5xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none z-[3]"
+        class="sm:text-5xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none"
       >
-      Biz haqimizda
+        Biz haqimizda
       </p>
     </div>
-    <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-2"></div>
+    <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-[2]"></div>
   </div>
-  <div class="mx-auto container lg:px-24">
-    <div class="flex justify-between items-start gap-24 pt-20">
-      <div class="w-1/2">
+
+  <div class="mx-auto container px-4 lg:px-24">
+    <div class="flex [@media(min-width:900px)]:justify-between [@media(min-width:900px)]:items-start gap-24 pt-20 justify-center items-center flex-wrap [@media(min-width:900px)]:flex-nowrap">
+      <div class="[@media(min-width:900px)]:w-1/2">
         <video class="rounded-lg" controls>
           <source src="/videos/header2.mp4" type="video/mp4" />
         </video>
       </div>
-      <div class="w-1/2">
+      <div class="[@media(min-width:900px)]:w-1/2">
         <span class="text-2xl text-main pb-1 font-semibold border-b-2 border-main"
           >Biz haqimizda</span
         >

@@ -8,11 +8,11 @@ storeToRefs(store)
 </script>
 
 <template>
-  <div class="sticky top-0 z-10">
+  <div class="sticky top-0 z-30">
     <BaseHeader />
   </div>
   <router-view></router-view>
-  <div>
+  <div class="z-20">
     <BaseFooter />
   </div>
 </template>

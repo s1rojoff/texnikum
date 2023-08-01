@@ -10,10 +10,10 @@ const props = defineProps({
 <template>
   <div>
     <router-link :to="itemInfo.path">
-      <div class="relative rounded-lg overflow-hidden cursor-pointer h-64 w-full">
+      <div class="relative rounded-lg overflow-hidden cursor-pointer h-64 w-64">
         <img
           :src="itemInfo.url"
-          class="bg-contain w-full h-full bg-center hover:scale-110 transition"
+          class="bg-contain w-full object-cover  h-full bg-center hover:scale-110 transition"
           alt=""
         />
         <div class="absolute w-full py-1 pl-3 bottom-0 bg-main">

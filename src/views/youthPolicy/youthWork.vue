@@ -19,7 +19,7 @@
     <p class="text-center sm:text-4xl font-light text-2xl text-black">
       Yoshlar ishlari bo'yicha bo'lim boshlig'i
     </p>
-    <div class="flex gap-11 mt-11 mb-11">
+    <div class="flex gap-11 flex-wrap mt-11 mb-11">
       <img class="w-[200px]" src="/rahbariyat/yoshlar_ishlari_boyicha.jpg" alt="" />
       <div>
         <p class="text-lg font-medium "><span class="font-normal">FISH:</span> Nabiev Sardor Abdumalikovich</p>

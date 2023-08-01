@@ -14,7 +14,7 @@
   </div>
   <div class="mt-11 container mx-auto lg:px-24 px-4">
     <p class="text-center sm:text-4xl font-light text-2xl text-black">Tanlovlar va grantlar</p>
-    <div class="mt-11">
+    <div class="mt-11 ">
       <table class="border-collapse border border-slate-500 ...">
         <tbody>
           <tr>

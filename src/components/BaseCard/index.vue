@@ -68,7 +68,7 @@ function replaceInfoMan() {
 
         <!-- Informations -->
         <div
-          class="flex items-center gap-20 mt-16"
+          class="flex items-center justify-around mt-16"
           v-if="props.cardData.experience && props.cardData.mandate"
         >
           <button
@@ -103,7 +103,7 @@ function replaceInfoMan() {
 </template>
 <style>
 .toggle-btn {
-  @apply rounded-md border-none border py-1 px-10 hover:bg-blue-500/50 hover:text-white transition hover:hover:shadow-blue-500/50 shadow-lg; 
+  @apply rounded-md border-none border py-1 sm:px-10 px-3 hover:bg-blue-500/50 hover:text-white transition hover:hover:shadow-blue-500/50 shadow-lg; 
 }
 .title {
   @apply text-center text-xl text-main font-semibold;

@@ -9,7 +9,7 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
   </div>
   <!-- main -->
   <div
-    class="bg-[url('/acceptance/bg-jpg.jpg')] lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh]"
+    class="bg-[url('/acceptance/bg-jpg.jpg')] px-4 lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh]"
   >
     <div class="mx-auto containers top-2/3 text-start">
       <p

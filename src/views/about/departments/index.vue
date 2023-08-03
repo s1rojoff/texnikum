@@ -5,7 +5,7 @@ const { departments } = useDepartment()
 </script>
 <template>
   <div
-    class="bg-[url('/about/teacher.webp')] lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh]"
+    class="bg-[url('/about/teacher.webp')] px-4 lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh]"
   >
     <div class="mx-auto container top-2/3 text-start z-20">
       <p

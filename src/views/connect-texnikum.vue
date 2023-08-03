@@ -5,20 +5,20 @@ import BaseInput from '@/components/BaseInput/index.vue'
 import BaseButton from '@/components/BaseButton/index.vue'
 </script>
 <template>
-  <div class="sticky top-0 z-10">
+  <div class="sticky top-0 z-30">
     <BaseHeader />
   </div>
   <div
-    class="bg-[url('/images/connect.jpg')] lg:px-24 bg-no-repeat w-full bg-center bg-cover h-[75vh]"
+    class="bg-[url('/images/connect.jpg')] px-4 lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh] relative"
   >
-    <div class="text-start top-2/3">
+    <div class="mx-auto container top-2/3 text-start z-20">
       <p
-        class="sm:text-5xl font-light text-white border-solid z-[6] border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none"
+        class="sm:text-5xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none"
       >
         Biz bilan bog'lanish
       </p>
     </div>
-    <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-[5]"></div>
+    <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-10"></div>
   </div>
   <div class="mt-20">
     <div class="mx-auto container lg:px-24 md:px-7 px-5 md:mt-10">

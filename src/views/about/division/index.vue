@@ -6,7 +6,7 @@ const { devisions } = useDivision()
 
 <template>
  <div
-    class="bg-[url('/about/depart.jpg')] lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh]"
+    class="bg-[url('/about/depart.jpg')] px-4 lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh]"
   >
     <div class="mx-auto container top-2/3 text-start z-20">
       <p
@@ -18,7 +18,7 @@ const { devisions } = useDivision()
     <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-[2]"></div>
   </div>
 
-  <div class="mx-auto container  mt-16 px-4 lg:px-24">
+  <div class="mx-auto container  mt-16 px-5 lg:px-24">
     <div class=" gap-5 flex flex-wrap justify-center">
       <div 
         v-for="(item, index) in devisions" 

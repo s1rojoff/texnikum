@@ -3,6 +3,7 @@ import { storeToRefs } from 'pinia'
 import BaseIcon from '@/components/BaseIcon/index.vue'
 import { useBaseHeader } from '@/components/BaseHeader/composable'
 import { useHeaderStore } from '@/stores'
+import { computed, ref } from 'vue'
 const { topIconName } = useBaseHeader()
 const store: any = useHeaderStore()
 const { toggleNavbar, navLinks, toggleSubNav } = store
@@ -72,15 +73,14 @@ storeToRefs(store)
               :key="index"
               class="menu-style text-black font-medium cursor-pointer text-xs py-1.5 m-3"
             >
-              <router-link v-if="item.name != 'Direktorga murojaat qilish'" :to="item.route">
-                {{ item.name }}
-              </router-link>
-              <a
-                v-if="item.name == 'Direktorga murojaat qilish'"
-                target="_blank"
-                :href="item.route"
-                >{{ item.name }}</a
+              <router-link
+                v-slot="{ isExactActive }"
+                v-if="item.name != 'Direktorga murojaat qilish'"
+                :to="item.route"
               >
+                <p :class="{ 'text-main': isExactActive }">{{ item.name }}</p>
+              </router-link>
+              <a v-else target="_blank" :href="item.route">{{ item.name }}</a>
             </p>
           </div>
         </div>
@@ -105,15 +105,14 @@ storeToRefs(store)
               @click="store.$state.allMenus = false"
               class="text-sm py-1 cursor-pointer all-submenu"
             >
-              <router-link :to="subItem.route" v-if="subItem.name != 'Direktorga murojaat qilish'">
-                {{ subItem.name }}
-              </router-link>
-              <a
-                v-if="subItem.name == 'Direktorga murojaat qilish'"
-                target="_blank"
-                :href="subItem.route"
-                >{{ subItem.name }}</a
+              <router-link
+                v-slot="{ isExactActive }"
+                :to="subItem.route"
+                v-if="subItem.name != 'Direktorga murojaat qilish'"
               >
+                <p :class="{ 'text-main': isExactActive }">{{ subItem.name }}</p>
+              </router-link>
+              <a v-else target="_blank" :href="subItem.route">{{ subItem.name }}</a>
             </p>
           </div>
         </div>
@@ -137,15 +136,23 @@ storeToRefs(store)
             />
           </div>
           <div class="ml-3" v-if="store.$state.phoneView === index + 1">
-            <router-link
+            <p
               v-for="(subItem, subIndex) in item.subMenu"
               :key="subIndex"
               class="cursor-pointer block hover:text-main"
-              :to="subItem.route"
               @click="store.$state.allMenus = false"
             >
-              {{ subItem.name }}
-            </router-link>
+              <router-link
+                :to="subItem.route"
+                v-if="subItem.name != 'Direktorga murojaat qilish'"
+                v-slot="{ isExactActive }"
+              >
+                <p :class="{ 'text-main': isExactActive }">{{ subItem.name }}</p>
+              </router-link>
+              <a v-else :href="subItem.route" target="_blank">
+                {{ subItem.name }}
+              </a>
+            </p>
           </div>
         </div>
       </div>

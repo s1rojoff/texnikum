@@ -24,7 +24,7 @@ const props = defineProps({
         >{{ props.infoName }} haqida ma'lumot</span
       >
     </div>
-    <p class="mt-4 px-4">
+    <p class="mt-4 px-5">
       {{ props.pageInfo.description }}
     </p>
   </div>

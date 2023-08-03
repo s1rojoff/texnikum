@@ -10,7 +10,7 @@ storeToRefs(store)
 
 <template>
   <div
-    class="bg-[url('/international/international.jpg')] lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh]"
+    class="bg-[url('/international/international.jpg')] px-4 lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh]"
   >
   <div class="mx-auto container top-2/3 text-start z-20">
       <p
@@ -33,7 +33,7 @@ storeToRefs(store)
       <div>
         <p class="text-center sm:text-4xl font-light text-2xl text-black">Bo'lim haqida ma'lumot</p>
       </div>
-      <div class="flex-wrap justify-center px-24">
+      <div class="flex-wrap justify-center px-4 lg:px-24">
         <div class="">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati mollitia illo voluptatem assumenda eaque, asperiores maxime expedita in voluptates! Ut aperiam quos maiores aliquid omnis, voluptas ratione optio voluptatem nulla adipisci odio! Veritatis repellendus omnis quia nobis aperiam, nostrum possimus hic voluptatibus, quidem adipisci quo repudiandae nihil dolorum impedit amet.</p>
         </div>

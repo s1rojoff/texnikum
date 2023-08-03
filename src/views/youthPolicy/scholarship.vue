@@ -3,7 +3,7 @@
 
 <template>
   <div
-    class="bg-[url('/youthpolicy/scholarship.jpg')] lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh]">
+    class="bg-[url('/youthpolicy/scholarship.jpg')] px-4 lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh]">
     <div class="mx-auto container top-2/3 text-start z-20">
       <p
         class="sm:text-5xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none">
@@ -14,7 +14,7 @@
   </div>
   <div class="mt-11 container mx-auto lg:px-24 px-4">
     <p class="text-center sm:text-4xl font-light text-2xl text-black">Tanlovlar va grantlar</p>
-    <div class="mt-11 ">
+    <div class="mt-11 snap-x">
       <table class="border-collapse border border-slate-500 ...">
         <tbody>
           <tr>

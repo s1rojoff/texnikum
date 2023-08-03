@@ -1,4 +1,12 @@
 <script setup lang="ts">
+import BaseCard from '@/components/BaseCard/index.vue'
+import {useYouthworkPage} from '@/views/youthPolicy/composable'
+import { useAboutStore } from '@/stores';
+import { storeToRefs } from 'pinia';
+const {youthwork} = useYouthworkPage()
+const store: any = useAboutStore()
+storeToRefs(store) 
+
 </script>
 <template>
   <div>
@@ -20,12 +28,11 @@
       Yoshlar ishlari bo'yicha bo'lim boshlig'i
     </p>
     <div class="flex gap-11 flex-wrap mt-11 mb-11">
-      <img class="w-[200px]" src="/rahbariyat/yoshlar_ishlari_boyicha.jpg" alt="" />
-      <div>
-        <p class="text-lg font-medium "><span class="font-normal">FISH:</span> Nabiev Sardor Abdumalikovich</p>
-        <p class="text-lg font-medium "><span class="font-normal">Telefon raqam:</span> (71) 299-05-76</p>
-        <p class="text-lg font-medium "><span class="font-normal">Email:</span> info@tpkjt.uz</p>
-      </div>
+      <BaseCard
+        v-for="(youthworker, index) in youthwork"
+        :key="index"
+        :card-data="youthworker"
+      />
     </div>
     <p>
       &nbsp; &nbsp; &nbsp; O‘zbekiston Respublikasi Prezidentining “Yoshlar bilan ishlash, ma’naviyat va ma’rifat

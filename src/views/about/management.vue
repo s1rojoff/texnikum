@@ -21,7 +21,7 @@ storeToRefs(store)
     </div>
     <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-[2]"></div>
   </div>
-  <div class="mt-10 container mx-auto lg:px-24">
+  <div class="mt-10 container px-4 mx-auto lg:px-24">
     <div>
       <BaseCard
         v-for="(management, index) in managements"

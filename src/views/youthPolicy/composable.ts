@@ -1,5 +1,6 @@
 import { type Activities } from "@/interfaces";
 import { type Trainings } from "@/interfaces";
+import { type Youthwork } from "@/interfaces";
 import { ref } from "vue";
 export function useNewsPage() {
   const activities = ref<Activities[]>([
@@ -68,3 +69,15 @@ export function useTrainingPage() {
     trainings
   } 
 }
+export function useYouthworkPage() {
+  const youthwork = ref<Youthwork[]>([
+    {
+      name: 'Nabiev Sardor Abdumalikovich',
+      phone: '(71) 299-05-76',
+      email: 'info@tpkjt.uz',
+      url: '/rahbariyat/yoshlar_ishlari_boyicha.jpg'
+    }])
+    return{
+      youthwork
+    }
+  }

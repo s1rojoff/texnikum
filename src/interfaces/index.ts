@@ -66,3 +66,9 @@ export interface Trainings {
   date: string,
   description: string
 }
+export interface Youthwork{
+  name: string,
+  phone: string,
+  email: string,
+  url: string
+}

@@ -8,7 +8,7 @@ const props = defineProps({
 });
 </script>
 <template>
-  <div>
+  <div class="px-4">
     <router-link :to="itemInfo.path">
       <div class="relative rounded-lg overflow-hidden cursor-pointer h-64 sm:w-64 w-[300px]">
         <img

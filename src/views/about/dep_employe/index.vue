@@ -17,7 +17,7 @@ const {depEmployes} = usedepEmploye()
     </div>
     <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-[2]"></div>
   </div>
-  <div class="mx-auto container mt-16 lg:px-24">
+  <div class="mx-auto container mt-16 px-4 lg:px-24">
     <div class="flex flex-wrap justify-center gap-5">
       <div v-for="(item, index) in depEmployes" :key="index">
         <BaseSmallCard :item-info="item" />

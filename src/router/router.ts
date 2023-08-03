@@ -294,6 +294,6 @@ export const routers = [
   {
     path :'/connection',
     name: 'Connection with texnikum',
-    component: ()=> import('@/views/connect-texnikum.vue')
+    component: ()=> import('@/views/connect/connect-texnikum.vue')
   }
 ]

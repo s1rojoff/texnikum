@@ -127,10 +127,6 @@ export const useHeaderStore = defineStore('header', {
               name: 'Videoroliklar',
               route: '/about'
             },
-            {
-              name: 'Direktorga murojaat qilish',
-              route: 'https://t.me/ttytdirektor_bot'
-            }
           ]
         },
         {
@@ -154,6 +150,10 @@ export const useHeaderStore = defineStore('header', {
             {
               name: "Biz bilan bog'lanish",
               route: '/connection'
+            },
+            {
+              name: 'Direktorga murojaat qilish',
+              route: 'https://t.me/ttytdirektor_bot'
             }
           ]
         }

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BaseCreatePage from '@/components/BaseCreatePage/index.vue'
 import { usedepEmploye } from '@/views/about/dep_employe/composable'
+import BaseCard from '@/components/BaseCard/index.vue'
 const { depEmployes } = usedepEmploye()
 const boss = {
   lavozim: "O‘quv-uslubiy bo‘lim boshlig'i",

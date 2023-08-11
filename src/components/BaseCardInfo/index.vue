@@ -26,7 +26,7 @@ function replaceInfoExp() {
       <div class="float-left">
         <img class="img" :src="props.cardData.url" :alt="props.cardData.id" />
       </div>
-      <div class="flex items-end justify-between flex-wrap w-full">
+      <div class="flex items-end justify-between lg:flex-nowrap flex-wrap w-full">
         <div class="flex  flex-col gap-5">
           <p class=" text-xl md:text-2xl">{{ props.cardData.title }}</p>
           <p class=" text-base/6 max-w-[400px]">{{ props.cardData.subtitle }}</p>

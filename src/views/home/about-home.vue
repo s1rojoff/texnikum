@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { useI18n } from 'vue-i18n'
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 import '@/assets/main.css'
 import { EffectCards } from 'swiper'
 const modules = [EffectCards]
 const slides = ref(['/images/saida.png', '/images/header1.png', '/images/header.jpg'])
+const { t }:any = useI18n()
 </script>
 <template>
   <div class="container overflow-hidden mx-auto lg:px-24 px-5 md:px-7 lg:pt-28 pt-10">
@@ -23,7 +25,7 @@ const slides = ref(['/images/saida.png', '/images/header1.png', '/images/header.
           <span
             class="lg:text-2xl md:text-[17px] text-center font-extrabold text-second border-b-2 lg:pb-4 md:pb-2 pb-1 border-main"
           >
-            Toshkent Temir Yo'l Texnikumi
+            {{ t('name') }}
           </span>
         </div>
         <p class="lg:pt-12 md:pt-7 pt-3 text-center md:text-start lg:text-xl md:text-[13px] lg:font-medium">

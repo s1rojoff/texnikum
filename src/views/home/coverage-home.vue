@@ -10,7 +10,6 @@ const regionInfo = ref<{ region: string; name: string; boy: number; girl: number
 })
 function testFn(region: any) {
   regionInfo.value = region
-  console.log(region)
 }
 </script>
 

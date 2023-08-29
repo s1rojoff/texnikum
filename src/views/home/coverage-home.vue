@@ -1,9 +1,21 @@
 <script setup lang="ts">
 import BaseIcon from '@/components/BaseIcon/index.vue'
+import uzbekistan from '@/views/home/uzbekistan.vue'
+import { ref } from 'vue'
+const regionInfo = ref<{ region: string; name: string; boy: number; girl: number }>({
+  region: '',
+  name: "O'zbekiston",
+  boy: 0,
+  girl: 0
+})
+function testFn(region: any) {
+  regionInfo.value = region
+  console.log(region)
+}
 </script>
 
 <template>
-    <div class="relative">
+  <div class="relative">
     <div class="w-full -z-10 -top-96 hidden lg:block overflow-x-hidden absolute">
       <BaseIcon class="left-3/4 w-1/2" name="lightway" />
       <BaseIcon class="w-1/2 lg:-top-32 2xl:-top-28" name="lightway" />
@@ -19,20 +31,24 @@ import BaseIcon from '@/components/BaseIcon/index.vue'
     </div>
     <div class="grid lg:grid-cols-2 md:px-7 grid-cols-1 lg:gap-16">
       <div class="">
-        <BaseIcon class="text-white" name="uzbekistan" />
+        <uzbekistan class="text-white" @getRegion="testFn" />
         <div class="w-56 bg-white h-auto py-2 px-4 border-main border rounded-lg">
-        <p class="text-center font-extrabold lg:text-base">Qoraqalpog'iston</p>
-        <p class="text-sm md:text-base">O'g'il bolalar: 2387</p>
-        <p class="text-sm md:text-base">Qiz bolalar: 1892</p>
+          <p class="text-center font-extrabold lg:text-base">{{ regionInfo.name }}</p>
+          <p class="text-sm md:text-base">O'g'il bolalar: {{ regionInfo.boy }}</p>
+          <p class="text-sm md:text-base">Qiz bolalar: {{ regionInfo.girl }}</p>
         </div>
       </div>
       <div>
         <div class="flex justify-center md:mt-12 lg:mt-0">
-          <span class="md:text-2xl md:font-extrabold text-lg font-semibold text-center border-b-2 pt-5 border-main lg:pb-6">
-          Qabul komissiyasi haqida ma'lumot
-        </span>
+          <span
+            class="md:text-2xl md:font-extrabold text-lg font-semibold text-center border-b-2 pt-5 border-main lg:pb-6"
+          >
+            Qabul komissiyasi haqida ma'lumot
+          </span>
         </div>
-        <p class="lg:font-medium lg:text-xl text-sm md:text-base text-center md:text-start md:pt-5 pt-3">
+        <p
+          class="lg:font-medium lg:text-xl text-sm md:text-base text-center md:text-start md:pt-5 pt-3"
+        >
           Agar siz o'zingizni veb-sahifalarni yaratishga bag'ishlasangiz yoki uni shablonlar orqali
           yaratgan bo'lsangiz, uni oldindan ko'rishda deyarli barcha hollarda bir xil bo'lgan asosiy
           matndan foydalanilganligini sezgan bo'lasiz. Lorem Ipsum. Lorem Ipsum generatori yordamida

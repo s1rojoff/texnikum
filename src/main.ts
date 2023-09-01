@@ -10,20 +10,16 @@ import App from './App.vue'
 import router from './router'
 
 const app = createApp(App)
+
 const i18n = createI18n({
-  locale: 'en',
   legacy: false,
-    messages: {
-      uz: uz,
-      en: en,
-      ru: ru 
-    }
-//   messages: {
-//     uz: () => import('@/locale/uz.json'),
-//     en: () => import('@/locale/en.json'),
-//     ru: () => import('@/locale/ru.json')
-//   }
-})
+  locale: 'uz',
+  messages: {
+    en,
+    uz,
+    ru
+  },
+});
 
 app.use(createPinia())
 app.use(router)

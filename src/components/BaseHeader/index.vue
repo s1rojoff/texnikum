@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import BaseIcon from '@/components/BaseIcon/index.vue'
 import { useBaseHeader } from '@/components/BaseHeader/composable'
 import { useHeaderStore } from '@/stores'
-import { computed, ref } from 'vue'
-const { topIconName } = useBaseHeader()
+import { useI18n } from 'vue-i18n'
+const { topIconName, locales } = useBaseHeader()
 const store: any = useHeaderStore()
 const { toggleNavbar, navLinks, toggleSubNav } = store
 const handleClicked = (id: number) => {
@@ -13,6 +14,15 @@ const handleClicked = (id: number) => {
   } else {
     store.$state.phoneView = 123
   }
+}
+const { t, locale, setLocaleMessage } = useI18n()
+const selectedLanguage = ref(locale.value)
+const changeLanguage = async () => {
+  await setLocaleMessage(
+    selectedLanguage.value,
+    await import(`../../locale/${selectedLanguage.value}.json`)
+  )
+  locale.value = selectedLanguage.value
 }
 storeToRefs(store)
 </script>
@@ -33,13 +43,22 @@ storeToRefs(store)
         <router-link to="/" class="cursor-pointer" @click="store.$state.allMenus = false"
           ><img src="/images/logo-header.png" class="w-32" alt=""
         /></router-link>
-        <div class="md:flex md:items-center md:justify-end lg:gap-6 md:gap-2">
+        <div class="md:flex md:items-center md:justify-end md:gap-2">
           <BaseIcon
             v-for="(icon, index) in topIconName"
             :key="index"
             :name="icon"
-            class="lg:w-7 lg:h-7 md:w-6 md:h-6"
+            class="h-7 w-7"
           />
+          <select
+            v-model="selectedLanguage"
+            @change="changeLanguage"
+            class="w-7 h-7 rounded-full text-sm text-white bg-main outline-none border-none text-center"
+          >
+            <option v-for="(locale, index) in locales" :key="index" :value="locale">
+              {{ locale.toUpperCase() }}
+            </option>
+          </select>
         </div>
       </div>
     </div>
@@ -159,7 +178,7 @@ storeToRefs(store)
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 .menu-style::after {
   content: '';
   width: 0;
@@ -170,6 +189,15 @@ storeToRefs(store)
   transition: all 0.4s linear;
   position: absolute;
 }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+
 .menu-style:hover::after {
   width: 100%;
 }

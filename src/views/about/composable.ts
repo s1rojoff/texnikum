@@ -66,6 +66,32 @@ export function useAboutPage() {
         'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam.',
       mandate:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odit blanditiis dolore sint provident nulla rem amet similique, architecto maxime.'
+    },
+    {
+      id: 6,
+      name: 'Fistname Lastname Middename',
+      url: '/rahbariyat/myself.jpg',
+      lavozim: "Texnikum bosh buxgalteri",
+      phone: '(71) 299-05-76',
+      qabul: 'Juma (10:00-12:00)',
+      email: 'info@tpkjt.uz',
+      experience:
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam.',
+      mandate:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odit blanditiis dolore sint provident nulla rem amet similique, architecto maxime.'
+    },
+    {
+      id: 7,
+      name: 'Fistname Lastname Middename',
+      url: '/rahbariyat/myself.jpg',
+      lavozim: "Texnikum yuristkonsult",
+      phone: '(71) 299-05-76',
+      qabul: 'Juma (10:00-12:00)',
+      email: 'info@tpkjt.uz',
+      experience:
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam.',
+      mandate:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odit blanditiis dolore sint provident nulla rem amet similique, architecto maxime.'
     }
   ])
   return {

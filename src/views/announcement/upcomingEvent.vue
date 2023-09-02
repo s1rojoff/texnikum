@@ -3,7 +3,9 @@ import BaseHeader from '@/components/BaseHeader/index.vue'
 import BaseFooter from '@/components/BaseFooter/index.vue'
 import BaseInput from '@/components/BaseInput/index.vue'
 import BaseNewsCard from '@/components/BaseNewsCard/index.vue'
+import { useAnnouncementFn } from '@/views/announcement/composable'
 const categories = ['Barchasi', 'Jamiyat', 'Sport', 'Texnikum', 'Rahbariyat']
+const { newsData } = useAnnouncementFn()
 </script>
 
 <template>
@@ -25,15 +27,7 @@ const categories = ['Barchasi', 'Jamiyat', 'Sport', 'Texnikum', 'Rahbariyat']
   <div class="container mx-auto px-4 lg:px-24 mt-10">
     <div class="flex flex-wrap items-start sm:flex-nowrap gap-5">
       <div class="flex flex-wrap sm:w-3/4 w-full gap-x-5 gap-y-5 sm:order-1 order-2">
-        <BaseNewsCard />
-        <BaseNewsCard />
-        <BaseNewsCard />
-        <BaseNewsCard />
-        <BaseNewsCard />
-        <BaseNewsCard />
-        <BaseNewsCard />
-        <BaseNewsCard />
-        <BaseNewsCard />
+        <BaseNewsCard v-for="(item, index) in newsData" :key="index" :news-data="item" />
       </div>
       <div class="sm:w-1/4 w-full sm:order-2 order-1">
         <BaseInput placeholder="Search for" size="sm" type="search" />

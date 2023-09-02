@@ -131,7 +131,7 @@ export const useHeaderStore = defineStore('header', {
         },
         {
           id:5,
-          name: 'Qabul komissiyasi',
+          name: "Abituriyentlarga",
           route: '/',
           visible: false,
           subMenu: [

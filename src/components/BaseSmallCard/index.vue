@@ -10,7 +10,7 @@ const props = defineProps({
 <template>
   <div class="px-4">
     <router-link :to="itemInfo.path">
-      <div class="relative rounded-lg  shadow-xl shadow-black-500 overflow-hidden cursor-pointer h-64 sm:w-64 w-[300px]">
+      <div class="relative rounded-lg  shadow-xl shadow-black-500 overflow-hidden cursor-pointer sm:h-72 h-64 md:h-[300px] sm:w-64 md:min-w-[330px]">
         <img
           :src="itemInfo.url"
           class="bg-contain w-full object-cover  h-full bg-center hover:scale-110 transition"

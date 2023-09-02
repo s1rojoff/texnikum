@@ -37,12 +37,12 @@ function replaceInfoMan() {
 <template>
   <br />
   <div class="w-full rounded py-5 px-4 bg-slate-100 shadow-lg shadow-indigo-500/50">
-    <div class="flex items-start gap-10 md:flex-nowrap flex-wrap justify-center">
+    <div class="flex items-start  md:flex-nowrap flex-wrap justify-between">
       <div class="1/3">
         <img
           :src="props.cardData.url"
           :alt="props.cardData.id"
-          class="md:h-52 h-[200px] sm:h-[300px] bg-cover bg-center rounded md:w-48"
+          class="md:h-52 h-[200px] lg:h-64 lg:w-64 object-cover  sm:h-[300px] bg-cover bg-center rounded md:w-48"
         />
       </div>
       <div class="md:w-2/3 w-full">

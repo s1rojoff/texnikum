@@ -5,7 +5,7 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
 import { useAboutStore } from '@/stores'
 import BaseNewsCard from '@/components/BaseNewsCard/index.vue'
 import BaseInput from '@/components/BaseInput/index.vue'
-import { useAnnouncementFn } from './composable'
+import { useAnnouncementFn } from '@/views/announcement/composable'
 const {newsData} = useAnnouncementFn()
 const store= useAboutStore()
 storeToRefs(store)

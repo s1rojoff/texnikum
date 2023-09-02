@@ -4,7 +4,7 @@ import { createPinia } from 'pinia'
 import { createI18n } from 'vue-i18n'
 import uz from './locale/uz.json'
 import ru from './locale/ru.json'
-import en from './locale/en.json'
+// import en from './locale/en.json'
 
 import App from './App.vue'
 import router from './router'
@@ -15,7 +15,6 @@ const i18n = createI18n({
   legacy: false,
   locale: 'uz',
   messages: {
-    en,
     uz,
     ru
   },

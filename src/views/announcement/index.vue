@@ -5,7 +5,9 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
 import { useAboutStore } from '@/stores'
 import BaseNewsCard from '@/components/BaseNewsCard/index.vue'
 import BaseInput from '@/components/BaseInput/index.vue'
-const store: any = useAboutStore()
+import { useAnnouncementFn } from './composable'
+const {newsData} = useAnnouncementFn()
+const store= useAboutStore()
 storeToRefs(store)
 const categories = ['Barchasi', 'Jamiyat', 'Sport', 'Texnikum', 'Rahbariyat']
 </script>
@@ -29,15 +31,7 @@ const categories = ['Barchasi', 'Jamiyat', 'Sport', 'Texnikum', 'Rahbariyat']
   <div class="container mx-auto px-4 lg:px-24 mt-10">
     <div class="flex flex-wrap sm:flex-nowrap items-start gap-5">
       <div class=" flex sm:w-3/4 w-full gap-x-5 flex-wrap gap-y-5 order-2 sm:order-1">
-        <BaseNewsCard />
-        <BaseNewsCard />
-        <BaseNewsCard />
-        <BaseNewsCard />
-        <BaseNewsCard />
-        <BaseNewsCard />
-        <BaseNewsCard />
-        <BaseNewsCard />
-        <BaseNewsCard />
+        <BaseNewsCard v-for="(item, index) in newsData" :key="index" :news-data="item"/>
       </div>
       <div class="sm:w-1/4 w-full order-1 sm:order-2">
       <BaseInput placeholder="Search for" size="sm" type="search" />

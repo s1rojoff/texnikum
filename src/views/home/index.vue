@@ -9,19 +9,24 @@ import PartnersHome from '@/views/home/partners-home.vue'
 import BaseFooter from '@/components/BaseFooter/index.vue'
 </script>
 <template>
-  <div class="sticky top-0 z-10">
+  <div class="sticky top-0 z-20">
     <div class="">
       <BaseHeader />
     </div>
   </div>
   <div class="h-auto overflow-hidden">
     <div class="h-auto lg:h-[75vh]">
-      <video src="/videos/header1.mp4" type="video/mp4" class="w-screen" muted autoplay loop>
-
-      </video>
+      <video
+        src="/videos/header1.mp4"
+        type="video/mp4"
+        class="w-screen"
+        muted
+        autoplay
+        loop
+      ></video>
     </div>
     <!-- <div class="bg-main absolute opacity-50 w-screen h-screen z-50"></div> -->
-    <div class="md:bottom-5 bottom-0  absolute left-0">
+    <div class="md:bottom-5 bottom-0 absolute left-0">
       <BaseIcon class="w-full md:h-24 h-16 text-main" name="afrosiyob" />
       <p
         class="absolute text-sm md:text-lg top-[20%] tracking-wider pl-5 lg:pl-32 text-white z-[1] lg:text-lg"
@@ -46,4 +51,5 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
     <base-footer />
   </div>
 </template>
-<style></style>
+<style>
+</style>

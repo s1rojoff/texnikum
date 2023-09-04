@@ -18,7 +18,6 @@ const props = defineProps({
     </div>
   </div>
   <div class="px-4 lg:px-24">
-    <div class="mt-10"><slot name="boss"></slot></div>
     <div class="text-center mt-10">
       <span class="text-main text-4xl border-b-2 border-main font-semibold"
         >{{ props.infoName }} haqida ma'lumot</span
@@ -27,5 +26,6 @@ const props = defineProps({
     <p class="mt-4">
       {{ props.pageInfo.description }}
     </p>
+    <div class="mt-10"><slot name="boss"></slot></div>
   </div>
 </template>

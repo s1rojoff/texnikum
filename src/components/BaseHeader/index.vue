@@ -33,7 +33,7 @@ storeToRefs(store)
     <!-- Logo and  icons for social media -->
     <div class="bg-white hidden md:block">
       <div
-        class="lg:px-24 md:px-7 lg:py-2 mx-auto container md:flex md:items-center md:justify-between"
+        class="lg:px-24 2xl:px-0 md:px-7 lg:py-2 mx-auto container md:flex md:items-center md:justify-between"
       >
         <router-link to="/" class="cursor-pointer" @click="store.$state.allMenus = false"
           ><img src="/images/logo-header.png" class="w-32" alt=""
@@ -60,10 +60,10 @@ storeToRefs(store)
 
     <!-- Laptop view navbars -->
     <div class="bg-[#E2F0F9]">
-      <div class="container mx-auto py-3 flex md:px-7 lg:px-24 px-5 items-center justify-between md:py-2 lg:py-6">
+      <div class="container mx-auto py-3 flex md:px-7 lg:px-24 2xl:px-0 px-5 items-center justify-between md:py-2 lg:py-6">
         <BaseIcon class="lg:w-7 lg:h-7 cursor-pointer md:w-5 md:-5" @click="toggleNavbar" name="dashboard" />
 
-        <div class="lg:text-lg relative uppercase lg:block hidden lg:font-normal text-main"
+        <div class="lg:text-lg relative uppercase lg:block hidden lg:font-normal xl:font-extrabold 2xl:text-[22px] text-main"
           v-for="(link, index) in navLinks" :key="index" @mouseenter="toggleSubNav(index)"
           @mouseleave="toggleSubNav(index)">
           <p class="cursor-pointer">{{ link.name }}</p>

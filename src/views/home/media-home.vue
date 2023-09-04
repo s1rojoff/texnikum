@@ -10,7 +10,7 @@ const slides = ref(['/images/media1.png', '/images/media2.png', '/images/media1.
 </script>
 
 <template>
-  <div class="container overflow-hidden lg:px-24 md:px-7 px-5 mx-auto md:mt-20 mt-10 lg:mt-40">
+  <div class="container overflow-hidden lg:px-24 2xl:px-0 md:px-7 px-5 mx-auto md:mt-20 mt-10 lg:mt-40">
     <div class="flex justify-center lg:pb-10">
       <span
         class="lg:text-3xl text-second text-2xl lg:font-extrabold border-main text-center md:border-b-8 border-b-4"
@@ -21,17 +21,17 @@ const slides = ref(['/images/media1.png', '/images/media2.png', '/images/media1.
     <div class="hidden md:block">
       <div class="lg:block hidden">
         <div class="lg:flex lg:justify-between lg:items-center lg:gap-11">
-          <div class="lg:rounded-[30px] lg:w-[320px] overflow-hidden cursor-pointer lg:h-[300px]">
+          <div class="lg:rounded-[30px] lg:w-[320px] 2xl:w-[400px] 2xl:h-[400px] overflow-hidden cursor-pointer lg:h-[300px]">
             <img
               src="/images/media1.png"
-              class="lg:rounded-[30px] hover:scale-110 transition lg:w-[320px] lg:h-[300px]"
+              class="lg:rounded-[30px] object-cover hover:scale-110 transition 2xl:w-[400px] 2xl:h-[400px] lg:w-[320px] lg:h-[300px]"
               alt=""
             />
           </div>
-          <div class="lg:rounded-[30px] lg:w-[320px] overflow-hidden cursor-pointer lg:h-[300px]">
+          <div class="lg:rounded-[30px] lg:w-[320px] overflow-hidden 2xl:w-[400px] 2xl:h-[400px] cursor-pointer lg:h-[300px]">
             <img
               src="/images/media2.png"
-              class="lg:rounded-[30px] hover:scale-110 transition lg:w-[320px] lg:h-[300px]"
+              class="lg:rounded-[30px] hover:scale-110 2xl:w-[400px] 2xl:h-[400px] object-cover transition lg:w-[320px] lg:h-[300px]"
               alt=""
             />
           </div>
@@ -39,7 +39,7 @@ const slides = ref(['/images/media1.png', '/images/media2.png', '/images/media1.
             <span class="font-semibold text-second text-2xl border-main border-b-2 pb-1"
               >Temir Yo'l texnikumi</span
             >
-            <p class="text-xl lg:mt-4 font-medium">
+            <p class="text-xl 2xl:text-2xl lg:mt-4 font-medium">
               Toshkent temir yo’l texnikumi sifatida 1932 yilda tashkil topgan. O’zbekiston
               Respublikasi o’rta maxsus, kasb-hunar ta’limi Markazining 2004 yil 27 yanvardagi №
               16-sonli va “O’zbekiston temir yo’llari” Davlat aksiyadorlik jamiyatining 2004 yil 16
@@ -52,24 +52,24 @@ const slides = ref(['/images/media1.png', '/images/media2.png', '/images/media1.
             <span class="font-semibold text-second text-2xl border-main border-b-2 pb-1"
               >Temir Yo'l texnikumi</span
             >
-            <p class="lg:text-xl lg:mt-4 font-medium">
+            <p class="lg:text-xl lg:mt-4 2xl:text-2xl font-medium">
               Toshkent temir yo’l texnikumi sifatida 1932 yilda tashkil topgan. O’zbekiston
               Respublikasi o’rta maxsus, kasb-hunar ta’limi Markazining 2004 yil 27 yanvardagi №
               16-sonli va “O’zbekiston temir yo’llari” Davlat aksiyadorlik jamiyatining 2004 yil 16
               fevraldagi №49-N sonli buyruqlari
             </p>
           </div>
-          <div class="lg:rounded-[30px] lg:w-[320px] overflow-hidden cursor-pointer lg:h-[300px]">
+          <div class="lg:rounded-[30px]  2xl:w-[400px] 2xl:h-[400px] lg:w-[320px] overflow-hidden cursor-pointer lg:h-[300px]">
             <img
               src="/images/media1.png"
-              class="lg:rounded-[30px] hover:scale-110 transition lg:w-[320px] lg:h-[300px]"
+              class="lg:rounded-[30px]  2xl:w-[400px] 2xl:h-[400px] hover:scale-110 transition lg:w-[320px] lg:h-[300px]"
               alt=""
             />
           </div>
-          <div class="lg:rounded-[30px] lg:w-[320px] overflow-hidden cursor-pointer lg:h-[300px]">
+          <div class="lg:rounded-[30px]  2xl:w-[400px] 2xl:h-[400px] lg:w-[320px] overflow-hidden cursor-pointer lg:h-[300px]">
             <img
               src="/images/media2.png"
-              class="lg:rounded-[30px] hover:scale-110 transition lg:w-[320px] lg:h-[300px]"
+              class="lg:rounded-[30px]  2xl:w-[400px] 2xl:h-[400px] hover:scale-110 transition lg:w-[320px] lg:h-[300px]"
               alt=""
             />
           </div>

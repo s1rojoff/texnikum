@@ -11,7 +11,7 @@ const slides = ref(['/images/saida.png', '/images/header1.png', '/images/header.
 const { t }:any = useI18n()
 </script>
 <template>
-  <div class="container overflow-hidden mx-auto lg:px-24 px-5 md:px-7 lg:pt-28 pt-10">
+  <div class="container overflow-hidden mx-auto lg:px-24 2xl:px-0 px-5 md:px-7 lg:pt-28 pt-10">
     <div class="grid md:grid-cols-2 grid-cols-1 lg:gap-24 md:gap-16 ">
       <div class="">
         <swiper :effect="'cards'" :grabCursor="true" :modules="modules" class="mySwiper">
@@ -23,12 +23,12 @@ const { t }:any = useI18n()
       <div class="mt-7 md:mt-0">
         <div class="text-center">
           <span
-            class="lg:text-2xl md:text-[17px] text-center font-extrabold text-second border-b-2 lg:pb-4 md:pb-2 pb-1 border-main"
+            class="lg:text-2xl 2xl:text-4xl md:text-[17px] text-center font-extrabold text-second border-b-2 lg:pb-4 md:pb-2 pb-1 border-main"
           >
             {{ t('name') }}
           </span>
         </div>
-        <p class="lg:pt-12 md:pt-7 pt-3 text-center md:text-start lg:text-xl md:text-[13px] lg:font-medium">
+        <p class="lg:pt-12 2xl:text-2xl md:pt-7 pt-3 text-center md:text-start lg:text-xl md:text-[13px] lg:font-medium">
           O’rta maxsus, kasb-hunar ta’limi Davlat ta’lim standartlari asosida o’quv, o’quv-uslubiy
           va o’quv-amaliy ishlarni tashkil etish, yosh pedagog kadrlarga o’quv-metodik yordam
           ko’rsatish, katta tajribaga ega bo’lgan pedagoglarning ish tajribalarini umumlashtirish va

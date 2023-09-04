@@ -53,16 +53,16 @@ function replaceInfoMan() {
           :class="{ 'mt-10': !props.cardData.experience && !props.cardData.mandate }"
         >
           <div class="grid grid-cols-1 grid-rows-2">
-            <p>Telefon</p>
-            <p>{{ props.cardData.phone }}</p>
+            <p class="2xl:text-2xl">Telefon</p>
+            <p class="2xl:text-2xl">{{ props.cardData.phone }}</p>
           </div>
           <div class="grid grid-cols-1 grid-rows-2">
-            <p>Email</p>
-            <p>{{ props.cardData.email }}</p>
+            <p class="2xl:text-2xl">Email</p>
+            <p class="2xl:text-2xl">{{ props.cardData.email }}</p>
           </div>
           <div v-if="props.cardData.qabul" class="grid grid-cols-1 grid-rows-2">
-            <p>Qabul kunlari</p>
-            <p>{{ props.cardData.qabul }}</p>
+            <p class="2xl:text-2xl">Qabul kunlari</p>
+            <p class="2xl:text-2xl">{{ props.cardData.qabul }}</p>
           </div>
         </div>
 
@@ -96,7 +96,7 @@ function replaceInfoMan() {
       </div>
       <div v-if="currentMan">
         <p class="title">Majburiyatlari</p>
-        <p class="mt-1">{{ props.cardData.mandate }}</p>
+        <p class="mt-1 2xl:text-xl">{{ props.cardData.mandate }}</p>
       </div>
     </div>
   </div>
@@ -106,6 +106,6 @@ function replaceInfoMan() {
   @apply rounded-md border-none border py-1 sm:px-10 px-3 hover:bg-blue-500/50 hover:text-white transition hover:hover:shadow-blue-500/50 shadow-lg; 
 }
 .title {
-  @apply text-center text-xl text-main font-semibold;
+  @apply text-center text-xl 2xl:text-3xl text-main font-semibold;
 }
 </style>

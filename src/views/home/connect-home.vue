@@ -18,7 +18,7 @@ import BaseIcon from '@/components/BaseIcon/index.vue'
         Bog'lanish
       </span>
     </div>
-    <div class="mx-auto container lg:px-24 md:px-7 px-5 md:mt-10">
+    <div class="mx-auto 2xl:px-0 container lg:px-24 md:px-7 px-5 md:mt-10">
       <div class="grid md:grid-cols-2 pt-10 md:pt-0 lg:gap-32 md:gap-20">
         <div class="rounded-2xl overflow-hidden">
           <iframe
@@ -34,6 +34,7 @@ import BaseIcon from '@/components/BaseIcon/index.vue'
           <div class="flex items-center justify-between gap-1 md:gap-3">
             <base-input placeholder="Ism va familya" />
             <base-input placeholder="E-maill" />
+            <base-input placeholder="Telefon raqam" />
           </div>
           <textarea
             placeholder="Tavsif"

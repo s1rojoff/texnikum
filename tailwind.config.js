@@ -2,6 +2,9 @@
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
+    container: {
+      
+    },
     extend: {
       colors: {
         main: 'rgba(51, 80, 157, 1)',

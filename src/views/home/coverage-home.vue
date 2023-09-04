@@ -26,10 +26,10 @@ function getPosition(valX:any, valY:any){
       <BaseIcon class="w-1/2 lg:-top-32 2xl:-top-28" name="lightway" />
     </div>
   </div>
-  <div class="mx-auto container lg:px-24 md:px-7 px-5 lg:mt-3 md:mt-20">
+  <div class="mx-auto 2xl:px-0 container lg:px-24 md:px-7 px-5 lg:mt-3 md:mt-20">
     <div class="flex justify-center lg:pb-10 pt-10">
       <span
-        class="lg:text-3xl text-second text-2xl lg:font-extrabold border-main text-center md:border-b-8 border-b-4"
+        class="lg:text-3xl text-second text-2xl 2xl:text-4xl lg:font-extrabold border-main text-center md:border-b-8 border-b-4"
       >
         Texnikum qamrovi
       </span>
@@ -46,13 +46,13 @@ function getPosition(valX:any, valY:any){
       <div>
         <div class="flex justify-center md:mt-12 lg:mt-0">
           <span
-            class="md:text-2xl md:font-extrabold text-lg font-semibold text-center border-b-2 pt-5 border-main lg:pb-6"
+            class="md:text-2xl  md:font-extrabold text-lg font-semibold text-center border-b-2 pt-5 border-main lg:pb-6"
           >
             Qabul komissiyasi haqida ma'lumot
           </span>
         </div>
         <p
-          class="lg:font-medium lg:text-xl text-sm md:text-base text-center md:text-start md:pt-5 pt-3"
+          class="lg:font-medium 2xl:text-2xl lg:text-xl text-sm md:text-base text-center md:text-start md:pt-5 pt-3"
         >
           Agar siz o'zingizni veb-sahifalarni yaratishga bag'ishlasangiz yoki uni shablonlar orqali
           yaratgan bo'lsangiz, uni oldindan ko'rishda deyarli barcha hollarda bir xil bo'lgan asosiy

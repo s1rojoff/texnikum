@@ -32,7 +32,7 @@ const { navLinks } = store
             <p
               class="text-center text-sm font-normal uppercase 2xl:text-xl pb-2 border-b border-white text-white"
             >
-              Toshkent temir yo'l <br />
+              Toshkent temir yo'l
               texnikumi
             </p>
             <div class="flex justify-center gap-5 mt-2">
@@ -44,7 +44,7 @@ const { navLinks } = store
           <div class="flex justify-end">
             <div class="hidden md:block">
               <router-link class="" v-for="(item, index) in navLinks" :key="index" :to="item.route">
-                <p class="text-white lg:text-sm 2xl:text-xl md:text-xs">{{ item.name }}</p>
+                <p class="text-white lg:text-sm 2xl:text-xl md:text-xs pt-1.5">{{ item.name }}</p>
               </router-link>
             </div>
           </div>

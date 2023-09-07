@@ -10,12 +10,16 @@ const regionInfo = ref<{ region: string; name: string; boy: number; girl: number
 })
 const isVisible = ref<boolean>(false)
 function getRegionInfoFn(region: any) {
+  isVisible.value = true
   regionInfo.value = region
 }
-const tooltip = ref<any>(null)
+const tooltip = ref<any>()
 function getPosition(valX:any, valY:any){
   tooltip.value.style.top = `${valY- 100}px`
   tooltip.value.style.left = `${valX}px`
+}
+function hideNotice(){
+  isVisible.value = false
 }
 </script>
 
@@ -36,8 +40,8 @@ function getPosition(valX:any, valY:any){
     </div>
     <div class="grid lg:grid-cols-2 md:px-7 grid-cols-1 lg:gap-16">
       <div class="">
-        <uzbekistan class="text-white w-full" @getRegion="getRegionInfoFn" @getElementPosition="getPosition"/>
-        <div ref="tooltip" v-if="regionInfo.region !== ''" class="w-56 absolute z-10 bg-white h-auto py-2 px-4 border-main border rounded-lg">
+        <uzbekistan class="text-white w-full" @getRegion="getRegionInfoFn" @leavePath="hideNotice" @getElementPosition="getPosition"/>
+        <div ref="tooltip" v-if="isVisible" class="w-56 absolute z-10 bg-white h-auto py-2 px-4 border-main border rounded-lg">
           <p class="text-start font-extrabold lg:text-base">{{ regionInfo.name }}</p>
           <p class="text-sm md:text-base">O'g'il bolalar: {{ regionInfo.boy }}</p>
           <p class="text-sm md:text-base">Qiz bolalar: {{ regionInfo.girl }}</p>

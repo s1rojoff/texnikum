@@ -38,8 +38,26 @@ export function useCoverageFn(){
             girl: 14
         },
         {
+            region: 'jizzax',
+            name: 'Jizzax viloyati',
+            boy: 33,
+            girl: 14
+        },
+        {
+            region: 'surxondaryo',
+            name: 'Surxandaryo viloyati',
+            boy: 33,
+            girl: 14
+        },
+        {
             region: 'andijon',
             name: 'Andijon viloyati',
+            boy: 75,
+            girl: 74
+        },
+        {
+            region: 'samarqand',
+            name: 'Samarqand viloyati',
             boy: 75,
             girl: 74
         },

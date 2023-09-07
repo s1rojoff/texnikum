@@ -1,17 +1,14 @@
 <script setup lang="ts">
-const emit = defineEmits(['getRegion', 'getElementPosition', 'enterPath'])
-import { ref } from 'vue'
+const emit = defineEmits(['getRegion', 'getElementPosition', 'leavePath'])
 import { useCoverageFn } from './composable'
 const { fakeStudents } = useCoverageFn()
 const mouseEnter = (val: string) => {
-  emit('enterPath')
   fakeStudents.value.forEach((el) => {
     if (el.region === val) {
       emit('getRegion', el)
     }
   })
 }
-const uzb = ref<any>(null)
 function handleMoved(event: any) {
   emit('getElementPosition', event.offsetX, event.offsetY)
 }
@@ -26,6 +23,7 @@ function handleMoved(event: any) {
         data-tooltip-target="tooltip-default"
         @mousemove="handleMoved($event)"
         @mouseenter="mouseEnter('buxoro')"
+        @mouseleave="$emit('leavePath')"
         stroke="#1A5CCE"
         stroke-width="2"
         stroke-linecap="round"
@@ -36,6 +34,7 @@ function handleMoved(event: any) {
         fill="currentColor"
         @mousemove="handleMoved($event)"
         @mouseenter="mouseEnter('xorazm')"
+        @mouseleave="$emit('leavePath')"
         class="svg-path"
         stroke-width="2"
         stroke-linecap="round"
@@ -46,6 +45,7 @@ function handleMoved(event: any) {
         fill="currentColor"
         @mousemove="handleMoved($event)"
         @mouseenter="mouseEnter('qoraqalpoq')"
+        @mouseleave="$emit('leavePath')"
         class="svg-path"
         stroke="#1A5CCE"
         stroke-width="2"
@@ -57,6 +57,7 @@ function handleMoved(event: any) {
         fill="currentColor"
         @mousemove="handleMoved($event)"
         @mouseenter="mouseEnter('navoiy')"
+        @mouseleave="$emit('leavePath')"
         class="svg-path"
         stroke="#1A5CCE"
         stroke-width="2"
@@ -68,6 +69,7 @@ function handleMoved(event: any) {
         fill="currentColor"
         @mousemove="handleMoved($event)"
         @mouseenter="mouseEnter('samarqand')"
+        @mouseleave="$emit('leavePath')"
         stroke="#1A5CCE"
         class="svg-path"
         stroke-width="2"
@@ -79,6 +81,7 @@ function handleMoved(event: any) {
         fill="currentColor"
         @mousemove="handleMoved($event)"
         @mouseenter="mouseEnter('qashqadaryo')"
+        @mouseleave="$emit('leavePath')"
         class="svg-path"
         stroke="#1A5CCE"
         stroke-width="2"
@@ -89,7 +92,8 @@ function handleMoved(event: any) {
         d="M571.45 536.602L573.07 535.613L573.88 533.995L574.15 533.096L574.42 530.49L574.69 529.411L575.14 528.782L581.53 522.85L581.89 522.131L582.25 521.322L582.52 520.513L582.79 519.794L583.33 518.446L584.14 517.098L584.59 516.469L585.04 516.199L586.93 515.84L587.56 515.66L590.53 514.042L596.29 509.369L597.01 508.65L597.1 508.29L597.55 506.672L598.09 503.257L598.36 502.179L598.72 501.28L598.99 500.83L600.97 499.213L601.87 498.224L602.5 497.235L602.86 496.336L604.93 495.797L605.74 495.348L606.28 494.988L607.18 494L607.72 493.281L610.87 487.169L611.14 486.899L611.5 486.54L611.95 486.18L612.67 485.821L613.39 485.641H614.11L614.92 485.731L615.73 485.911L616.09 486.09L616.36 486.27L616.54 486.45L617.53 487.439L617.8 487.618L618.16 487.708L618.34 487.439L618.43 487.169V486.001L618.52 485.461L618.79 484.922L619.33 484.113L619.6 483.574L619.78 483.035V482.675L619.69 482.316L619.6 481.597L619.42 481.327V480.967L619.33 480.608V480.248L619.42 479.889V479.529L619.51 479.08L619.6 478.721V478.271L619.51 477.912L619.42 477.642L618.16 475.395L617.89 472.968L617.44 471.351V470.811L617.62 470.362L617.89 469.823L618.34 469.463L618.61 469.194L618.97 469.014L619.51 468.744L620.23 468.564L624.01 468.385L624.91 468.025L625.72 467.396L626.62 468.295L633.28 469.463L634.72 469.373L638.68 468.025L639.4 467.666L640.12 467.486H640.93L641.74 467.845L642.19 468.025L643 468.834L643.81 469.014L644.71 468.654L645.61 468.025L645.97 467.935H646.42H646.87L647.32 468.025L648.13 469.014L649.84 472.968L651.37 475.215L651.91 476.563L651.82 478.002L651.37 479.17L650.74 480.069L649.93 480.788L649.03 481.237L647.77 481.507H646.87L646.33 481.866L646.15 483.304L646.24 484.023L646.6 484.563L646.78 485.192V486.001L646.51 486.36L645.16 487.349L644.8 488.337L644.89 489.506L645.61 492.022L645.7 493.371L645.52 497.235L645.7 498.673L646.06 499.572L647.32 501.549L647.68 502.538L647.77 504.695L647.95 505.594L648.4 506.582L650.47 508.56L652.45 512.065L653.35 513.054L656.05 514.582L660.19 518.267L661.45 520.244L661.63 522.85L660.82 526.715L659.56 530.4L657.49 533.546L656.86 534.804L656.41 535.883L656.23 536.961L655.78 537.77L654.97 538.399L654.16 538.579L651.73 538.938L650.11 539.478L649.21 540.466L646.96 547.207L645.43 550.263L641.65 555.566L638.77 558.262L636.07 561.677L633.91 565.542L632.38 569.587L632.2 572.373L633.28 577.586L633.46 580.372L633.19 582.709L632.56 584.955L631.57 586.933L631.3 587.832L631.12 586.663L630.49 585.764L629.59 585.225L628.51 584.955L626.62 585.045L625.9 584.955L625.36 584.596L624.19 583.787L623.65 583.607L623.02 583.697L622.03 583.967L621.49 584.057L621.13 584.326L620.86 584.955L620.41 585.585L619.87 585.854L618.97 585.045L617.98 582.349L616.81 581.72L615.73 582.079L614.74 582.798L613.03 584.506L612.04 585.315L610.96 585.854L609.79 586.124L608.53 586.304L607.18 586.573L605.2 587.832L604.03 588.101L602.86 587.652L602.32 586.663L601.87 585.405L601.42 584.236L600.34 583.338L598 582.439L596.92 581.72L596.47 580.731L595.57 577.855L594.94 577.316L593.86 576.956L591.79 575.518L590.8 574.979H588.28L583.51 576.058L576.67 576.417L576.13 576.597L575.05 577.496L574.51 577.675H573.07L572.44 577.496L569.02 576.058L567.76 575.878L566.41 576.058L565.42 576.327L564.07 575.339L564.16 574.17L564.97 573.002L565.96 572.013L566.77 570.665L566.59 569.587L565.78 568.688L564.7 567.789L563.98 565.991L564.25 563.565L565.33 559.161L565.51 556.554L565.15 551.341L565.33 548.735L567.13 545.499L570.1 541.725L571.99 537.95L571.45 536.602Z"
         fill="currentColor"
         @mousemove="handleMoved($event)"
-        @mouseenter="mouseEnter('surxandaryo')"
+        @mouseenter="mouseEnter('surxondaryo')"
+        @mouseleave="$emit('leavePath')"
         class="svg-path"
         stroke="#1A5CCE"
         stroke-width="2"
@@ -101,6 +105,7 @@ function handleMoved(event: any) {
         fill="currentColor"
         @mousemove="handleMoved($event)"
         @mouseenter="mouseEnter('andijon')"
+        @mouseleave="$emit('leavePath')"
         class="svg-path"
         stroke="#1A5CCE"
         stroke-width="2"
@@ -112,6 +117,7 @@ function handleMoved(event: any) {
         fill="currentColor"
         @mousemove="handleMoved($event)"
         @mouseenter="mouseEnter('fargona')"
+        @mouseleave="$emit('leavePath')"
         class="svg-path"
         stroke="#1A5CCE"
         stroke-width="2"
@@ -123,6 +129,7 @@ function handleMoved(event: any) {
         fill="currentColor"
         @mousemove="handleMoved($event)"
         @mouseenter="mouseEnter('namangan')"
+        @mouseleave="$emit('leavePath')"
         class="svg-path"
         stroke="#1A5CCE"
         stroke-width="2"
@@ -134,6 +141,7 @@ function handleMoved(event: any) {
         fill="currentColor"
         @mousemove="handleMoved($event)"
         @mouseenter="mouseEnter('jizzax')"
+        @mouseleave="$emit('leavePath')"
         class="svg-path"
         stroke="#1A5CCE"
         stroke-width="2"
@@ -145,6 +153,7 @@ function handleMoved(event: any) {
         fill="currentColor"
         @mousemove="handleMoved($event)"
         @mouseenter="mouseEnter('sirdaryo')"
+        @mouseleave="$emit('leavePath')"
         class="svg-path"
         stroke="#1A5CCE"
         stroke-width="2"
@@ -156,6 +165,7 @@ function handleMoved(event: any) {
         fill="currentColor"
         @mousemove="handleMoved($event)"
         @mouseenter="mouseEnter('toshkent')"
+        @mouseleave="$emit('leavePath')"
         class="svg-path"
         stroke="#1A5CCE"
         stroke-width="2"
@@ -172,6 +182,7 @@ function handleMoved(event: any) {
         stroke-linejoin="round"
         @mousemove="handleMoved($event)"
         @mouseenter="mouseEnter('toshkent_c')"
+        @mouseleave="$emit('leavePath')"
       />
     </g>
     <defs>

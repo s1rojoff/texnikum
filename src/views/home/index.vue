@@ -14,7 +14,7 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
       <BaseHeader />
     </div>
   </div>
-  <div class="h-auto overflow-hidden">
+  <!-- <div class="h-auto overflow-hidden">
     <div class="h-auto lg:h-[75vh]">
       <video
         src="/videos/header1.mp4"
@@ -25,7 +25,17 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
         loop
       ></video>
     </div>
-    <!-- <div class="bg-main absolute opacity-50 w-screen h-screen z-50"></div> -->
+    <div class="md:bottom-5 bottom-0 absolute left-0">
+      <BaseIcon class="w-full md:h-24 h-16 text-main" name="afrosiyob" />
+      <p
+        class="absolute text-sm md:text-lg top-[20%] tracking-wider pl-5 lg:pl-32 text-white z-[1] lg:text-lg"
+      >
+        "O'zbekiston Temir Yo'llari" AJ <br />Toshkent Temir Yo'l Texnikumi
+      </p>
+    </div>
+  </div> -->
+  <div>
+    <img src="/images/image.png" alt="" />
     <div class="md:bottom-5 bottom-0 absolute left-0">
       <BaseIcon class="w-full md:h-24 h-16 text-main" name="afrosiyob" />
       <p
@@ -51,5 +61,4 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
     <base-footer />
   </div>
 </template>
-<style>
-</style>
+<style></style>

@@ -69,16 +69,16 @@ storeToRefs(store)
     <!-- Laptop view navbars -->
     <div class="bg-[#E2F0F9]">
       <div
-        class="container mx-auto py-3 flex md:px-7 lg:px-24 2xl:px-0 px-5 items-center justify-between md:py-2 lg:py-6"
+        class="container mx-auto py-2 flex md:px-7 lg:px-24 2xl:px-0 px-5 items-center justify-between md:py-2 lg:py-6"
       >
         <BaseIcon
-          class="lg:w-7 lg:h-7 cursor-pointer md:w-5 md:-5"
+          class="lg:w-5 lg:h-5 cursor-pointer md:w-5 md:-5"
           @click="toggleNavbar"
           name="dashboard"
         />
 
         <div
-          class="lg:text-lg relative uppercase lg:block hidden lg:font-normal xl:font-extrabold 2xl:text-[22px] text-main"
+          class="lg:text-base relative uppercase lg:block hidden lg:font-normal xl:font-extrabold 2xl:text-[22px] text-main"
           v-for="(link, index) in navLinks"
           :key="index"
           @mouseenter="toggleSubNav(index)"

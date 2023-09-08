@@ -206,7 +206,6 @@ export const routers = [
         path: 'currentpro',
         name: 'Amaldagi loyihalar',
         component: () => import('@/views/international/currentpro.vue')
-
       },
       {
         path: 'students',
@@ -222,6 +221,18 @@ export const routers = [
         path: 'foreignPractice',
         name: "Xorijda malaka oshirish va ta'lim",
         component: () => import('@/views/international/foreignpractice.vue')
+      }
+    ]
+  },
+  {
+    path: '/student',
+    name: 'Student',
+    component: () => import('@/views/student/index.vue'),
+    children: [
+      {
+        path: 'schedule',
+        name: 'Dars jadvali',
+        component: () => import('@/views/student/schedule/index.vue')
       }
     ]
   },
@@ -247,12 +258,12 @@ export const routers = [
       },
       {
         path: 'scholarship',
-        name: "Tanlovlar, musobaqa va stipendiyalar",
+        name: 'Tanlovlar, musobaqa va stipendiyalar',
         component: () => import('@/views/youthPolicy/scholarship.vue')
       },
       {
-        path:'studentcampus',
-        name: "Talabalar shaharchasi",
+        path: 'studentcampus',
+        name: 'Talabalar shaharchasi',
         component: () => import('@/views/youthPolicy/studentCampus.vue')
       },
       {
@@ -277,23 +288,23 @@ export const routers = [
   {
     path: '/announcement',
     name: "E'lonlar",
-    component: ()=> import('@/views/announcement/main.vue'),
-    children:[
+    component: () => import('@/views/announcement/main.vue'),
+    children: [
       {
         path: 'news',
         name: 'main page of announcement page',
-        component: ()=> import('@/views/announcement/index.vue')
+        component: () => import('@/views/announcement/index.vue')
       },
       {
         path: 'upcoming-event',
         name: 'Upcoming events',
-        component: ()=> import('@/views/announcement/upcomingEvent.vue')
+        component: () => import('@/views/announcement/upcomingEvent.vue')
       }
     ]
   },
   {
-    path :'/connection',
+    path: '/connection',
     name: 'Connection with texnikum',
-    component: ()=> import('@/views/connect/connect-texnikum.vue')
+    component: () => import('@/views/connect/connect-texnikum.vue')
   }
 ]

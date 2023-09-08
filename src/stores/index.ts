@@ -131,6 +131,18 @@ export const useHeaderStore = defineStore('header', {
         },
         {
           id:5,
+          name: "O'quvchilarga",
+          route:'/',
+          visible: false,
+          subMenu:[
+            {
+              name: 'Dars jadvali',
+              route: '/student/schedule'
+            }
+          ]
+        },
+        {
+          id:6,
           name: "Abituriyentlarga",
           route: '/',
           visible: false,
@@ -142,7 +154,7 @@ export const useHeaderStore = defineStore('header', {
           ]
         },
         {
-          id:6,
+          id:7,
           name: "Bog'lanish",
           route: '/',
           visible: false,

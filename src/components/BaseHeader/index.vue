@@ -93,7 +93,7 @@ const changeLanguage = async () => {
             <p
               v-for="(item, index) in link.subMenu"
               :key="index"
-              class="menu-style text-black cursor-pointer text-sm font-bold py-1.5 m-3"
+              class="menu-style text-black cursor-pointer text-sm font-bold m-3"
             >
               <router-link
                 v-slot="{ isExactActive }"

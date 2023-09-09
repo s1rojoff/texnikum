@@ -35,7 +35,9 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
     </div>
   </div> -->
   <div>
-    <img src="/images/image.png" alt="" />
+    <div class="bg-[url('/images/image.png')] bg-no-repeat w-full bg-center bg-cover h-[100dvh]">
+
+    </div>
     <div class="md:bottom-5 bottom-0 absolute left-0">
       <BaseIcon class="w-full md:h-24 h-16 text-main" name="afrosiyob" />
       <p

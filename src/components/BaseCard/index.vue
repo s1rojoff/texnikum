@@ -12,6 +12,8 @@ const props = defineProps({
 })
 const currentExp = ref<boolean>(false)
 const currentMan = ref<boolean>(false)
+
+
 function replaceInfoExp() {
   if (currentExp.value) {
     currentExp.value = false
@@ -85,6 +87,9 @@ function replaceInfoMan() {
           >
             Majburiyatlari
           </button>
+          <!-- <button v-if="props.cardData.qabul" class="toggle-btn bg-white text-main">
+            Email orqali murojaat qilish
+          </button> -->
         </div>
       </div>
     </div>

@@ -11,12 +11,12 @@ const slides = ref(['/images/saida.png', '/images/header1.png', '/images/header.
 const { t }:any = useI18n()
 </script>
 <template>
-  <div class="container overflow-hidden mx-auto lg:px-24 2xl:px-0 px-5 md:px-7 lg:pt-28 pt-10">
+  <div class="container overflow-hidden mx-auto lg:px-24 2xl:px-5 px-5 md:px-7 lg:pt-28 pt-10">
     <div class="grid md:grid-cols-2 grid-cols-1 lg:gap-24 md:gap-16 ">
       <div class="">
         <swiper :effect="'cards'" :grabCursor="true" :modules="modules" class="mySwiper">
           <swiper-slide v-for="slide in slides" :key="slide">
-            <img :src="slide" class="w-full min-h-full bg-contain" alt="" />
+            <img :src="slide" class="w-full min-h-full bg-contain object-cover" alt="" />
           </swiper-slide>
         </swiper>
       </div>

@@ -24,7 +24,7 @@ const changeLanguage = async () => {
   )
   locale.value = selectedLanguage.value
 }
-storeToRefs(store)
+(store)
 </script>
 <template>
   <div>
@@ -38,7 +38,7 @@ storeToRefs(store)
     <!-- Logo and  icons for social media -->
     <div class="bg-white hidden md:block">
       <div
-        class="lg:px-24 2xl:px-0 md:px-7 lg:py-2 mx-auto container md:flex md:items-center md:justify-between"
+        class="lg:px-24 2xl:px-5 md:px-7 lg:py-2 mx-auto container md:flex md:items-center md:justify-between"
       >
         <router-link to="/" class="cursor-pointer" @click="store.$state.allMenus = false">
           <div class="w-fit flex justify-start items-center gap-1">
@@ -117,7 +117,7 @@ storeToRefs(store)
     </div>
     <!-- All menues in navbar -->
     <div class="relative hidden md:block" v-if="store.$state.allMenus">
-      <div class="bg-white absolute w-full h-80 pl-10 pt-5">
+      <div class="bg-white absolute w-full h-80 xl:h-[470px] pl-10 pt-5">
         <div class="flex w-full items-start gap-5 justify-center">
           <div v-for="(item, index) in navLinks" :key="index">
             <p class="text-lg font-semibold pb-2">{{ item.name }}</p>

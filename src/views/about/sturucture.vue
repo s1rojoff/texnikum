@@ -5,14 +5,14 @@
   >
     <div class="mx-auto container top-2/3 text-start z-20">
       <p
-        class="sm:text-5xl 2xl:text-7xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none"
+        class="sm:text-5xl 2xl:text-7xl lg:px-24 2xl:px-5 font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none"
       >
         Tashkiliy tuzilmasi
       </p>
     </div>
     <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-[2]"></div>
   </div>
-  <div class="lg:px-24 mt-5">
+  <div class="lg:px-24 mt-5 mx-auto container">
     <img class="w-full" src="/images/Tarkibiy_tuzilma.jpg" alt="" />
   </div>
 </template>

@@ -24,7 +24,7 @@ const partners = ref<string[]>([
 </script>
 
 <template>
-  <div class="container 2xl:px-0 mx-auto lg:px-24 md:px-7 px-5 md:mt-36">
+  <div class="container 2xl:px-5 mx-auto lg:px-24 md:px-7 px-5 md:mt-36">
     <div class="flex justify-center lg:pb-10 pt-10">
       <span class="lg:text-3xl text-second text-2xl lg:font-extrabold border-main text-center md:border-b-8 border-b-4">
         Hamkor Tashkilotlar
@@ -54,12 +54,11 @@ const partners = ref<string[]>([
       <swiper-slide
         v-for="(partner, index) in partners"
         :key="index"
-        class="pb-10"
-      >
-        
+        class="pb-10 "
+      >  
         <img
           :src="partner"
-          class="select-none">
+          class="select-none xl:w-[150px]">
       </swiper-slide>
     </swiper>
   </div>

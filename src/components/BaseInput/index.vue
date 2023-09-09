@@ -23,8 +23,8 @@ const props = defineProps({
 <template>
   <div>
     <input
-      class="border-main border w-full rounded-2xl py-1 outline-none px-2"
-      :class="{'py-2' : (props.size == 'md'), 'py-1' :(props.size == 'sm') }"
+      class="border-main border w-full rounded-lg py-1 outline-none px-2 focus:border-sky-500"
+      :class="{'py-2' : (props.size == 'md'), 'py-1' :(props.size == 'sm'), 'textarea' : (props.size=='h-300px')}"
       :type="props.type"
       :value="props.modelValue"
       :placeholder="props.placeholder"

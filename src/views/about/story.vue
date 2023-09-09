@@ -13,7 +13,7 @@
     <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-[2]"></div>
   </div>
 
-  <div class="mx-auto 2xl:px-0 container px-4 lg:px-24">
+  <div class="mx-auto 2xl:px-5 container px-4 lg:px-24">
     <div class="flex [@media(min-width:900px)]:justify-between [@media(min-width:900px)]:items-start gap-24 pt-20 justify-center items-center flex-wrap [@media(min-width:900px)]:flex-nowrap">
       <div class="[@media(min-width:900px)]:w-1/2">
         <video class="rounded-lg" controls>

@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+const emit = defineEmits(['byEmailAppeal'])
+import { useAboutPage } from '@/views/about/composable';
+const { openModal } = useAboutPage()
 const props = defineProps({
   cardData: {
     type: Object,
@@ -12,7 +15,6 @@ const props = defineProps({
 })
 const currentExp = ref<boolean>(false)
 const currentMan = ref<boolean>(false)
-
 
 function replaceInfoExp() {
   if (currentExp.value) {
@@ -34,6 +36,7 @@ function replaceInfoMan() {
     }
   }
 }
+
 </script>
 
 <template>
@@ -41,19 +44,14 @@ function replaceInfoMan() {
   <div class="w-full rounded py-5 px-4 bg-slate-100 shadow-lg shadow-indigo-500/50">
     <div class="flex items-start  md:flex-nowrap flex-wrap justify-between">
       <div class="1/3">
-        <img
-          :src="props.cardData.url"
-          :alt="props.cardData.id"
-          class="md:h-52 h-[200px] lg:h-64 lg:w-64 object-cover  sm:h-[300px] bg-cover bg-center rounded md:w-48"
-        />
+        <img :src="props.cardData.url" :alt="props.cardData.id"
+          class="md:h-52 h-[200px] lg:h-64 lg:w-64 object-cover  sm:h-[300px] bg-cover bg-center rounded md:w-48" />
       </div>
       <div class="md:w-2/3 w-full">
         <p class="text-center text-lg">{{ props.cardData.lavozim }}</p>
         <p class="text-center text-2xl">{{ props.cardData.name }}</p>
-        <div
-          class="flex sm:justify-between mt-11 flex-wrap md:flex-row gap-4 flex-col"
-          :class="{ 'mt-10': !props.cardData.experience && !props.cardData.mandate }"
-        >
+        <div class="flex sm:justify-between mt-11 flex-wrap md:flex-row gap-4 flex-col"
+          :class="{ 'mt-10': !props.cardData.experience && !props.cardData.mandate }">
           <div class="grid grid-cols-1 grid-rows-2">
             <p class="2xl:text-2xl">Telefon</p>
             <p class="2xl:text-2xl">{{ props.cardData.phone }}</p>
@@ -69,27 +67,20 @@ function replaceInfoMan() {
         </div>
 
         <!-- Informations -->
-        <div
-          class="flex items-center justify-around mt-16"
-          v-if="props.cardData.experience && props.cardData.mandate"
-        >
-          <button
-            :class="currentExp ? 'bg-main text-white' : 'bg-white text-main'"
-            class="toggle-btn "
-            @click="replaceInfoExp"
-          >
+        <div class="flex items-center justify-around mt-16" v-if="props.cardData.experience && props.cardData.mandate">
+          <button :class="currentExp ? 'bg-main text-white' : 'bg-white text-main'" class="toggle-btn "
+            @click="replaceInfoExp">
             Ish tajribasi
           </button>
-          <button
-            :class="currentMan ? 'bg-main text-white' : 'bg-white text-main'"
-            class="toggle-btn"
-            @click="replaceInfoMan"
-          >
+          <button :class="currentMan ? 'bg-main text-white' : 'bg-white text-main'" class="toggle-btn"
+            @click="replaceInfoMan">
             Majburiyatlari
           </button>
-          <!-- <button v-if="props.cardData.qabul" class="toggle-btn bg-white text-main">
+          <button
+            @click="$emit('byEmailAppeal')" 
+            v-if="props.cardData.qabul" class="toggle-btn bg-white text-main">
             Email orqali murojaat qilish
-          </button> -->
+          </button>
         </div>
       </div>
     </div>
@@ -108,8 +99,9 @@ function replaceInfoMan() {
 </template>
 <style>
 .toggle-btn {
-  @apply rounded-md border-none border py-1 sm:px-10 px-3 hover:bg-blue-500/50 hover:text-white transition hover:hover:shadow-blue-500/50 shadow-lg; 
+  @apply rounded-md border-none border py-1 sm:px-10 px-3 hover:bg-blue-500/50 hover:text-white transition hover:hover:shadow-blue-500/50 shadow-lg;
 }
+
 .title {
   @apply text-center text-xl 2xl:text-3xl text-main font-semibold;
 }

@@ -94,7 +94,18 @@ export function useAboutPage() {
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odit blanditiis dolore sint provident nulla rem amet similique, architecto maxime.'
     }
   ])
+  const openModal = ref<boolean>(false)
+  function clickModal (val:string){
+      if(val == 'send') {
+        console.log('send');
+      }
+      if(val == 'close') {
+        openModal.value = false
+      }
+  }
   return {
-    managements
+    managements,
+    openModal,
+    clickModal
   }
 }

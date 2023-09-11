@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import BaseSmallCard from '@/components/BaseSmallCard/index.vue'
+// import BaseSmallCard from '@/components/BaseSmallCard/index.vue'
+import BaseDepartmentCard from '@/components/BaseDepartmentCard/index.vue'
 import {usedepEmploye} from '@/views/about/dep_employe/composable'
-const {depEmployes} = usedepEmploye()
+
+const {depEmployes, departments} = usedepEmploye()
 
 </script>
 <template>
@@ -18,10 +20,15 @@ const {depEmployes} = usedepEmploye()
     <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-[2]"></div>
   </div>
   <div class="mx-auto container mt-16 px-4  lg:px-20">
-    <div class="flex flex-wrap justify-between  gap-y-10">
+    <!-- <div class=" flex flex-wrap justify-between  gap-y-10">
       <div v-for="(item, index) in depEmployes" :key="index">
         <BaseSmallCard :item-info="item" />
       </div>
-    </div>
+    </div> -->
+    <BaseDepartmentCard
+      v-for="(department, index) in departments"
+      :key="index"
+      :cardData = "department"
+    />
   </div>
 </template>

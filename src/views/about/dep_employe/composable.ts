@@ -94,5 +94,63 @@ export function usedepEmploye() {
       path: '/about/dep-employee/technical-economy'
     }
   ])
-  return {depEmployes}
+  const departments = ref<any>([
+    {
+      lavozim: "Infrastruktura bo'limi boshlig'i",
+      url: '/images/user.jpg',
+      name: 'Firstname Lastname',
+      phone: '97-000-00-00',
+      email: 'example@gmail.com'
+    },
+    {
+      lavozim: "O‘quv-uslubiy bo‘lim boshlig'i",
+      url: '/images/user.jpg',
+      name: 'Firstname Lastname',
+      phone: '97-000-00-00',
+      email: 'example@gmail.com'
+    },
+    {
+      lavozim: "O‘quv-uslubiy bo‘lim boshlig'i",
+      url: '/images/user.jpg',
+      name: 'Firstname Lastname',
+      phone: '97-000-00-00',
+      email: 'example@gmail.com'
+    },
+    {
+      lavozim: "O‘quv-uslubiy bo‘lim boshlig'i",
+      url: '/images/user.jpg',
+      name: 'Firstname Lastname',
+      phone: '97-000-00-00',
+      email: 'example@gmail.com'
+    },
+    {
+      lavozim: "O‘quv-uslubiy bo‘lim boshlig'i",
+      url:'/images/user.jpg',
+      name: 'Firstname Lastname',
+      phone: '97-000-00-00',
+      email: 'example@gmail.com'
+    },
+    {
+      lavozim: "O‘quv-uslubiy bo‘lim boshlig'i",
+      url: '/images/user.jpg',
+      name: 'Firstname Lastname',
+      phone: '97-000-00-00',
+      email: 'example@gmail.com'
+    },
+    {
+      lavozim: "O‘quv-uslubiy bo‘lim boshlig'i",
+      url: '/images/user.jpg',
+      name: 'Firstname Lastname',
+      phone: '97-000-00-00',
+      email: 'example@gmail.com'
+    },
+    {
+      lavozim: "O‘quv-uslubiy bo‘lim boshlig'i",
+      url: '/images/user.jpg',
+      name: 'Firstname Lastname',
+      phone: '97-000-00-00',
+      email: 'example@gmail.com'
+    }
+  ])
+  return { depEmployes, departments }
 }

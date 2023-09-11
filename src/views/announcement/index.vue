@@ -30,10 +30,10 @@ const categories = ['Barchasi', 'Jamiyat', 'Sport', 'Texnikum', 'Rahbariyat']
   </div>
   <div class="container mx-auto px-4 lg:px-24 mt-10">
     <div class="flex flex-wrap sm:flex-nowrap items-start gap-5">
-      <div class=" flex sm:w-3/4 w-full gap-x-5 flex-wrap gap-y-5 order-2 sm:order-1">
+      <div class=" flex sm:w-3/4 w-full gap-x-5 flex-wrap gap-y-5 order-2">
         <BaseNewsCard v-for="(item, index) in newsData" :key="index" :news-data="item"/>
       </div>
-      <div class="sm:w-1/4 w-full order-1 sm:order-2">
+      <div class="sm:w-1/4 w-full order-1">
       <BaseInput placeholder="Search for" size="sm" type="search" />
         <p class="text-main text-start text-lg mt-5 font-medium">Kategoriyalar</p>
         <p class="border-b first:mt-2 custom-transition text-sm border-main py-3 cursor-pointer hover:pl-4 pl-2 transition hover:bg-slate-200" v-for="item in categories" :key="item">{{ item }}</p>

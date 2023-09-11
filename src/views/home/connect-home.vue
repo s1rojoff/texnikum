@@ -13,7 +13,7 @@ import BaseIcon from '@/components/BaseIcon/index.vue'
   <div id="connect">
     <div class="flex justify-center pt-10 lg:pb-10">
       <span
-        class="lg:text-3xl text-second text-2xl lg:font-extrabold border-main text-center md:border-b-8 border-b-4"
+        class="lg:text-3xl text-second text-2xl lg:font-extrabold border-main text-center md:border-b-4 border-b-4"
       >
         Bog'lanish
       </span>

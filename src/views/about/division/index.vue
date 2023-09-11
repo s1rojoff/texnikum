@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { useDivision } from '@/views/about/division/composable'
-import BaseSmallPage from '@/components/BaseSmallCard/index.vue'
-const { devisions } = useDivision()
+// import BaseSmallPage from '@/components/BaseSmallCard/index.vue'
+import BaseDepartmentCard from '@/components/BaseDepartmentCard/index.vue'
+import { storeToRefs } from 'pinia'
+import { useAboutStore } from '@/stores';
+const store: any = useAboutStore()
+storeToRefs(store)
+const { devisions, bosses } = useDivision()
 </script>
 
 <template>
@@ -20,12 +25,18 @@ const { devisions } = useDivision()
 
   <div class="mx-auto container 2xl:px-5  mt-16 px-5 lg:px-24">
     <div class=" gap-5 flex flex-wrap justify-center">
-      <div 
+      <!-- <div 
         v-for="(item, index) in devisions" 
         :key="index"
         >
         <BaseSmallPage :item-info="item" />
-      </div>
+      </div> -->
+      <BaseDepartmentCard 
+        v-for="(boss, index) in bosses"
+        :key="index"
+        :cardData = "boss" 
+        :showInfo="store.visibleInfo"
+      />
     </div>
   </div>
 </template>

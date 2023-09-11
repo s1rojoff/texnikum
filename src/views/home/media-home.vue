@@ -13,7 +13,7 @@ const slides = ref(['/images/media1.png', '/images/media2.png', '/images/media1.
   <div class="container overflow-hidden lg:px-24 2xl:px-5 md:px-7 px-5 mx-auto md:mt-20 mt-10 lg:mt-40">
     <div class="flex justify-center lg:pb-10">
       <span
-        class="lg:text-3xl text-second text-2xl lg:font-extrabold border-main text-center md:border-b-8 border-b-4"
+        class="lg:text-3xl text-second text-2xl lg:font-extrabold border-main text-center md:border-b-4 border-b-4"
       >
         Mediateka
       </span>

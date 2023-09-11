@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import BaseCard from '@/components/BaseCard/index.vue'
+// import BaseCard from '@/components/BaseCard/index.vue'
+import BaseDepartmentCard from '@/components/BaseDepartmentCard/index.vue'
 const boss = {
   lavozim: "Toshkent temir yo'l transporti texnikumining Kasaba uyushmasi raisi",
   url: '/images/user.jpg',
@@ -25,7 +26,7 @@ const boss = {
   </div>
   <div class="container px-5 lg:px-24 2xl:px-0 mx-auto">
     <div class="lg:mt-5">
-      <BaseCard :card-data="boss" />
+      <BaseDepartmentCard :card-data="boss" />
     </div>
     <p class="text-main text-center mt-10 text-3xl border-b-2 pb-2 border-main font-semibold">
       Kasaba uyushmasi haqida ma'lumot

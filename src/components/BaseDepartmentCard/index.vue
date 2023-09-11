@@ -3,6 +3,10 @@ const props = defineProps({
   cardData: {
     type: Object,
     required: true
+  },
+  showInfo: {
+    type: Boolean,
+    default: false
   }
 })
 </script>
@@ -16,6 +20,7 @@ const props = defineProps({
       <p class="text-2xl font-bold text-main border-l pl-5 border-l-indigo-500">{{ props.cardData.name }}</p>
       <p class="text-lg border-l pl-5 border-l-indigo-500">&phone; {{ props.cardData.phone }}</p>
       <p class="text-lg border-l pl-5 border-l-indigo-500"> {{ props.cardData.email}}</p>
+      <p class="text-lg border-l pl-5 border-l-indigo-500" v-if="props.cardData.qabul">{{ props.cardData.qabul }}</p>
     </div>
   </div>
 </template>

@@ -43,5 +43,35 @@ export function useDivision() {
       path: '/about/division/organization'
     }
   ])
-  return { devisions }
+  const bosses = ref<any>([
+    {
+      lavozim: "Infrastruktura bo'limi boshlig'i",
+      url: '/images/user.jpg',
+      name: 'Firstname Lastname',
+      phone: '97-000-00-00',
+      email: 'example@gmail.com'
+    },
+    {
+      lavozim: "Infrastruktura bo'limi boshlig'i",
+      url: '/images/user.jpg',
+      name: 'Firstname Lastname',
+      phone: '97-000-00-00',
+      email: 'example@gmail.com'
+    },
+    {
+      lavozim: "Infrastruktura bo'limi boshlig'i",
+      url: '/images/user.jpg',
+      name: 'Firstname Lastname',
+      phone: '97-000-00-00',
+      email: 'example@gmail.com'
+    },
+    {
+      lavozim: "Infrastruktura bo'limi boshlig'i",
+      url: '/images/user.jpg',
+      name: 'Firstname Lastname',
+      phone: '97-000-00-00',
+      email: 'example@gmail.com'
+    }
+  ])
+  return { devisions, bosses }
 }

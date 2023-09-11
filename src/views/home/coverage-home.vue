@@ -33,7 +33,7 @@ function hideNotice(){
   <div class="mx-auto 2xl:px-5 container lg:px-24 md:px-7 px-5 lg:mt-3 md:mt-20">
     <div class="flex justify-center lg:pb-10 pt-10">
       <span
-        class="lg:text-3xl text-second text-2xl 2xl:text-4xl lg:font-extrabold border-main text-center md:border-b-8 border-b-4"
+        class="lg:text-3xl text-second text-2xl 2xl:text-4xl lg:font-extrabold border-main text-center md:border-b-4 border-b-4"
       >
         Texnikum qamrovi
       </span>

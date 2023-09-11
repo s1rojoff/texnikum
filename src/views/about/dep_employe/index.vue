@@ -1,7 +1,11 @@
 <script setup lang="ts">
 // import BaseSmallCard from '@/components/BaseSmallCard/index.vue'
 import BaseDepartmentCard from '@/components/BaseDepartmentCard/index.vue'
+import { useAboutStore } from '@/stores';
 import {usedepEmploye} from '@/views/about/dep_employe/composable'
+import { storeToRefs } from 'pinia'
+const store: any = useAboutStore()
+storeToRefs(store)
 
 const {depEmployes, departments} = usedepEmploye()
 
@@ -19,7 +23,7 @@ const {depEmployes, departments} = usedepEmploye()
     </div>
     <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-[2]"></div>
   </div>
-  <div class="mx-auto container mt-16 px-4  lg:px-20">
+  <div class="mx-auto container mt-16 px-5  lg:px-24">
     <!-- <div class=" flex flex-wrap justify-between  gap-y-10">
       <div v-for="(item, index) in depEmployes" :key="index">
         <BaseSmallCard :item-info="item" />
@@ -29,6 +33,7 @@ const {depEmployes, departments} = usedepEmploye()
       v-for="(department, index) in departments"
       :key="index"
       :cardData = "department"
+      :showInfo="store.visibleInfo"
     />
   </div>
 </template>

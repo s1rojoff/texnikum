@@ -268,6 +268,26 @@ export const routers = [
         path: 'major-employer',
         name: "Asosiy ish beruvchilar",
         component: () => import('@/views/student/curriculum.vue')
+      },
+      {
+        path: 'graduated-students',
+        name: "Bitirgan talabalar",
+        component: () => import('@/views/student/curriculum.vue')
+      },
+      {
+        path: 'employment-graduates',
+        name: "Bitirganlarni ishga joylashtirish",
+        component: () => import('@/views/student/curriculum.vue')
+      },
+      {
+        path: 'working-curricula',
+        name: "O'quv rejalar",
+        component: () => import('@/views/student/curriculum.vue')
+      },
+      {
+        path: 'qual-requirement',
+        name: "Malaka talablari",
+        component: () => import('@/views/student/curriculum.vue')
       }
     ]
   },

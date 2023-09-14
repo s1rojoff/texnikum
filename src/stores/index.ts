@@ -138,7 +138,35 @@ export const useHeaderStore = defineStore('header', {
             {
               name: 'Dars jadvali',
               route: '/student/schedule'
-            }
+            },
+            {
+              name: 'Stipendiya qiymati',
+              route: '/student/award'
+            },
+            {
+              name: "O'quv dasturi",
+              route: '/student/curriculum'
+            },
+            {
+              name: "Fan dasturi",
+              route: '/student/science-program'
+            },
+            {
+              name: "Bitiruv malakaviy ish himoyasi",
+              route: '/student/graduate-work'
+            },
+            {
+              name: "Iqtidorli talabalar",
+              route: '/student/talanted-student'
+            },
+            {
+              name: "Talabalar turar joyi",
+              route: '/student/ttj'
+            },
+            {
+              name: "Asosiy ish beruvchi tashkilotlar",
+              route: '/student/major-employer'
+            },
           ]
         },
         {

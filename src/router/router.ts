@@ -233,6 +233,41 @@ export const routers = [
         path: 'schedule',
         name: 'Dars jadvali',
         component: () => import('@/views/student/schedule/index.vue')
+      },
+      {
+        path: 'award',
+        name: 'Stipendiya qiymati',
+        component: () => import('@/views/student/award.vue')
+      },
+      {
+        path: 'curriculum',
+        name: "O'quv dasturi",
+        component: () => import('@/views/student/curriculum.vue')
+      },
+      {
+        path: 'science-program',
+        name: "Fan dasturi",
+        component: () => import('@/views/student/curriculum.vue')
+      },
+      {
+        path: 'graduate-work',
+        name: "Bitiruv malakaviy ish himoyasi",
+        component: () => import('@/views/student/curriculum.vue')
+      },
+      {
+        path: 'talanted-student',
+        name: "Iqtidorli talabalar",
+        component: () => import('@/views/student/curriculum.vue')
+      },
+      {
+        path: 'ttj',
+        name: "Talabalar turar joyi",
+        component: () => import('@/views/student/curriculum.vue')
+      },
+      {
+        path: 'major-employer',
+        name: "Asosiy ish beruvchilar",
+        component: () => import('@/views/student/curriculum.vue')
       }
     ]
   },

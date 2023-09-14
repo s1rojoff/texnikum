@@ -11,16 +11,16 @@ const props = defineProps({
 })
 </script>
 <template>
-  <div class="shadow-lg flex shadow-indigo-500/40 w-full h-80 relative mb-5">
+  <div class="shadow-lg flex flex-col justify-center items-center p-5 sm:p-0 sm:flex-row  shadow-indigo-500/40 w-full h-auto relative mb-5">
     <div class=" h-full w-1/3">
       <img class="object-cover w-full h-full" :src="props.cardData.url" alt="">
     </div>
     <div class="w-2/3 ml-6 flex flex-col gap-4 mt-5">
-      <p class="text-xl uppercase border-l pl-5 border-l-indigo-500">{{ props.cardData.lavozim }}</p>
-      <p class="text-2xl font-bold text-main border-l pl-5 border-l-indigo-500">{{ props.cardData.name }}</p>
-      <p class="text-lg border-l pl-5 border-l-indigo-500">&phone; {{ props.cardData.phone }}</p>
-      <p class="text-lg border-l pl-5 border-l-indigo-500"> {{ props.cardData.email}}</p>
-      <p class="text-lg border-l pl-5 border-l-indigo-500" v-if="props.cardData.qabul">{{ props.cardData.qabul }}</p>
+      <p class="lg:text-xl sm:text-md text-sm uppercase border-l pl-5 border-l-indigo-500">{{ props.cardData.lavozim }}</p>
+      <p class="lg:text-2xl sm:text-md text-sm font-bold text-main border-l pl-5 border-l-indigo-500">{{ props.cardData.name }}</p>
+      <p class="lg:text-lg sm:text-md text-sm border-l pl-5 border-l-indigo-500">&phone; {{ props.cardData.phone }}</p>
+      <p class="lg:text-lg sm:text-md text-sm border-l pl-5 border-l-indigo-500"> {{ props.cardData.email}}</p>
+      <p class="lg:text-lg sm:text-md text-sm border-l pl-5 border-l-indigo-500" v-if="props.cardData.qabul">{{ props.cardData.qabul }}</p>
     </div>
   </div>
 </template>

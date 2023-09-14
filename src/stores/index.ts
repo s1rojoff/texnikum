@@ -167,6 +167,22 @@ export const useHeaderStore = defineStore('header', {
               name: "Asosiy ish beruvchi tashkilotlar",
               route: '/student/major-employer'
             },
+            {
+              name: "Bitirgan talabalarning ish faoliyatidan",
+              route: '/student/graduated-students'
+            },
+            {
+              name: "Bitirgan talabalarning ishga joylashtirish",
+              route: '/student/employment-gaduates'
+            },
+            {
+              name: "Ishchi o'quv rejalar",
+              route: '/student/working-curricula'
+            },
+            {
+              name: "Malaka talablari",
+              route: '/student/qual-requirement'
+            },
           ]
         },
         {

@@ -11,7 +11,7 @@ const props = defineProps({
 })
 </script>
 <template>
-  <div class="shadow-lg flex flex-col justify-center items-center p-5 sm:p-0 sm:flex-row  shadow-indigo-500/40 w-full h-auto relative mb-5">
+  <div class="shadow-lg flex flex-col justify-center items-center p-5 sm:p-0 sm:flex-row  shadow-indigo-500/40 w-full h-auto  relative mb-5">
     <div class=" h-full w-1/3">
       <img class="object-cover w-full h-full" :src="props.cardData.url" alt="">
     </div>

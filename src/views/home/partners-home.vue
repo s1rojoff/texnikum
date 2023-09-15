@@ -26,7 +26,7 @@ const partners = ref<string[]>([
 <template>
   <div class="container 2xl:px-5 mx-auto lg:px-24 md:px-7 px-5 md:mt-36">
     <div class="flex justify-center lg:pb-10 pt-10">
-      <span class="lg:text-3xl text-second text-2xl lg:font-extrabold border-main text-center md:border-b-4 border-b-4">
+      <span class="lg:text-3xl text-second text-2xl mb-4 lg:font-extrabold border-main text-center md:border-b-4 border-b-4">
         Hamkor Tashkilotlar
       </span>
     </div>

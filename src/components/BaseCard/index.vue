@@ -67,7 +67,7 @@ function replaceInfoMan() {
         </div>
 
         <!-- Informations -->
-        <div class="flex items-center justify-around mt-16" v-if="props.cardData.experience && props.cardData.mandate">
+        <div class="flex items-center flex-wrap gap-5 justify-around mt-16" v-if="props.cardData.experience && props.cardData.mandate">
           <button :class="currentExp ? 'bg-main text-white' : 'bg-white text-main'" class="toggle-btn "
             @click="replaceInfoExp">
             Ish tajribasi

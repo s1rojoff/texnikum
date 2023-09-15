@@ -193,7 +193,39 @@ export const useHeaderStore = defineStore('header', {
           subMenu: [
             {
               name: "Qabul komissiyasi haqida ma'lumot",
-              route: '/acceptance'
+              route: '/abiturian/acceptance'
+            },
+            {
+              name: "Ta'lim yo'nalishlari",
+              route: '/abiturian/approaches'
+            },
+            {
+              name: "Qabul kvotalari",
+              route: '/abiturian/quotas'
+            },
+            {
+              name: "Imtihon fanlari ro'yxati",
+              route: '/abiturian/examlist'
+            },
+            {
+              name: "Ijodiy imtihon tizimi",
+              route: '/abiturian/creativeexam'
+            },
+            {
+              name: "Qabul natijalari",
+              route: '/abiturian/examresults'
+            },
+            {
+              name: "O'qishni ko'chirish va tiklash",
+              route: '/abiturian/transfer'
+            },
+            {
+              name: "Qo'shma ta'lim dasturlari",
+              route: '/abiturian/jointeducation'
+            },
+            {
+              name: "Kechki ta'lim",
+              route: '/abiturian/eveningeducation'
             }
           ]
         },

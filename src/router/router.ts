@@ -329,15 +329,56 @@ export const routers = [
     ]
   },
   {
-    path: '/acceptance',
-    name: 'Qabul komissiyasi',
+    path: '/abiturian',
+    name: 'Abituriyentlarga',
     component: () => import('@/views/acceptance/index.vue'),
     children: [
       {
-        path: '',
+        path: 'acceptance',
         name: "Qabul komissiyasi haqida ma'lumot",
-        component: () => import('@/views/acceptance/index.vue')
-      }
+        component: () => import('@/views/acceptance/acceptance.vue')
+      },
+      {
+        path: 'approaches',
+        name: "Ta'lim yo'nalishlari",
+        component: () => import('@/views/acceptance/approaches.vue')
+      },
+      {
+        path: 'quotas',
+        name: "Qabul kvotalari",
+        component: () => import('@/views/acceptance/approaches.vue')
+      },
+      {
+        path: 'examlist',
+        name: "Imtihon fanlari ro'yxati",
+        component: () => import('@/views/acceptance/approaches.vue')
+      },
+      {
+        path: 'creativeexam',
+        name: "Ijodiy imtihon tizimi",
+        component: () => import('@/views/acceptance/approaches.vue')
+      },
+      {
+        path: 'examresults',
+        name: "Qabul natijalari",
+        component: () => import('@/views/acceptance/approaches.vue')
+      },
+      {
+        path: 'transfer',
+        name: "O'qishni ko'chirish va tiklash",
+        component: () => import('@/views/acceptance/approaches.vue')
+      },
+      {
+        path: 'jointeducation',
+        name: "Qo'shma ta'lim dasturlari",
+        component: () => import('@/views/acceptance/approaches.vue')
+      },
+      {
+        path: 'eveningeducation',
+        name: "Kechki ta'lim",
+        component: () => import('@/views/acceptance/approaches.vue')
+      },
+
     ]
   },
   {

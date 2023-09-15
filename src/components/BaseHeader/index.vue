@@ -70,7 +70,6 @@ const changeLanguage = async () => {
           v-for="(link, index) in navLinks" :key="index" @mouseenter="toggleSubNav(index)"
           @mouseleave="toggleSubNav(index)">
           <p class="cursor-pointer">{{ link.name }}</p>
-
           <div v-if="navLinks[index].visible && !store.$state.allMenus"
             class="h-auto w-80 absolute px-2 text-start rounded-md bg-bgColor drop-shadow-lg">
             <p v-for="(item, index) in link.subMenu" :key="index"

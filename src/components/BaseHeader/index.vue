@@ -62,7 +62,7 @@ const changeLanguage = async () => {
     <!-- Laptop view navbars -->
     <div class="bg-[#E2F0F9]">
       <div
-        class="container mx-auto py-2 flex md:px-7 lg:px-24 2xl:px-0 px-5 items-center justify-between md:py-2 lg:py-6">
+        class="container mx-auto py-2 flex md:px-7 lg:px-24 2xl:px-5 px-5 items-center justify-between md:py-2 lg:py-6">
         <BaseIcon class="lg:w-5 lg:h-5 cursor-pointer md:w-5 md:-5" @click="toggleNavbar" name="dashboard" />
 
         <div

@@ -35,7 +35,7 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
     </div>
   </div> -->
   <div>
-    <div class="bg-[url('/images/image.png')] bg-no-repeat w-full bg-center bg-cover h-[100dvh]">
+    <div class="bg-[url('/images/image.png')] px-4 lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh] relative">
 
     </div>
     <div class="md:bottom-5 bottom-0 absolute left-0">

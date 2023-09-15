@@ -71,12 +71,30 @@ const changeLanguage = async () => {
           @mouseleave="toggleSubNav(index)">
           <p class="cursor-pointer">{{ link.name }}</p>
 
+<<<<<<< Updated upstream
           <div v-if="navLinks[index].visible && !store.$state.allMenus"
             class="h-auto w-80 absolute px-2 text-start rounded-md bg-bgColor drop-shadow-lg">
             <p v-for="(item, index) in link.subMenu" :key="index"
               class="menu-style text-black cursor-pointer text-xs font-bold m-3">
               <router-link v-slot="{ isExactActive }" v-if="item.name != 'Direktorga murojaat qilish'" :to="item.route">
                 <span :class="{ 'text-main': isExactActive }">{{ item.name }}</span>
+=======
+          <div
+            v-if="navLinks[index].visible && !store.$state.allMenus"
+            class="h-auto py-2 w-64 absolute px-4 text-start backdrop-blur-md bg-white/30 drop-shadow-md"
+          >
+            <p
+              v-for="(item, index) in link.subMenu"
+              :key="index"
+              class="menu-style text-black cursor-pointer text-sm font-bold m-3"
+            >
+              <router-link
+                v-slot="{ isExactActive }"
+                v-if="item.name != 'Direktorga murojaat qilish'"
+                :to="item.route"
+              >
+                <p :class="{ 'text-main': isExactActive }">{{ item.name }}</p>
+>>>>>>> Stashed changes
               </router-link>
               <a v-else target="_blank" :href="item.route">{{ item.name }}</a>
             </p>

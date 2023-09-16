@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import 'swiper/css'
-import 'swiper/css/effect-coverflow'
-import 'swiper/css/pagination'
-import { EffectCoverflow, Pagination } from 'swiper'
-const modules = [EffectCoverflow, Pagination]
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import { Autoplay, FreeMode, Pagination } from 'swiper';
+const modules = [Autoplay, FreeMode, Pagination]
 const slides = ref([
   '/youthpolicy/boks.webp',
   '/youthpolicy/chess.jpg',
@@ -34,63 +34,46 @@ const slides = ref([
   <div>
     
   </div>
-  <div class="mt-14 mx-auto container lg:px-24 px-4">
-    <swiper
-      :effect="'coverflow'"
-      :grabCursor="true"
-      :centeredSlides="true"
-      :slidesPerView="'auto'"
-      :coverflowEffect="{
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true
-      }"
-      :pagination="true"
-      :modules="modules"
-      class="mySwiper"
+  <div class="mt-14 mx-auto container lg:px-24 px-5 2xl:px-5">
+    <swiper 
+    :slidesPerView="3"
+    :spaceBetween="30"
+    :autoplay="{
+      delay: 1500,
+      disableOnInteraction: false,
+    }"
+    :freeMode="true"
+    :pagination="{
+      clickable: true,
+    }"
+    :modules="modules"
+    class="mySwiper"
+  >
+    <swiper-slide 
+      class="mb-10"
+      v-for="(item, index) in slides" 
+      :key="index"
     >
-      <swiper-slide v-for="slide in slides" :key="slide">
-        <img class="object-cover w-[300px] h-[300px] select-none" :src="slide" />
-      </swiper-slide>
-    </swiper>
+
+      <img :src="item" alt="" class="select-none">
+    </swiper-slide>
+  </swiper>
   </div>
 </template>
 <style scoped>
-#app {
-  height: 100%;
-}
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
 .swiper {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  height: 100%;
 }
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
+.swiper-slide{
+  width: -400px;
   height: 300px;
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>

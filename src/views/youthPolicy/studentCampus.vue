@@ -1,10 +1,20 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
-import 'swiper/css/effect-coverflow';
+import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import { EffectCoverflow, Pagination } from 'swiper';
-const modules = [EffectCoverflow, Pagination]
+import { Autoplay, FreeMode, Pagination } from 'swiper';
+const modules = [Autoplay, FreeMode, Pagination]
+const stundets = ref<string[]> ([
+  '/students/1.jpg',
+  '/students/2.jpg',
+  '/students/3.jpg',
+  '/students/4.jpg',
+  '/students/5.jpg',
+  '/students/6.jpg',
+  '/students/7.jpg'
+])
 </script>
   
 <template>
@@ -28,91 +38,51 @@ const modules = [EffectCoverflow, Pagination]
     </p>
   </div>
   </div>
-  <div class="mt-11 mx-auto px-4 lg:px-24 container">
+  <div class="mt-11 mx-auto px-5 lg:px-24 2xl:px-5 container">
     <div>
       <p class="text-center sm:text-4xl font-light text-2xl text-black mb-11">Foto Galereya</p>
     </div>
     <div>
-      <swiper
-    :effect="'coverflow'"
-    :grabCursor="true"
-    :centeredSlides="true"
-    :slidesPerView="'auto'"
-    :coverflowEffect="{
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
+      <swiper 
+    :slidesPerView="3"
+    :spaceBetween="30"
+    :autoplay="{
+      delay: 1500,
+      disableOnInteraction: false,
     }"
-    :pagination="true"
+    :freeMode="true"
+    :pagination="{
+      clickable: true,
+    }"
     :modules="modules"
     class="mySwiper"
   >
-    <swiper-slide
-      ><img class="w-[300px] h-[300px]"
-        src="https://swiperjs.com/demos/images/nature-1.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img class="w-[300px] h-[300px]"
-        src="https://swiperjs.com/demos/images/nature-2.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img class="w-[300px] h-[300px]"
-        src="https://swiperjs.com/demos/images/nature-3.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img class="w-[300px] h-[300px]"
-        src="https://swiperjs.com/demos/images/nature-4.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img class="w-[300px] h-[300px]"
-        src="https://swiperjs.com/demos/images/nature-5.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img class="w-[300px] h-[300px]"
-        src="https://swiperjs.com/demos/images/nature-6.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img class="w-[300px] h-[300px]"
-        src="https://swiperjs.com/demos/images/nature-7.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img class="w-[300px] h-[300px]"
-        src="https://swiperjs.com/demos/images/nature-8.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img class="w-[300px] h-[300px]" src="https://swiperjs.com/demos/images/nature-9.jpg"
-    /></swiper-slide>
+    <swiper-slide 
+      class="mb-10"
+      v-for="(item, index) in stundets" 
+      :key="index"
+    >
+
+      <img :src="item" alt="" class="select-none">
+    </swiper-slide>
   </swiper>
     </div>
   </div>
 </template>
 <style scoped>
-  #app { height: 100% }
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
 .swiper {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  height: 100%;
 }
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
+.swiper-slide{
+  width: -400px;
   height: 300px;
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
 </style>

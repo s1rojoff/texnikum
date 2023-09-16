@@ -173,7 +173,7 @@ export const useHeaderStore = defineStore('header', {
             },
             {
               name: "Bitirgan talabalarning ishga joylashtirish",
-              route: '/student/employment-gaduates'
+              route: '/student/employment-graduates'
             },
             {
               name: "Ishchi o'quv rejalar",

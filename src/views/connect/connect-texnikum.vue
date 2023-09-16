@@ -5,7 +5,7 @@ import BaseInput from '@/components/BaseInput/index.vue'
 import BaseButton from '@/components/BaseButton/index.vue'
 </script>
 <template>
-  <div class="sticky top-0 z-10">
+  <div class="sticky top-0 z-30">
     <BaseHeader />
   </div>
   <div

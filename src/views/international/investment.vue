@@ -12,14 +12,14 @@ storeToRefs(store)
   >
     <div class="mx-auto container top-2/3 text-start z-20">
       <p
-        class="sm:text-5xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none"
+        class="sm:text-5xl 2xl:text-7xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none"
       >
         Jalb etilgan sarmoyalar va grantlar
       </p>
     </div>
     <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-10"></div>
   </div>
-  <div class="realtive px-7 lg:px-24 container mx-auto mt-10">
+  <div class="realtive px-5 2xl:px-5 lg:px-24  container mx-auto mt-10">
     <!-- ------------------------------- FOR PC -------------------------------------- -->
     <div class="forPC hidden lg:block">
       <div class="flex mb-2 sticky top-[143px] bg-white z-20">

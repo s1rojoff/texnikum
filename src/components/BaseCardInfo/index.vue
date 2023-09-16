@@ -28,8 +28,8 @@ function replaceInfoExp() {
       </div>
       <div class="flex items-end justify-between lg:flex-nowrap flex-wrap w-full">
         <div class="flex  flex-col gap-5">
-          <p class=" text-xl md:text-2xl">{{ props.cardData.title }}</p>
-          <p class=" text-base/6 max-w-[400px]">{{ props.cardData.subtitle }}</p>
+          <p class=" text-xl md:text-2xl 2xl:text-4xl">{{ props.cardData.title }}</p>
+          <p class=" text-base/6 max-w-[400px] 2xl:max-w-[600px] lg:text-xl">{{ props.cardData.subtitle }}</p>
           <p v-if= "props.cardData.date" class="font-thin">{{ props.cardData.date }}</p>
         </div>
         <button

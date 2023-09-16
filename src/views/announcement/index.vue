@@ -21,14 +21,14 @@ const categories = ['Barchasi', 'Jamiyat', 'Sport', 'Texnikum', 'Rahbariyat']
   >
     <div class="mx-auto container top-2/3 text-start z-20">
       <p
-        class="sm:text-5xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none"
+        class="sm:text-5xl 2xl:text-7xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none"
       >
         Yangiliklar
       </p>
     </div>
     <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-10"></div>
   </div>
-  <div class="container mx-auto px-4 lg:px-24 mt-10">
+  <div class="container mx-auto px-5 2xl:px-5 lg:px-24 mt-10">
     <div class="flex flex-wrap sm:flex-nowrap items-start gap-5">
       <div class=" flex sm:w-3/4 w-full gap-x-5 flex-wrap gap-y-5 order-2">
         <BaseNewsCard v-for="(item, index) in newsData" :key="index" :news-data="item"/>

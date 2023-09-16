@@ -15,7 +15,7 @@ storeToRefs(store)
     >
       <div class="mx-auto container top-2/3 text-start z-20">
         <p
-          class="sm:text-5xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-2xl select-none"
+          class="sm:text-5xl 2xl:text-7xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none"
         >
           Yoshlar bilan ishlash, madaniyat va ma'rifat bo'limi
         </p>
@@ -23,8 +23,8 @@ storeToRefs(store)
       <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-10"></div>
     </div>
   </div>
-  <div class="mt-10 mx-auto container lg:px-24 px-4">
-    <p class="text-center sm:text-4xl font-light text-2xl text-black">
+  <div class="mt-10 mx-auto container lg:px-24 px-5 2xl:px-5">
+    <p class="text-center sm:text-4xl 2xl:text-5xl font-light text-2xl text-black">
       Yoshlar ishlari bo'yicha bo'lim boshlig'i
     </p>
     <div class="flex gap-11 flex-wrap mt-11 mb-11">
@@ -34,7 +34,7 @@ storeToRefs(store)
         :card-data="youthworker"
       />
     </div>
-    <p>
+    <p class="sm:text-lg text-md 2xl:text-xl">
       &nbsp; &nbsp; &nbsp; O‘zbekiston Respublikasi Prezidentining “Yoshlar bilan ishlash, ma’naviyat va ma’rifat
       jamoatchilik markazi faoliyatini yanada takomillashtirish va samaradorligini oshirish
       to‘g‘risida”gi 1996 yil 9 sentabr 1559-sonli farmoni hamda O‘zbekiston Respublikasi Oliy va

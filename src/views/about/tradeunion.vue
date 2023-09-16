@@ -17,21 +17,21 @@ const boss = {
   >
     <div class="mx-auto container top-2/3 text-start z-20">
       <p
-        class="sm:text-5xl 2xl:text-7xl lg:px-24 2xl:px-5 font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none"
+        class="sm:text-5xl 2xl:text-7xl font-light text-white border-solid border-l-stone-400 sm:pb-2 sm:mb-2 border-b-2 text-3xl select-none"
       >
         Kasaba uyushmasi
       </p>
     </div>
     <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-[2]"></div>
   </div>
-  <div class="container px-5 lg:px-24 2xl:px-0 mx-auto">
+  <div class="container px-5 lg:px-24 2xl:px-5 mx-auto">
     <div class="lg:mt-5">
       <BaseDepartmentCard :card-data="boss" />
     </div>
-    <p class="text-main text-center mt-10 text-3xl border-b-2 pb-2 border-main font-semibold">
+    <p class="text-main text-center mt-10 text-3xl lg:text-4xl 2xl:text-5xl mb-8 border-b-2 pb-2 border-main font-semibold">
       Kasaba uyushmasi haqida ma'lumot
     </p>
-    <p class="text-base lg:mt-4">
+    <p class="text-base lg:text-lg 2xl:text-xl lg:mt-4">
       There are many variations of passages of Lorem Ipsum available, but the majority have suffered
       alteration in some form, by injected humour, or randomised words which don't look even
       slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure

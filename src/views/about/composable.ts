@@ -18,7 +18,7 @@ export function useAboutPage() {
     {
       id: 2,
       name: "To'ychiyev Jamshid Xajiakbarovich",
-      url: '/rahbariyat/oquv_ishlari_boyicha.png',
+      url: '/rahbariyat/oquv_tarbiyaviy.png',
       lavozim: "Direktorning o'quv ishlari bo‘yicha o‘rinbosari",
       phone: '(71) 299-05-44',
       qabul: 'Seshanba (10:00-12:00)',
@@ -31,7 +31,7 @@ export function useAboutPage() {
     {
       id: 3,
       name: 'Annaqulov Asatillo Ergashevich',
-      url: '/rahbariyat/ishlab_chiqarish_boyicha.jpg',
+      url: '/rahbariyat/ishlab_chiqarish.png',
       lavozim: "Direktorning ishlab chiqarish ta'limi bo'yicha o‘rinbosari",
       phone: '(71) 299-05-76',
       qabul: 'Juma (10:00-12:00)',
@@ -44,7 +44,7 @@ export function useAboutPage() {
     {
       id: 4,
       name: 'Nabiev Sardor Abdumalikovich',
-      url: '/rahbariyat/yoshlar_ishlari_boyicha.jpg',
+      url: '/rahbariyat/yoshlar_bilan.png',
       lavozim: "Direktorning ishlab chiqarish ta'limi bo'yicha o‘rinbosari",
       phone: '(71) 299-05-76',
       qabul: 'Juma (10:00-12:00)',
@@ -56,9 +56,9 @@ export function useAboutPage() {
     },
     {
       id: 5,
-      name: 'Farhod aka',
-      url: '/rahbariyat/myself.jpg',
-      lavozim: "Direktorning moliya-iqtisod va ma'muriy xo'jalik ishlari bo‘yicha o‘rinbosari",
+      name: "Xujakeldiyev Soibjon To'lamboyevich",
+      url: '/rahbariyat/bosh_hisobchi.png',
+      lavozim: "Toshkent temir yo'l texnikumi bosh hisobchi",
       phone: '(71) 299-05-76',
       qabul: 'Juma (10:00-12:00)',
       email: 'info@tpkjt.uz',
@@ -69,9 +69,9 @@ export function useAboutPage() {
     },
     {
       id: 6,
-      name: 'Fistname Lastname Middename',
-      url: '/rahbariyat/myself.jpg',
-      lavozim: "Texnikum bosh buxgalteri",
+      name: "Ganiev Bobomurod Saydimurodovich",
+      url: '/rahbariyat/moliya_ishlab_chiqarish.png',
+      lavozim: "Toshkent temir yo‘l texnikumi Moliya-iqtisod ishlari bo‘yicha direktor o‘rinbosari",
       phone: '(71) 299-05-76',
       qabul: 'Juma (10:00-12:00)',
       email: 'info@tpkjt.uz',
@@ -82,9 +82,9 @@ export function useAboutPage() {
     },
     {
       id: 7,
-      name: 'Fistname Lastname Middename',
-      url: '/rahbariyat/myself.jpg',
-      lavozim: "Texnikum yuristkonsult",
+      name: 'Djumaniyazov Baxrambay Matkarimovich',
+      url: '/rahbariyat/ishki_nazorat.png',
+      lavozim: "Toshkent temir yo‘l texnikumi ichki nazorat bo‘limi inspektori",
       phone: '(71) 299-05-76',
       qabul: 'Juma (10:00-12:00)',
       email: 'info@tpkjt.uz',
@@ -92,7 +92,59 @@ export function useAboutPage() {
         'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam.',
       mandate:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odit blanditiis dolore sint provident nulla rem amet similique, architecto maxime.'
-    }
+    },
+    {
+      id: 8,
+      name: 'Rizayeva Minajatxon Muminovna',
+      url: '/rahbariyat/uslubchi.png',
+      lavozim: "Toshkent temir yo‘l texnikumi uslubchisi",
+      phone: '(71) 299-05-76',
+      qabul: 'Juma (10:00-12:00)',
+      email: 'info@tpkjt.uz',
+      experience:
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam.',
+      mandate:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odit blanditiis dolore sint provident nulla rem amet similique, architecto maxime.'
+    },
+    {
+      id: 9,
+      name: 'Nomozov Furqat Abdisharipovich',
+      url: '/rahbariyat/yuristkonsult.png',
+      lavozim: "Toshkent temir yo’l texnikumi yuristkonsulti",
+      phone: '(71) 299-05-76',
+      qabul: 'Juma (10:00-12:00)',
+      email: 'info@tpkjt.uz',
+      experience:
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam.',
+      mandate:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odit blanditiis dolore sint provident nulla rem amet similique, architecto maxime.'
+    },
+    {
+      id: 10,
+      name: 'Rejametova Dilbar Nigmatullayevna',
+      url: '/rahbariyat/yoshlar_yetakchisi.png',
+      lavozim: "Toshkent temir yo'l texnikumi boshlang'ich tashkilot yetakchisi",
+      phone: '(71) 299-05-76',
+      qabul: 'Juma (10:00-12:00)',
+      email: 'info@tpkjt.uz',
+      experience:
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam.',
+      mandate:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odit blanditiis dolore sint provident nulla rem amet similique, architecto maxime.'
+    },
+    {
+      id: 10,
+      name: 'Yulchiyeva Ra‘noxon Abdumuxtorovna ',
+      url: '/rahbariyat/myself.jpg',
+      lavozim: "Toshkent temir yo‘l texnikumi kadrlar  bo‘yicha noziri",
+      phone: '(71) 299-05-76',
+      qabul: 'Juma (10:00-12:00)',
+      email: 'info@tpkjt.uz',
+      experience:
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea molestiae debitis maiores quod cupiditate, id repellat doloremque, omnis voluptatum vel architecto harum amet sunt voluptates magnam culpa ex voluptatem doloribus provident veniam dolor. Soluta, possimus est? Voluptas reprehenderit doloribus ipsam.',
+      mandate:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odit blanditiis dolore sint provident nulla rem amet similique, architecto maxime.'
+    },
   ])
   const openModal = ref<boolean>(false)
   function clickModal (val:string){

@@ -35,14 +35,13 @@ import BaseFooter from '@/components/BaseFooter/index.vue'
     </div>
   </div> -->
   <div>
-    <div class="bg-[url('/images/image.png')] px-4 lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh] relative">
+    <div
+      class="bg-[url('/images/image.png')] px-4 lg:px-24 bg-no-repeat w-full bg-center bg-cover lg:h-[75vh] sm:h-[50vh] h-[35vh] relative">
 
     </div>
     <div class="md:bottom-5 bottom-0 absolute left-0">
       <BaseIcon class="w-full md:h-24 h-16 text-main" name="afrosiyob" />
-      <p
-        class="absolute text-sm md:text-lg top-[20%] tracking-wider pl-5 lg:pl-32 text-white z-[1] lg:text-lg"
-      >
+      <p class="absolute text-sm md:text-lg top-[20%] tracking-wider pl-5 lg:pl-32 text-white z-[1] lg:text-lg">
         "O'zbekiston Temir Yo'llari" AJ <br />Toshkent Temir Yo'l Texnikumi
       </p>
     </div>

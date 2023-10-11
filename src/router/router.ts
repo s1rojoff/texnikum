@@ -389,12 +389,36 @@ export const routers = [
       {
         path: 'news',
         name: 'main page of announcement page',
-        component: () => import('@/views/announcement/index.vue')
+        component: () => import('@/views/announcement/news.vue'),
+        children: [
+          {
+            path: '',
+            name: 'all news',
+            component: ()=> import('@/views/announcement/index.vue'),
+          },
+          {
+            path: ':newsId',
+            name: 'One of news',
+            component: ()=> import('@/views/announcement/newsPage.vue'),
+          }
+        ]
       },
       {
         path: 'upcoming-event',
         name: 'Upcoming events',
-        component: () => import('@/views/announcement/upcomingEvent.vue')
+        component: () => import('@/views/announcement/upcomingEventMain.vue'),
+        children:[
+          {
+            path: '',
+            name: 'all upcoming-event',
+            component: () => import('@/views/announcement/upcomingEvent.vue'),
+          },
+          {
+            path: ':id',
+            name: 'one of  upcoming-event',
+            component: () => import('@/views/announcement/upcomingNews.vue'),
+          }
+        ]
       }
     ]
   },

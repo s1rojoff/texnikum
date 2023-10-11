@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import BaseSmallCard from '@/components/BaseSmallCard/index.vue'
+import BaseSmallCard from '@/components/BaseSmallCard/index.vue'
 import BaseDepartmentCard from '@/components/BaseDepartmentCard/index.vue'
 import { useAboutStore } from '@/stores';
 import {usedepEmploye} from '@/views/about/dep_employe/composable'
@@ -24,16 +24,16 @@ const {depEmployes, departments} = usedepEmploye()
     <div class="bg-opacityColor absolute w-full h-full top-0 left-0 z-[2]"></div>
   </div>
   <div class="mx-auto container mt-16 px-5 2xl:px-5  lg:px-24">
-    <!-- <div class=" flex flex-wrap justify-between  gap-y-10">
+    <div class=" flex flex-wrap justify-between  gap-y-10">
       <div v-for="(item, index) in depEmployes" :key="index">
         <BaseSmallCard :item-info="item" />
       </div>
-    </div> -->
-    <BaseDepartmentCard
+    </div>
+    <!-- <BaseDepartmentCard
       v-for="(department, index) in departments"
       :key="index"
       :cardData = "department"
       :showInfo="store.visibleInfo"
-    />
+    /> -->
   </div>
 </template>

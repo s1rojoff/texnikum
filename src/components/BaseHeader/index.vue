@@ -62,28 +62,41 @@ const changeLanguage = async () => {
     <!-- Laptop view navbars -->
     <div class="bg-[#E2F0F9]">
       <div
-        class="container mx-auto py-2 flex md:px-7 lg:px-24 2xl:px-5 px-5 items-center justify-between md:py-2 lg:py-6">
+        class="container mx-auto py-2 flex md:px-7 lg:px-24 2xl:px-5 px-5 items-center justify-between md:py-2 lg:py-4">
         <BaseIcon class="lg:w-5 lg:h-5 cursor-pointer md:w-5 md:-5" @click="toggleNavbar" name="dashboard" />
 
-        <div
-          class="lg:text-base relative uppercase lg:block hidden lg:font-normal xl:font-extrabold 2xl:text-[22px] text-main"
+        <div class="lg:text-base relative lg:block hidden lg:font-normal xl:font-extrabold 2xl:text-[22px]"
           v-for="(link, index) in navLinks" :key="index" @mouseenter="toggleSubNav(index)"
           @mouseleave="toggleSubNav(index)">
-          <p class="cursor-pointer">{{ link.name }}</p>
-          <div v-if="navLinks[index].visible && !store.$state.allMenus"
-            class="h-auto w-80 absolute px-2 text-start rounded-md bg-bgColor drop-shadow-lg">
-            <p v-for="(item, index) in link.subMenu" :key="index"
+          <p class="cursor-pointer uppercase text-main">{{ link.name }}</p>
+          <div v-if="navLinks[index].visible && !store.$state.allMenus" class="absolute rounded-md bg-bgColor px-5 py-3"
+            :style="{ 'width': `${Object.keys(link.subMenu).length * 300}px` }">
+            <!-- <p v-for="(item, index) in link.subMenu" :key="index"
               class="menu-style text-black cursor-pointer text-xs font-bold m-3">
               <router-link v-slot="{ isExactActive }" v-if="item.name != 'Direktorga murojaat qilish'" :to="item.route">
                 <span :class="{ 'text-main': isExactActive }">{{ item.name }}</span>
               </router-link>
               <a v-else target="_blank" :href="item.route">{{ item.name }}</a>
-            </p>
+            </p> -->
+            <div class="flex items-start justify-between gap-4">
+              <div v-for="(item, index) in Object.keys(link.subMenu)" :key="index">
+                <div>
+                  <p class="text-main">{{ link.subMenu[item].name }}</p>
+                  <div class="cursor-pointer menu-style" v-for="(subItem, index) in link.subMenu[item].childrens"
+                    :key="index">
+                    <router-link :to="subItem.route" v-if="subItem.name !== 'Videoroliklar'" class="text-sm  py-0.5">
+                      {{ subItem.name }}
+                    </router-link>
+                    <a :href="subItem.route" v-else target="_blank" class="text-sm  py-0.5">{{ subItem.name }}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <router-link to="/" class="cursor-pointer block md:hidden" @click="store.$state.allMenus = false"><img
             src="/images/logo-header.png" class="w-32" alt="" /></router-link>
-        <BaseIcon class="lg:w-7 lg:h-7 md:w-5 md:-5 hidden md:block" name="search" />
+        <!-- <BaseIcon class="lg:w-7 lg:h-7 md:w-5 md:-5 hidden md:block" name="search" /> -->
       </div>
     </div>
     <!-- All menues in navbar -->
